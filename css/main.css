@@ -41,14 +41,14 @@ nav {
   top: 0;
   right: 0;
   left: 0;
-
   width: 100%;
+  border-bottom: 1px solid #eee;
 }
 
 .navUp {
   height: 56px;
   display: flex;
-  border-bottom: 1px solid #eee;
+  
 }
 
 .navUp>h1 {
@@ -142,14 +142,22 @@ nav {
   align-items: center;
   cursor: pointer;
   z-index: 5;
+ }
+.menuBtn span{
+  width:100%;
+  height: 100%;
+  background-image: url('../img/noun-flower-1002754.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 100;
 }
 
-.menuBtn span {
+/* .menuBtn span {
   width: 30px;
   height: 2px;
   background-color: #A5A5AA;
   display: block;
-
 }
 
 .menuBtn span::after {
@@ -170,7 +178,7 @@ nav {
   height: 2px;
   position: absolute;
   bottom: 13px;
-}
+} */
 
 
 /* footer */
