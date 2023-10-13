@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>라움</title>
+  <style>
+    p {
+      font-size: 60px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.5s;
+      font-family: 'MYYeongnamnu';
+    }
+
+    span {
+      font-family: 'MYYeongnamnu';
+
+    }
+
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    @font-face {
+      font-family: 'MYYeongnamnu';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/MYYeongnamnu.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <p id="example1"></p>
+  </section>
+  <script src="js/typeit.min.js"></script>
+  <script>
+    setTimeout(function () {
+      //javascript로 웹페이지 이동하기
+      location.href = "main.html";
+    }, 8000);
+
+
+    //はな, цветок, 
+    new TypeIt("#example1", {
+      speed: 80,
+      waitUntilVisible: true,
+      loop: false
+    })
+      .type("꽃  flower  blume  fleur  flora  fiore") // 타이핑
+      .pause(100) //멈춤
+      .delete(0) // 지우기
+      .pause(1000)
+      .type("<span style='color:#005B4D'>라움</span>")
+      .pause(1000)
+      .move(1)
+      .go(); // 실행
+
+    // go 시작 / String (,)콤마 줄바꿈
+
+
+
+
+
+  </script>
+</body>
+
+</html>
