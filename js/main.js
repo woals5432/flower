@@ -11,7 +11,7 @@ menuBtn.addEventListener('click', function () {
     nav.style.background = "#000";
     nav.style.color = "white";
     nav.style.border = "none";
-    document.querySelector('.menuBtn span').style.backgroundImage = "url(`../img/noun-flower-1002754-FFFFFF.svg`)"
+    document.querySelector('.menuBtn span').style.backgroundImage = "url(../img/noun-flower-1002754-FFFFFF.svg)"
     menu.style.visibility = "visible";
   } else {
     menu.style.opacity = '0'; // 닫기
