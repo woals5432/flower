@@ -20,7 +20,7 @@ menuBtn.addEventListener('click', function () {
     nav.style.background = "white";
     nav.style.color = "#000";
     nav.style.borderBottom = "1px solid #eee";
-    document.querySelector('.menuBtn span').style.backgroundImage = "url(`../img/noun-flower-1002754.svg`)"
+    document.querySelector('.menuBtn span').style.backgroundImage = "url(../img/noun-flower-1002754.svg)"
     menu.style.visibility = "hidden";
   }
 })
