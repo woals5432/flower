@@ -74,8 +74,8 @@ nav {
   bottom: 0;
   background: #000;
   color: #A5A5AA;
-  z-index: 1;
   opacity: 0;
+  visibility:  hidden;
   transition: all 0.3s;
 }
 
