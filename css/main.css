@@ -1,258 +1,501 @@
-@charset "utf-8";
-
 @font-face {
-  font-family: 'MYYeongnamnu';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/MYYeongnamnu.woff2') format('woff2');
+  font-family: "MYYeongnamnu";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/MYYeongnamnu.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'S-CoreDream-3Light';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+  font-family: "S-CoreDream-3Light";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
-body{
-  font-family: 'S-CoreDream-3Light';
+*, html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
 }
-.container{
-  margin:auto;
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
 }
-/* nav */
+
+body {
+  line-height: 1;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "S-CoreDream-3Light";
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  min-width: 360px;
+  margin: auto;
+}
+
+/* header */
 header {
-  z-index: 10;
-  width: 100%;
-  position: relative;
-}
-
-.headerInnerTop {
-  width: 100%;
-  height: 56px;
-} 
-
-nav {
-  background: white;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
+  margin: auto;
+  background: transparent;
+  z-index: 11;
+}
+header .header_inner {
+  font-family: "MYYeongnamnu";
+  height: 56px;
+}
+header .header_inner h1 {
+  width: 120px;
+  text-align: center;
+  margin: auto;
+  line-height: 56px;
+  font-size: 2em;
+  font-weight: bold;
 }
 
-.navUp {
-  position: sticky;
+/* main */
+.main_inner {
+  width: 100%;
+}
+.main_inner .nav .nav_btn {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: #000 url("../img/icon/open.png") no-repeat center center/38px 38px;
+  border-radius: 50%;
+  z-index: 10;
+}
+.main_inner .nav_open {
+  display: none;
+  position: fixed;
   top: 0;
   left: 0;
-  height: 56px;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  color: #fff;
+  z-index: 10;
+}
+.main_inner .nav_open .nav_inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
-  border-bottom: 1px solid #eee;
+  justify-content: space-between;
+  align-items: center;
+  width: 55%;
+}
+.main_inner .nav_open .nav_inner .nav_menuLeft img, .main_inner .nav_open .nav_inner .nav_menuRight img {
+  width: 100px;
+}
+.main_inner .nav_open .nav_inner .nav_menu > li {
+  margin: 50px 0;
+  text-align: center;
+}
+.main_inner .nav_open .nav_inner .nav_menu > li > a {
+  font-size: 1.1em;
+}
+.main_inner .nav_open .nav_inner .nav_menu > li .nav_subMenu > li {
+  margin: 20px 0 -10px;
+}
+.main_inner .nav_open .nav_inner .nav_menu > li .nav_subMenu > li > a {
+  color: #767676;
+  font-size: 0.9em;
+}
+.main_inner .nav_open .nav_close .nav_closeBtn {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: #fff url("../img/icon/close.png") no-repeat center center/38px 38px;
+  border-radius: 50%;
+  z-index: 11;
+}
+.main_inner .main_visual img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+.main_inner .season_flower {
+  width: 100%;
+}
+.main_inner .season_flower div {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.navUp>h1 {
-  width: 113px;
-  height: 29px;
-  font-size: 30px;
+/* footer */
+footer {
+  width: 100%;
+  padding: 30px;
+  background: #444;
+}
+footer .footer_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer_inner .footer_left {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+footer .footer_inner .footer_left h1 {
+  font-family: "MYYeongnamnu";
+  font-size: 1.8em;
   font-weight: bold;
-  margin: auto;
-  font-family: 'MYYeongnamnu';
+  color: #fff;
+}
+footer .footer_inner .footer_left p {
+  font-size: 0.9em;
+  color: #b7b7b7;
+}
+footer .footer_inner .footer_right {
+  display: flex;
+  justify-content: center;
+}
+footer .footer_inner .footer_right form {
+  border-bottom: 1px solid #fff;
+}
+footer .footer_inner .footer_right form .footer_emailInput {
+  width: 250px;
+  padding-bottom: 10px;
+  background: transparent;
+  outline: none;
+  caret-color: white;
+}
+footer .footer_inner .footer_right form .footer_emailInput::placeholder {
+  color: #b7b7b7;
+}
+footer .footer_inner .footer_right form .footer_btn {
+  background: transparent;
+  color: #fff;
+  font-size: 1.3em;
 }
 
-/*navDown*/
-.navDown{
+body {
+  font-family: "S-CoreDream-3Light";
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  min-width: 360px;
+  margin: auto;
+}
+
+/* header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: auto;
+  background: transparent;
+  z-index: 11;
+}
+header .header_inner {
+  font-family: "MYYeongnamnu";
+  height: 56px;
+  background: white;
+}
+header .header_inner h1 {
+  width: 120px;
+  text-align: center;
+  margin: auto;
+  line-height: 56px;
+  font-size: 2em;
+  font-weight: bold;
+}
+header .nav_contents {
   position: sticky;
-  top:56px;
-  left:0;
-  display: block;
+  top: 56px;
+  left: 0px;
   width: 100%;
   min-height: 56px;
   background: #eee;
-}
-.error{padding-top:8px}
-
-.navDown_hashtag_subbtn{
-  position: absolute;
-  top:18px;
-  padding-left: 40px; 
-  margin:0 auto;
-  
-}
-/* subbtn꽃사전 미디어커리 */
-@media (max-width: 1240px){
-  .navDown_hashtag_subbtn{
-  display: none;
-  position: absolute;
-  top:18px;
-  padding-left: 40px;  
-}
-}
-
-.navDown_hashtag_subbtn>button{
-  background: none;
-  cursor: pointer;
-}
-.navDown_hashtag_subbtn>button>span{
-}
-
-.navDown_hashtag_wrap{
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: 30px;;
+  column-gap: 50px;
 }
-.navDown_hashtag {
+header .nav_contents .nav_hashtag_subbtn {
+  position: absolute;
+  left: 100px;
+  font-weight: 400;
 }
- 
-.navDown_hashtag_namewrap{
+@media (max-width: 1240px) {
+  header .nav_contents .nav_hashtag_subbtn {
+    display: none;
+    position: absolute;
+    left: 100px;
+    font-weight: 400;
+  }
+}
+header .nav_contents .nav_hashtag_main .nav_hashtag_wrap {
+  display: flex;
+  column-gap: 30px;
+}
+header .nav_contents .nav_hashtag_main .nav_hashtag_wrap .nav_hashtag .nav_hashtag_namewrap {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 40px;
-  border: 2px solid black ;  
-  background: white;
+  border: 2px solid black;
+  background-color: white;
   border-radius: 24px;
-  padding:10px
+  padding: 10px;
 }
-.navDown_hashtag_namewrap>button{
+header .nav_contents .nav_hashtag_main .nav_hashtag_wrap .nav_hashtag .nav_hashtag_namewrap button {
   background: none;
   display: block;
   cursor: pointer;
   font-weight: 700;
 }
-.navDown_hashtag_namewrap>span{
-  
+/* main */
+.main_inner {
+  width: 100%;
+}
+.main_inner .nav .nav_btn {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: #000 url("../img/icon/open.png") no-repeat center center/38px 38px;
+  border-radius: 50%;
+  z-index: 10;
+}
+.main_inner .nav_open {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  color: #fff;
+  z-index: 10;
+}
+.main_inner .nav_open .nav_inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 55%;
+}
+.main_inner .nav_open .nav_inner .nav_menuLeft img, .main_inner .nav_open .nav_inner .nav_menuRight img {
+  width: 100px;
+}
+.main_inner .nav_open .nav_inner .nav_menu > li {
+  margin: 50px 0;
+  text-align: center;
+}
+.main_inner .nav_open .nav_inner .nav_menu > li > a {
+  font-size: 1.1em;
+}
+.main_inner .nav_open .nav_inner .nav_menu > li .nav_subMenu > li {
+  margin: 20px 0 -10px;
+}
+.main_inner .nav_open .nav_inner .nav_menu > li .nav_subMenu > li > a {
+  color: #767676;
+  font-size: 0.9em;
+}
+.main_inner .nav_open .nav_close .nav_closeBtn {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: #fff url("../img/icon/close.png") no-repeat center center/38px 38px;
+  border-radius: 50%;
+  z-index: 11;
 }
 
-/*main*/
-.flower_contents{
+section.flower_contents {
   position: relative;
   width: 100%;
   height: 100%;
-  padding-top: 60px;
   padding-bottom: 100px;
+  padding-top: 112px;
   margin: auto;
 }
-.flower_dictionary{
+section.flower_contents .flower_dictionary {
   max-width: 1714px;
   width: 100%;
   margin: 0 auto;
 }
-.flower_dictionary_title{
-  padding-top: 30px;
+section.flower_contents .flower_dictionary .flower_dictionary_title {
+  padding: 30px 15px;
   display: flex;
   align-items: center;
   column-gap: 22px;
 }
-.flower_dictionary_title_1{
+section.flower_contents .flower_dictionary .flower_dictionary_title .flower_dictionary_title_1 {
   font-size: 30px;
   font-weight: 600;
   line-height: 40px;
-  letter-spacing: 0.005em;
+  letter-spacing: 0.006em;
 }
-.flower_dictionary_title_description{
+section.flower_contents .flower_dictionary .flower_dictionary_title .flower_dictionary_title_description {
   display: block;
   font-size: 14px;
   font-weight: 500;
 }
-.flower_dictionary_wrapper{
-  position: relative;
-  margin: 30px 0;
+section.flower_contents .flower_dictionary div.flower_dictionary_wrapper {
+  margin: 0px 15px;
 }
-.flower_dictionary_list{
+section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list {
   display: grid;
-  grid-template-columns: repeat(4,minmax(0px,1fr));
+  grid-template-columns: repeat(4, minmax(0px, 1fr));
   row-gap: 24px;
   column-gap: 24px;
-  margin-bottom: 80px;
 }
-.flower_dictionary_item{
+section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item {
   display: block;
 }
-.lower_dictionary_item_link{
+section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link {
   display: block;
-  ;}
-
-.flower_dictionary_item_imgblock{
+}
+section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_imgblock {
   width: auto;
-  height: 45vh;
-  background-image: url('../img/dictinary1.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover
 }
-.flower_dictionary_item_imgblock>img{
+section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_imgblock img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
-.flower_dictionary_item_title{
-  padding:10px;
+section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_title {
+  padding: 10px 0;
   display: block;
 }
-.flower_dictionary_item_title_name{
-  font-size: 12px;
+section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_title .flower_dictionary_item_title_name font {
+  size: 20px;
   font-weight: 400;
   line-height: 18px;
 }
 
-
 /* footer */
 footer {
+  width: 100%;
+  padding: 30px;
   background: #444;
-  padding:30px;
-  display:flex;
-  justify-content: space-between;
-  margin-top: 1000px;;
+  margin-top: 1000px;
 }
-
-
-.footerText {
-  color:#fff;
+footer .footer_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer_inner .footer_left {
   display: flex;
   flex-direction: column;
   row-gap: 15px;
 }
-
-.footerText h1{
-  font-size:28px;
+footer .footer_inner .footer_left h1 {
+  font-family: "MYYeongnamnu";
+  font-size: 1.8em;
   font-weight: bold;
-  font-family: 'MYYeongnamnu';
+  color: #fff;
 }
-
-.footerUnder p {
-  font-size:14px;
-  color:#bdbdbd;
+footer .footer_inner .footer_left p {
+  font-size: 0.9em;
+  color: #b7b7b7;
 }
-
-.footerEmail {
-  display:flex;
-  align-items: center;
+footer .footer_inner .footer_right {
+  display: flex;
   justify-content: center;
 }
-.footerEmailInputDiv{  
-  border-bottom:1px solid #fff;
+footer .footer_inner .footer_right form {
+  border-bottom: 1px solid #fff;
 }
-.footerEmailInputDiv button{
-  background:transparent;
-}
-.footerEmailInput{
-  background: #444;
+footer .footer_inner .footer_right form .footer_emailInput {
+  width: 250px;
+  padding-bottom: 10px;
+  background: transparent;
   outline: none;
-  width:250px;
-  height:46px;
-  caret-color:white;
-  padding-bottom:10px;
+  caret-color: white;
+}
+footer .footer_inner .footer_right form .footer_emailInput::placeholder {
+  color: #b7b7b7;
+}
+footer .footer_inner .footer_right form .footer_btn {
+  background: transparent;
+  color: #fff;
+  font-size: 1.3em;
 }
 
-.footerEmailInput::placeholder{
-  color:#fff;
-  font-weight: 600;
-}
-.footerEmailInput:focus::placeholder{
-  color:#838383;
-  
-}
-
-.footerEmail img{ 
-  width:25px;
-  height: 25px;
-  vertical-align: middle;
-}
+/*# sourceMappingURL=main.css.map */
