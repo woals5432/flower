@@ -21,6 +21,7 @@ body {
 .container {
   margin: auto;
   min-width: 390px;
+  width: 100%;
 }
 
 /* nav */
@@ -62,8 +63,49 @@ nav {
 
 /* main */
 .full {
+  /* height:calc(100vh - 233px); */
   height: 100vh;
 }
+
+.main {
+  width: 100%;
+  /* height:calc(100vh - 233px); */
+  height: 100vh;
+
+}
+
+.mainFirst {
+  display: flex;
+  width: 100%;
+  height: 80vh;
+  background: #92a369 !important;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.mainFirstImg {
+  background: url('../img/nong-qQyNLR0tKi0-unsplash.jpg')no-repeat center center / 100%;
+  width: 50%;
+  height: 100%;
+}
+
+.mainFirstText {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.mainFirstText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  color: black;
+  font-size: 100px;
+  font-family: 'MYYeongnamnu';
+  
+}
+
 
 /* menu */
 .menuBg {
@@ -147,7 +189,7 @@ nav {
 .menuBtn span {
   width: 100%;
   height: 100%;
-  background: url('../img/noun-flower-1002754.svg') no-repeat center center / 100% ;
+  background: url('../img/noun-flower-1002754.svg') no-repeat center center / 100%;
   z-index: 100;
 }
 
