@@ -87,8 +87,16 @@ header {
           text-align: center;
 
           & > a {
-            color: #767676;
-            font-size: 0.9em;
+            font-size: 1.1em;
+          }
+
+          .nav_subMenu > li {
+            margin: 20px 0 -10px;
+
+            & > a {
+              color: #767676;
+              font-size: 0.9em;
+            }
           }
         }
       }

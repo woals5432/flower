@@ -150,6 +150,12 @@ header .header_inner h1 {
   text-align: center;
 }
 .main_inner .nav_open .nav_inner .nav_menu > li > a {
+  font-size: 1.1em;
+}
+.main_inner .nav_open .nav_inner .nav_menu > li .nav_subMenu > li {
+  margin: 20px 0 -10px;
+}
+.main_inner .nav_open .nav_inner .nav_menu > li .nav_subMenu > li > a {
   color: #767676;
   font-size: 0.9em;
 }
