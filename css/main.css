@@ -1,117 +1,232 @@
-@charset "utf-8";
-
 @font-face {
-  font-family: 'MYYeongnamnu';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/MYYeongnamnu.woff2') format('woff2');
+  font-family: "MYYeongnamnu";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/MYYeongnamnu.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'S-CoreDream-3Light';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+  font-family: "S-CoreDream-3Light";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
-body{
-  font-family: 'S-CoreDream-3Light';
+*, html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
 }
-.container{
-  margin:auto;
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
 }
-/* nav */
+
+body {
+  line-height: 1;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "S-CoreDream-3Light";
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  min-width: 360px;
+  margin: auto;
+}
+
+/* header */
 header {
-  z-index: 10;
-  width: 100%;
-  position: relative;
-}
-
-.headerInnerTop {
-  width: 100%;
-  height: 56px;
-}
-
-nav {
-  background: white;
   position: fixed;
   top: 0;
+  width: 100%;
+  margin: auto;
+  background: transparent;
+  z-index: 11;
+}
+header .header_inner {
+  font-family: "MYYeongnamnu";
+  height: 56px;
+}
+header .header_inner h1 {
+  width: 120px;
+  text-align: center;
+  margin: auto;
+  line-height: 56px;
+  font-size: 2em;
+  font-weight: bold;
+}
 
+/* main */
+.main_inner {
   width: 100%;
 }
-
-.navUp {
-  height: 56px;
-  display: flex;
-  border-bottom: 1px solid #eee;
+.main_inner .nav .nav_btn {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: #000 url("../img/icon/open.png") no-repeat center center/38px 38px;
+  border-radius: 50%;
+  z-index: 10;
 }
-
-.navUp>h1 {
-  width: 113px;
-  height: 29px;
-  font-size: 30px;
-  font-weight: bold;
-  margin: auto;
-  font-family: 'MYYeongnamnu';
+.main_inner .nav_open {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  color: #fff;
+  z-index: 10;
+}
+.main_inner .nav_open .nav_inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 55%;
+}
+.main_inner .nav_open .nav_inner .nav_menuLeft img, .main_inner .nav_open .nav_inner .nav_menuRight img {
+  width: 100px;
+}
+.main_inner .nav_open .nav_inner .nav_menu > li {
+  margin: 50px 0;
+  text-align: center;
+}
+.main_inner .nav_open .nav_inner .nav_menu > li > a {
+  color: #767676;
+  font-size: 0.9em;
+}
+.main_inner .nav_open .nav_close .nav_closeBtn {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: #fff url("../img/icon/close.png") no-repeat center center/38px 38px;
+  border-radius: 50%;
+  z-index: 11;
+}
+.main_inner .main_visual img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+.main_inner .season_flower {
+  width: 100%;
+}
+.main_inner .season_flower div {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* footer */
 footer {
+  width: 100%;
+  padding: 30px;
   background: #444;
-  padding:30px;
-  display:flex;
-  justify-content: space-between;
 }
-
-
-.footerText {
-  color:#fff;
+footer .footer_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer_inner .footer_left {
   display: flex;
   flex-direction: column;
   row-gap: 15px;
 }
-
-.footerText h1{
-  font-size:28px;
+footer .footer_inner .footer_left h1 {
+  font-family: "MYYeongnamnu";
+  font-size: 1.8em;
   font-weight: bold;
-  font-family: 'MYYeongnamnu';
+  color: #fff;
 }
-
-.footerUnder p {
-  font-size:14px;
-  color:#bdbdbd;
+footer .footer_inner .footer_left p {
+  font-size: 0.9em;
+  color: #b7b7b7;
 }
-
-.footerEmail {
-  display:flex;
-  align-items: center;
+footer .footer_inner .footer_right {
+  display: flex;
   justify-content: center;
 }
-.footerEmailInputDiv{  
-  border-bottom:1px solid #fff;
+footer .footer_inner .footer_right form {
+  border-bottom: 1px solid #fff;
 }
-.footerEmailInputDiv button{
-  background:transparent;
-}
-.footerEmailInput{
-  background: #444;
+footer .footer_inner .footer_right form .footer_emailInput {
+  width: 250px;
+  padding-bottom: 10px;
+  background: transparent;
   outline: none;
-  width:250px;
-  height:46px;
-  caret-color:white;
-  padding-bottom:10px;
+  caret-color: white;
+}
+footer .footer_inner .footer_right form .footer_emailInput::placeholder {
+  color: #b7b7b7;
+}
+footer .footer_inner .footer_right form .footer_btn {
+  background: transparent;
+  color: #fff;
+  font-size: 1.3em;
 }
 
-.footerEmailInput::placeholder{
-  color:#fff;
-  font-weight: 600;
-}
-.footerEmailInput:focus::placeholder{
-  color:#838383;
-  
-}
-
-.footerEmail img{ 
-  width:25px;
-  height: 25px;
-  vertical-align: middle;
-}
+/*# sourceMappingURL=main.css.map */
