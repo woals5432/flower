@@ -31,7 +31,7 @@ header {
     height: 56px;
 
     &.open {
-      color: $main-color;
+      color: $white;
     }
     h1 {
       width: 120px;
@@ -55,26 +55,25 @@ header {
       top: 50%;
       right: 20px;
       transform: translateY(-50%);
-      background: $sub-color url('../img/icon/open.png') no-repeat center center / 38px 38px;
+      background: $black url('../img/icon/open.png') no-repeat center center / 38px 38px;
       z-index: 10;
     }
   }
   .nav_open{
+    @include set-box(100vw, 100vh);
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
     transition: 0.3s;
     z-index: -10;
     transition: opacity 1s cubic-bezier(0.2, 0.8, 0.4, 1);
     opacity: 0;
 
     &.open {
-      background: $sub-color;
-      color: $main-color;
+      background: $black;
+      color: $white;
       z-index: 10;
-      transition: 1s cubic-bezier(0.2, 0.8, 0.4, 1);
+      transition: opacity 1s cubic-bezier(0.2, 0.8, 0.4, 1);
       opacity: 1;
     }
     .nav_inner {
@@ -84,11 +83,11 @@ header {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 55%;
+      width: 60%;
 
       .nav_menuLeft, .nav_menuRight {
         img {
-          width: 100px;
+          width: 150px;
         }
       }
       .nav_menu {
@@ -117,7 +116,7 @@ header {
         top: 50%;
         right: 20px;
         transform: translateY(-50%);
-        background: $main-color url('../img/icon/close.png') no-repeat center center / 38px 38px;
+        background: $white url('../img/icon/close.png') no-repeat center center / 38px 38px;
         z-index: 100;
       }
     }
@@ -161,16 +160,16 @@ header {
         border-radius: 0 8px 0 0;
 
         &.season_color1 {
-          background: #E6A9C9;
+          background: $main-color1;
         }
         &.season_color2 {
-          background: #F1D152;
+          background: $main-color2;
         }
         &.season_color3 {
-          background: #8D9D66;
+          background: $main-color3;
         }
         &.season_color4 {
-          background: #ACC3E4;
+          background: $main-color4;
         }
       }
     }
@@ -181,7 +180,7 @@ header {
 footer {
   width: 100%;
   padding: 50px 70px;
-  background: $sub-color;
+  background: $black;
 
   .footer_inner {
     @extend %double;
@@ -196,7 +195,7 @@ footer {
         font-family: 'MYYeongnamnu';
         font-size: 1.8em;
         font-weight: bold;
-        color: $main-color;
+        color: $white;
       }
       p {
         font-size: 0.9em;
@@ -208,14 +207,14 @@ footer {
       justify-content: center;
 
       form {
-        border-bottom: 1px solid $main-color;
+        border-bottom: 1px solid $white;
 
         .footer_emailInput {
           width: 250px;
           padding-bottom: 10px;
           background: transparent;
           outline: none;
-          caret-color: $main-color;
+          caret-color: $white;
 
           &::placeholder {
             color: $gray3;
@@ -223,7 +222,7 @@ footer {
         }
         .footer_btn {
           background: transparent;
-          color: $main-color;
+          color: $white;
           font-size: 1.3em;
         }
       }
@@ -234,6 +233,15 @@ footer {
 
 @media (max-width: 1023px) {
   .main_inner {
+    .nav_open {
+      .nav_inner {
+        .nav_menuLeft, .nav_menuRight {
+          img {
+            width: 120px;
+          }
+        }
+      }
+    }
     .season_flower {
       .season {
         flex-direction: column;
@@ -251,5 +259,15 @@ footer {
 }
 
 @media (max-width: 767px) {
+  .main_inner {
+    .nav_open {
+      .nav_inner {
+        justify-content: center;
 
+        .nav_menuLeft, .nav_menuRight {
+          display: none;
+        }
+      }
+    }
+  }
 }

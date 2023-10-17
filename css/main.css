@@ -107,7 +107,7 @@ header .header_inner {
   height: 56px;
 }
 header .header_inner.open {
-  color: #FFF;
+  color: #FFFFFF;
 }
 header .header_inner h1 {
   width: 120px;
@@ -130,25 +130,26 @@ header .header_inner h1 {
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
-  background: #000 url("../img/icon/open.png") no-repeat center center/38px 38px;
+  background: #000000 url("../img/icon/open.png") no-repeat center center/38px 38px;
   z-index: 10;
 }
 .main_inner .nav_open {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
   transition: 0.3s;
   z-index: -10;
   transition: opacity 1s cubic-bezier(0.2, 0.8, 0.4, 1);
   opacity: 0;
 }
 .main_inner .nav_open.open {
-  background: #000;
-  color: #FFF;
+  background: #000000;
+  color: #FFFFFF;
   z-index: 10;
-  transition: 1s cubic-bezier(0.2, 0.8, 0.4, 1);
+  transition: opacity 1s cubic-bezier(0.2, 0.8, 0.4, 1);
   opacity: 1;
 }
 .main_inner .nav_open .nav_inner {
@@ -157,10 +158,10 @@ header .header_inner h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 55%;
+  width: 60%;
 }
 .main_inner .nav_open .nav_inner .nav_menuLeft img, .main_inner .nav_open .nav_inner .nav_menuRight img {
-  width: 100px;
+  width: 150px;
 }
 .main_inner .nav_open .nav_inner .nav_menu > li {
   margin: 50px 0;
@@ -184,7 +185,7 @@ header .header_inner h1 {
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
-  background: #FFF url("../img/icon/close.png") no-repeat center center/38px 38px;
+  background: #FFFFFF url("../img/icon/close.png") no-repeat center center/38px 38px;
   z-index: 100;
 }
 .main_inner .main_visual {
@@ -245,7 +246,7 @@ header .header_inner h1 {
 footer {
   width: 100%;
   padding: 50px 70px;
-  background: $sub-color;
+  background: $black;
 
   .footer_inner {
     @extend %double;
@@ -260,7 +261,7 @@ footer {
         font-family: 'MYYeongnamnu';
         font-size: 1.8em;
         font-weight: bold;
-        color: $main-color;
+        color: $white;
       }
       p {
         font-size: 0.9em;
@@ -272,14 +273,14 @@ footer {
       justify-content: center;
 
       form {
-        border-bottom: 1px solid $main-color;
+        border-bottom: 1px solid $white;
 
         .footer_emailInput {
           width: 250px;
           padding-bottom: 10px;
           background: transparent;
           outline: none;
-          caret-color: $main-color;
+          caret-color: $white;
 
           &::placeholder {
             color: $gray3;
@@ -287,7 +288,7 @@ footer {
         }
         .footer_btn {
           background: transparent;
-          color: $main-color;
+          color: $white;
           font-size: 1.3em;
         }
       }
@@ -296,6 +297,9 @@ footer {
 }
 */
 @media (max-width: 1023px) {
+  .main_inner .nav_open .nav_inner .nav_menuLeft img, .main_inner .nav_open .nav_inner .nav_menuRight img {
+    width: 120px;
+  }
   .main_inner .season_flower .season {
     flex-direction: column;
   }
@@ -309,6 +313,14 @@ footer {
     width: 100%;
     height: 50%;
     border-radius: 0;
+  }
+}
+@media (max-width: 767px) {
+  .main_inner .nav_open .nav_inner {
+    justify-content: center;
+  }
+  .main_inner .nav_open .nav_inner .nav_menuLeft, .main_inner .nav_open .nav_inner .nav_menuRight {
+    display: none;
   }
 }
 
