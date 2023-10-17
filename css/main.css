@@ -1,10 +1,14 @@
 @font-face {
   font-family: "MYYeongnamnu";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/MYYeongnamnu.woff2") format("woff2");
+  font-family: "MYYeongnamnu";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/MYYeongnamnu.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
+  font-family: "S-CoreDream-3Light";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff") format("woff");
   font-family: "S-CoreDream-3Light";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff") format("woff");
   font-weight: normal;
@@ -83,8 +87,77 @@ button {
 }
 
 .container {
+*, html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "S-CoreDream-3Light";
+}
+
+img {
   width: 100%;
-  min-width: 390px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  min-width: 360px;
   margin: auto;
 }
 
@@ -96,10 +169,6 @@ header {
   margin: auto;
   background: transparent;
   z-index: 11;
-  transition: 0.3s ease-in;
-}
-header.on {
-  background: #FFF;
 }
 header .header_inner {
   font-family: "MYYeongnamnu";
@@ -178,33 +247,26 @@ header .header_inner h1 {
   border-radius: 50%;
   z-index: 11;
 }
-.main_inner .main_visual {
+.main_inner .main_visual img {
   width: 100%;
   height: 100vh;
-  background: url("../img/main/main_5.jpg") fixed center/cover;
+  object-fit: cover;
 }
 .main_inner .season_flower {
   width: 100%;
 }
-.main_inner .season_flower h2 {
-  padding: 30px;
-  font-size: 1.2em;
-  font-weight: 700;
-}
 .main_inner .season_flower div {
   height: 100vh;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-}
-.main_inner .season_flower div img {
-  width: 500px;
 }
 
 /* footer */
 footer {
   width: 100%;
-  padding: 50px;
+  padding: 30px;
   background: #444;
 }
 footer .footer_inner {
@@ -249,5 +311,401 @@ footer .footer_inner .footer_right form .footer_btn {
   color: #fff;
   font-size: 1.3em;
 }
+
+body {
+  font-family: "S-CoreDream-3Light";
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  min-width: 390px;
+  margin: auto;
+  min-width: 360px;
+  margin: auto;
+}
+
+/* header */
+header {
+  position: fixed;
+  top: 0;
+/* header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: auto;
+  background: transparent;
+  z-index: 11;
+  transition: 0.3s ease-in;
+}
+header.on {
+  background: #FFF;
+}
+header .header_inner {
+  font-family: "MYYeongnamnu";
+  height: 56px;
+}
+header .header_inner h1 {
+  width: 120px;
+  text-align: center;
+  margin: auto;
+  line-height: 56px;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+/* main */
+.main_inner {
+  width: 100%;
+}
+.main_inner .nav .nav_btn {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: #000 url("../img/icon/open.png") no-repeat center center/38px 38px;
+  border-radius: 50%;
+  z-index: 10;
+}
+.main_inner .nav_open {
+  display: none;
+  background: white;
+}
+header .header_inner h1 {
+  width: 120px;
+  text-align: center;
+  margin: auto;
+  line-height: 56px;
+  font-size: 2em;
+  font-weight: bold;
+}
+header .nav_contents {
+  position: sticky;
+  top: 56px;
+  left: 0px;
+  width: 100%;
+  min-height: 56px;
+  background: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 50px;
+}
+header .nav_contents .nav_hashtag_subbtn {
+  position: absolute;
+  left: 100px;
+  font-weight: 400;
+}
+@media (max-width: 1240px) {
+  header .nav_contents .nav_hashtag_subbtn {
+    display: none;
+    position: absolute;
+    left: 100px;
+    font-weight: 400;
+  }
+}
+header .nav_contents .nav_hashtag_main .nav_hashtag_wrap {
+  display: flex;
+  column-gap: 30px;
+}
+header .nav_contents .nav_hashtag_main .nav_hashtag_wrap .nav_hashtag .nav_hashtag_namewrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 24px;
+  padding: 10px;
+}
+header .nav_contents .nav_hashtag_main .nav_hashtag_wrap .nav_hashtag .nav_hashtag_namewrap button {
+  background: none;
+  display: block;
+  cursor: pointer;
+  font-weight: 700;
+}
+/* main */
+.main_inner {
+  width: 100%;
+}
+.main_inner .nav .nav_btn {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: #000 url("../img/icon/open.png") no-repeat center center/38px 38px;
+  border-radius: 50%;
+  z-index: 10;
+}
+.main_inner .nav_open {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  color: #fff;
+  z-index: 10;
+}
+.main_inner .nav_open .nav_inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 55%;
+}
+.main_inner .nav_open .nav_inner .nav_menuLeft img, .main_inner .nav_open .nav_inner .nav_menuRight img {
+  width: 100px;
+}
+.main_inner .nav_open .nav_inner .nav_menu > li {
+  margin: 50px 0;
+  text-align: center;
+}
+.main_inner .nav_open .nav_inner .nav_menu > li > a {
+  font-size: 1.1em;
+}
+.main_inner .nav_open .nav_inner .nav_menu > li .nav_subMenu > li {
+  margin: 20px 0 -10px;
+}
+.main_inner .nav_open .nav_inner .nav_menu > li .nav_subMenu > li > a {
+  color: #767676;
+  font-size: 0.9em;
+}
+.main_inner .nav_open .nav_close .nav_closeBtn {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: #fff url("../img/icon/close.png") no-repeat center center/38px 38px;
+  border-radius: 50%;
+  z-index: 11;
+}
+.main_inner .main_visual {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/main/main_5.jpg") fixed center/cover;
+}
+.main_inner .season_flower {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  color: #fff;
+  z-index: 10;
+}
+.main_inner .nav_open .nav_inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 55%;
+}
+.main_inner .nav_open .nav_inner .nav_menuLeft img, .main_inner .nav_open .nav_inner .nav_menuRight img {
+  width: 100px;
+}
+.main_inner .nav_open .nav_inner .nav_menu > li {
+  margin: 50px 0;
+  text-align: center;
+}
+.main_inner .nav_open .nav_inner .nav_menu > li > a {
+  font-size: 1.1em;
+}
+.main_inner .nav_open .nav_inner .nav_menu > li .nav_subMenu > li {
+  margin: 20px 0 -10px;
+}
+.main_inner .nav_open .nav_inner .nav_menu > li .nav_subMenu > li > a {
+  color: #767676;
+  font-size: 0.9em;
+}
+.main_inner .nav_open .nav_close .nav_closeBtn {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: #fff url("../img/icon/close.png") no-repeat center center/38px 38px;
+  border-radius: 50%;
+  z-index: 11;
+}
+
+section.flower_contents {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 100px;
+  padding-top: 112px;
+  margin: auto;
+}
+section.flower_contents .flower_dictionary {
+  max-width: 1714px;
+  width: 100%;
+  margin: 0 auto;
+}
+section.flower_contents .flower_dictionary .flower_dictionary_title {
+  padding: 30px 15px;
+.main_inner .season_flower h2 {
+  padding: 30px;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+.main_inner .season_flower div {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  column-gap: 22px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+section.flower_contents .flower_dictionary .flower_dictionary_title .flower_dictionary_title_1 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: 0.006em;
+}
+section.flower_contents .flower_dictionary .flower_dictionary_title .flower_dictionary_title_description {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+}
+section.flower_contents .flower_dictionary div.flower_dictionary_wrapper {
+  margin: 0px 15px;
+}
+section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0px, 1fr));
+  row-gap: 24px;
+  column-gap: 24px;
+}
+section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item {
+  display: block;
+}
+section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link {
+  display: block;
+}
+section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_imgblock {
+  width: auto;
+}
+section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_imgblock img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_title {
+  padding: 10px 0;
+  display: block;
+}
+section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_title .flower_dictionary_item_title_name font {
+  size: 20px;
+  font-weight: 400;
+  line-height: 18px;
+.main_inner .season_flower div img {
+  width: 500px;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  padding: 50px;
+  width: 100%;
+  padding: 30px;
+  background: #444;
+}
+footer .footer_inner {
+  display: flex;
+  margin-top: 1000px;
+}
+footer .footer_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: center;
+}
+footer .footer_inner .footer_left {
+footer .footer_inner .footer_left {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+footer .footer_inner .footer_left h1 {
+  font-family: "MYYeongnamnu";
+  font-size: 1.8em;
+footer .footer_inner .footer_left h1 {
+  font-family: "MYYeongnamnu";
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #fff;
+  color: #fff;
+}
+footer .footer_inner .footer_left p {
+  font-size: 0.9em;
+  color: #b7b7b7;
+footer .footer_inner .footer_left p {
+  font-size: 0.9em;
+  color: #b7b7b7;
+}
+footer .footer_inner .footer_right {
+  display: flex;
+footer .footer_inner .footer_right {
+  display: flex;
+  justify-content: center;
+}
+footer .footer_inner .footer_right form {
+  border-bottom: 1px solid #fff;
+footer .footer_inner .footer_right form {
+  border-bottom: 1px solid #fff;
+}
+footer .footer_inner .footer_right form .footer_emailInput {
+  width: 250px;
+  padding-bottom: 10px;
+  background: transparent;
+footer .footer_inner .footer_right form .footer_emailInput {
+  width: 250px;
+  padding-bottom: 10px;
+  background: transparent;
+  outline: none;
+  caret-color: white;
+}
+footer .footer_inner .footer_right form .footer_emailInput::placeholder {
+  color: #b7b7b7;
+}
+footer .footer_inner .footer_right form .footer_btn {
+  background: transparent;
+  color: #fff;
+  font-size: 1.3em;
+  caret-color: white;
+}
+footer .footer_inner .footer_right form .footer_emailInput::placeholder {
+  color: #b7b7b7;
+}
+footer .footer_inner .footer_right form .footer_btn {
+  background: transparent;
+  color: #fff;
+  font-size: 1.3em;
+}
+
+/*# sourceMappingURL=main.css.map */
+
 
 /*# sourceMappingURL=main.css.map */
