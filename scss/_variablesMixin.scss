@@ -2,7 +2,9 @@ $main-color: #FFF;
 $sub-color: #000;
 $point-color: #FFF400;
 
-$gray1:#444;
+$gray1: #444;
+$gray2: #767676;
+$gray3: #b7b7b7;
 
 @mixin set-box($width: 100%, $height: 100%, $border-radius: 0) {
   width: $width;
