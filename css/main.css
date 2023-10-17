@@ -1,4 +1,4 @@
-footer .footer_inner, .main_inner .season_flower .season, .main_inner .nav_open .nav_inner {
+.main_inner .nav_open .nav_inner {
   display: flex;
   justify-content: space-between;
 }
@@ -83,6 +83,10 @@ button {
   cursor: pointer;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .container {
   width: 100%;
   min-width: 390px;
@@ -97,11 +101,13 @@ header {
   margin: auto;
   background: transparent;
   z-index: 11;
-  transition: 0.3s ease-in;
 }
 header .header_inner {
   font-family: "MYYeongnamnu";
   height: 56px;
+}
+header .header_inner.open {
+  color: #FFF;
 }
 header .header_inner h1 {
   width: 120px;
@@ -128,15 +134,22 @@ header .header_inner h1 {
   z-index: 10;
 }
 .main_inner .nav_open {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: 0.3s;
+  z-index: -10;
+  transition: opacity 1s cubic-bezier(0.2, 0.8, 0.4, 1);
+  opacity: 0;
+}
+.main_inner .nav_open.open {
   background: #000;
   color: #FFF;
   z-index: 10;
+  transition: 1s cubic-bezier(0.2, 0.8, 0.4, 1);
+  opacity: 1;
 }
 .main_inner .nav_open .nav_inner {
   align-items: center;
@@ -176,92 +189,127 @@ header .header_inner h1 {
 }
 .main_inner .main_visual {
   width: 100%;
-  height: 100vh;
+  height: 98vh;
   border-radius: 0;
   background: url("../img/main/main_5.jpg") fixed center/cover;
 }
 .main_inner .season_flower {
   width: 100%;
-  padding: 50px 70px;
+  background: url("../img/main/main_5.jpg") fixed center/cover;
 }
 .main_inner .season_flower .season {
-  align-items: center;
-  height: 200px;
+  display: flex;
+  height: 614px;
+  padding: 0 20px;
 }
 .main_inner .season_flower .season .season_img {
   width: 50%;
-}
-.main_inner .season_flower .season .season_img img {
-  width: 100%;
   height: 100%;
-  object-fit: cover;
+  border-radius: 0;
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px 0 0 0;
 }
-.main_inner .season_flower .season .season_color1 {
+.main_inner .season_flower .season .season_img.season_img1 {
+  background-image: url("../img/season/spring_lilac.jpg");
+}
+.main_inner .season_flower .season .season_img.season_img2 {
+  background-image: url("../img/season/summer_sunflower.jpg");
+}
+.main_inner .season_flower .season .season_img.season_img3 {
+  background-image: url("../img/season/fall_cosmos.jpg");
+}
+.main_inner .season_flower .season .season_img.season_img4 {
+  background-image: url("../img/season/winnter_dendrobium.jpg");
+}
+.main_inner .season_flower .season .season_color {
   width: 50%;
   height: 100%;
-  background: #EBADCD;
+  border-radius: 0;
+  border-radius: 0 8px 0 0;
 }
-.main_inner .season_flower .season .season_color2 {
-  width: 50%;
-  height: 100%;
+.main_inner .season_flower .season .season_color.season_color1 {
+  background: #E6A9C9;
+}
+.main_inner .season_flower .season .season_color.season_color2 {
   background: #F1D152;
 }
-.main_inner .season_flower .season .season_color3 {
-  width: 50%;
-  height: 100%;
+.main_inner .season_flower .season .season_color.season_color3 {
   background: #8D9D66;
 }
-.main_inner .season_flower .season .season_color4 {
-  width: 50%;
-  height: 100%;
+.main_inner .season_flower .season .season_color.season_color4 {
   background: #ACC3E4;
 }
 
-/* footer */
+/* footer 
 footer {
   width: 100%;
   padding: 50px 70px;
-  background: #000;
+  background: $sub-color;
+
+  .footer_inner {
+    @extend %double;
+    align-items: center;
+
+    .footer_left {
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+
+      h1 {
+        font-family: 'MYYeongnamnu';
+        font-size: 1.8em;
+        font-weight: bold;
+        color: $main-color;
+      }
+      p {
+        font-size: 0.9em;
+        color: $gray3;
+      }
+    }
+    .footer_right {
+      display: flex;
+      justify-content: center;
+
+      form {
+        border-bottom: 1px solid $main-color;
+
+        .footer_emailInput {
+          width: 250px;
+          padding-bottom: 10px;
+          background: transparent;
+          outline: none;
+          caret-color: $main-color;
+
+          &::placeholder {
+            color: $gray3;
+          }
+        }
+        .footer_btn {
+          background: transparent;
+          color: $main-color;
+          font-size: 1.3em;
+        }
+      }
+    }
+  }
 }
-footer .footer_inner {
-  align-items: center;
-}
-footer .footer_inner .footer_left {
-  display: flex;
-  flex-direction: column;
-  row-gap: 15px;
-}
-footer .footer_inner .footer_left h1 {
-  font-family: "MYYeongnamnu";
-  font-size: 1.8em;
-  font-weight: bold;
-  color: #FFF;
-}
-footer .footer_inner .footer_left p {
-  font-size: 0.9em;
-  color: #b7b7b7;
-}
-footer .footer_inner .footer_right {
-  display: flex;
-  justify-content: center;
-}
-footer .footer_inner .footer_right form {
-  border-bottom: 1px solid #FFF;
-}
-footer .footer_inner .footer_right form .footer_emailInput {
-  width: 250px;
-  padding-bottom: 10px;
-  background: transparent;
-  outline: none;
-  caret-color: #FFF;
-}
-footer .footer_inner .footer_right form .footer_emailInput::placeholder {
-  color: #b7b7b7;
-}
-footer .footer_inner .footer_right form .footer_btn {
-  background: transparent;
-  color: #FFF;
-  font-size: 1.3em;
+*/
+@media (max-width: 1023px) {
+  .main_inner .season_flower .season {
+    flex-direction: column;
+  }
+  .main_inner .season_flower .season .season_img {
+    width: 100%;
+    height: 50%;
+    border-radius: 0;
+    border-radius: 8px 8px 0 0;
+  }
+  .main_inner .season_flower .season .season_color {
+    width: 100%;
+    height: 50%;
+    border-radius: 0;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

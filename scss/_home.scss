@@ -8,7 +8,7 @@ button {
   cursor: pointer;
 }
 ::-webkit-scrollbar {
-  // display: none;
+  display: none;
 }
 
 .container {
@@ -25,12 +25,14 @@ header {
   margin: auto;
   background: transparent;
   z-index: 11;
-  transition: 0.3s ease-in;
 
   .header_inner {
     font-family: 'MYYeongnamnu';
     height: 56px;
 
+    &.open {
+      color: $main-color;
+    }
     h1 {
       width: 120px;
       text-align: center;
@@ -40,14 +42,6 @@ header {
       font-weight: bold;
     }
   }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  
-}
-
-@media (max-width: 767px) {
-
 }
 
 /* main */
@@ -65,17 +59,24 @@ header {
       z-index: 10;
     }
   }
-  .nav_open {
-    display: none;
+  .nav_open{
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: $sub-color;
-    color: $main-color;
-    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    transition: 0.3s;
+    z-index: -10;
+    transition: opacity 1s cubic-bezier(0.2, 0.8, 0.4, 1);
+    opacity: 0;
 
+    &.open {
+      background: $sub-color;
+      color: $main-color;
+      z-index: 10;
+      transition: 1s cubic-bezier(0.2, 0.8, 0.4, 1);
+      opacity: 1;
+    }
     .nav_inner {
       @extend %double;
       align-items: center;
@@ -122,52 +123,61 @@ header {
     }
   }
   .main_visual {
-    @include set-box(100%, 100vh);
+    @include set-box(100%, 98vh);
     background: url('../img/main/main_5.jpg') fixed center / cover;
   }
   .season_flower {
     width: 100%;
-    padding: 50px 70px;
+    background: url('../img/main/main_5.jpg') fixed center / cover;
 
-      .season {
-        @extend %double;
-        align-items: center;
-        height: 200px;
-        
-        .season_img {
-          width: 50%;
-          
-          img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
+    .season {
+      display: flex;
+      height: 614px;
+      padding: 0 20px;
+      
+      .season_img {
+        @include set-box(50%);
+        background: {
+          position: center;
+          size: cover;
         }
-        .season_color1 {
-          width: 50%;
-          height: 100%;
-          background: #EBADCD;
+        border-radius: 8px 0 0 0;
+
+        &.season_img1 {
+          background-image: url('../img/season/spring_lilac.jpg');
         }
-        .season_color2 {
-          width: 50%;
-          height: 100%;
+        &.season_img2 {
+          background-image: url('../img/season/summer_sunflower.jpg');
+        }
+        &.season_img3 {
+          background-image: url('../img/season/fall_cosmos.jpg');
+        }
+        &.season_img4 {
+          background-image: url('../img/season/winnter_dendrobium.jpg');
+        }
+      }
+      .season_color {
+        @include set-box(50%);
+        border-radius: 0 8px 0 0;
+
+        &.season_color1 {
+          background: #E6A9C9;
+        }
+        &.season_color2 {
           background: #F1D152;
         }
-        .season_color3 {
-          width: 50%;
-          height: 100%;
-          background: #8D9D66 ;
+        &.season_color3 {
+          background: #8D9D66;
         }
-        .season_color4 {
-          width: 50%;
-          height: 100%;
-          background: #ACC3E4 ;
+        &.season_color4 {
+          background: #ACC3E4;
         }
       }
     }
   }
+}
 
-/* footer */
+/* footer 
 footer {
   width: 100%;
   padding: 50px 70px;
@@ -219,4 +229,27 @@ footer {
       }
     }
   }
+}
+*/
+
+@media (max-width: 1023px) {
+  .main_inner {
+    .season_flower {
+      .season {
+        flex-direction: column;
+        
+        .season_img {
+          @include set-box(100%, 50%);
+          border-radius: 8px 8px 0 0;
+        }
+        .season_color {
+          @include set-box(100%, 50%);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+
 }
