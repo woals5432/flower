@@ -253,46 +253,50 @@ button {
   margin: auto;
 }
 
-/* header */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  margin: auto;
-  background: transparent;
-  z-index: 11;
+@media all and (min-width: 1024px) {
+  /* header */
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin: auto;
+    background: transparent;
+    z-index: 11;
+  }
+  header .header_inner {
+    font-family: "MYYeongnamnu";
+    height: 56px;
+    background: white;
+  }
+  header .header_inner h1 {
+    width: 120px;
+    text-align: center;
+    margin: auto;
+    line-height: 56px;
+    font-size: 2em;
+    font-weight: bold;
+  }
+  header .nav_contents {
+    position: sticky;
+    top: 56px;
+    left: 0px;
+    width: 100%;
+    min-height: 56px;
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+  }
+  header .nav_contents .nav_hashtag_subbtn {
+    position: absolute;
+    left: 100px;
+    font-weight: 400;
+  }
+  /* main */
+  /* footer */
 }
-header .header_inner {
-  font-family: "MYYeongnamnu";
-  height: 56px;
-  background: white;
-}
-header .header_inner h1 {
-  width: 120px;
-  text-align: center;
-  margin: auto;
-  line-height: 56px;
-  font-size: 2em;
-  font-weight: bold;
-}
-header .nav_contents {
-  position: sticky;
-  top: 56px;
-  left: 0px;
-  width: 100%;
-  min-height: 56px;
-  background: #eee;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 50px;
-}
-header .nav_contents .nav_hashtag_subbtn {
-  position: absolute;
-  left: 100px;
-  font-weight: 400;
-}
-@media (max-width: 1240px) {
+@media (min-width: 1024px) and (max-width: 1240px) {
   header .nav_contents .nav_hashtag_subbtn {
     display: none;
     position: absolute;
@@ -300,202 +304,464 @@ header .nav_contents .nav_hashtag_subbtn {
     font-weight: 400;
   }
 }
-header .nav_contents .nav_hashtag_main .nav_hashtag_wrap {
-  display: flex;
-  column-gap: 30px;
+@media all and (min-width: 1024px) {
+  header .nav_contents .nav_hashtag_main .nav_hashtag_wrap {
+    display: flex;
+    column-gap: 30px;
+  }
+  header .nav_contents .nav_hashtag_main .nav_hashtag_wrap .nav_hashtag .nav_hashtag_namewrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 24px;
+    padding: 10px;
+  }
+  header .nav_contents .nav_hashtag_main .nav_hashtag_wrap .nav_hashtag .nav_hashtag_namewrap button {
+    background: none;
+    display: block;
+    cursor: pointer;
+    font-weight: 700;
+  }
+  .main_inner {
+    width: 100%;
+  }
+  .main_inner .nav .nav_btn {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    background: #000 url("../img/icon/open.png") no-repeat center center/38px 38px;
+    border-radius: 50%;
+    z-index: 10;
+  }
+  .main_inner .nav_open {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    color: #fff;
+    z-index: 10;
+  }
+  .main_inner .nav_open .nav_inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 55%;
+  }
+  .main_inner .nav_open .nav_inner .nav_menuLeft img, .main_inner .nav_open .nav_inner .nav_menuRight img {
+    width: 100px;
+  }
+  .main_inner .nav_open .nav_inner .nav_menu > li {
+    margin: 50px 0;
+    text-align: center;
+  }
+  .main_inner .nav_open .nav_inner .nav_menu > li > a {
+    font-size: 1.1em;
+  }
+  .main_inner .nav_open .nav_inner .nav_menu > li .nav_subMenu > li {
+    margin: 20px 0 -10px;
+  }
+  .main_inner .nav_open .nav_inner .nav_menu > li .nav_subMenu > li > a {
+    color: #767676;
+    font-size: 0.9em;
+  }
+  .main_inner .nav_open .nav_close .nav_closeBtn {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    background: #fff url("../img/icon/close.png") no-repeat center center/38px 38px;
+    border-radius: 50%;
+    z-index: 11;
+  }
+  section.flower_contents {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100px;
+    padding-top: 112px;
+    margin: auto;
+  }
+  section.flower_contents .flower_dictionary {
+    max-width: 1714px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  section.flower_contents .flower_dictionary .flower_dictionary_title {
+    padding: 30px 15px;
+    display: flex;
+    align-items: center;
+    column-gap: 22px;
+  }
+  section.flower_contents .flower_dictionary .flower_dictionary_title .flower_dictionary_title_1 {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: 0.006em;
+  }
+  section.flower_contents .flower_dictionary .flower_dictionary_title .flower_dictionary_title_description {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper {
+    margin: 0px 15px;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0px, 1fr));
+    row-gap: 24px;
+    column-gap: 24px;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item {
+    display: block;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link {
+    display: block;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_imgblock {
+    width: auto;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_imgblock img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_title {
+    padding: 10px 0;
+    display: block;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_title .flower_dictionary_item_title_name font {
+    size: 20px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  footer {
+    width: 100%;
+    padding: 30px;
+    background: #444;
+    margin-top: 1000px;
+  }
+  footer .footer_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer .footer_inner .footer_left {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  footer .footer_inner .footer_left h1 {
+    font-family: "MYYeongnamnu";
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #fff;
+  }
+  footer .footer_inner .footer_left p {
+    font-size: 0.9em;
+    color: #b7b7b7;
+  }
+  footer .footer_inner .footer_right {
+    display: flex;
+    justify-content: center;
+  }
+  footer .footer_inner .footer_right form {
+    border-bottom: 1px solid #fff;
+  }
+  footer .footer_inner .footer_right form .footer_emailInput {
+    width: 250px;
+    padding-bottom: 10px;
+    background: transparent;
+    outline: none;
+    caret-color: white;
+  }
+  footer .footer_inner .footer_right form .footer_emailInput::placeholder {
+    color: #b7b7b7;
+  }
+  footer .footer_inner .footer_right form .footer_btn {
+    background: transparent;
+    color: #fff;
+    font-size: 1.3em;
+  }
 }
-header .nav_contents .nav_hashtag_main .nav_hashtag_wrap .nav_hashtag .nav_hashtag_namewrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  border: 2px solid black;
-  background-color: white;
-  border-radius: 24px;
-  padding: 10px;
+@media (min-width: 768px) and (max-width: 1024px) {
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin: auto;
+    background: transparent;
+    z-index: 11;
+  }
+  header .header_inner {
+    font-family: "MYYeongnamnu";
+    height: 56px;
+    background: white;
+  }
+  header .header_inner h1 {
+    width: 120px;
+    text-align: center;
+    margin: auto;
+    line-height: 56px;
+    font-size: 2em;
+    font-weight: bold;
+  }
+  header .nav_contents {
+    position: sticky;
+    top: 56px;
+    left: 0px;
+    width: 100%;
+    min-height: 56px;
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+  }
+  header .nav_contents .nav_hashtag_subbtn {
+    position: absolute;
+    left: 100px;
+    font-weight: 400;
+  }
 }
-header .nav_contents .nav_hashtag_main .nav_hashtag_wrap .nav_hashtag .nav_hashtag_namewrap button {
-  background: none;
-  display: block;
-  cursor: pointer;
-  font-weight: 700;
+@media (min-width: 768px) and (max-width: 1024px) and (max-width: 1240px) {
+  header .nav_contents .nav_hashtag_subbtn {
+    display: none;
+    position: absolute;
+    left: 100px;
+    font-weight: 400;
+  }
 }
-/* main */
-.main_inner {
-  width: 100%;
+@media (min-width: 768px) and (max-width: 1024px) {
+  header .nav_contents .nav_hashtag_main .nav_hashtag_wrap {
+    display: flex;
+    column-gap: 30px;
+  }
+  header .nav_contents .nav_hashtag_main .nav_hashtag_wrap .nav_hashtag .nav_hashtag_namewrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 24px;
+    padding: 10px;
+  }
+  header .nav_contents .nav_hashtag_main .nav_hashtag_wrap .nav_hashtag .nav_hashtag_namewrap button {
+    background: none;
+    display: block;
+    cursor: pointer;
+    font-weight: 700;
+  }
+  section.flower_contents {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100px;
+    padding-top: 112px;
+    margin: auto;
+  }
+  section.flower_contents .flower_dictionary {
+    width: 100%;
+    margin: 0 auto;
+  }
+  section.flower_contents .flower_dictionary .flower_dictionary_title {
+    padding: 20px 5px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+  section.flower_contents .flower_dictionary .flower_dictionary_title .flower_dictionary_title_1 {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: 0.006em;
+    text-indent: -9999px;
+  }
+  section.flower_contents .flower_dictionary .flower_dictionary_title .flower_dictionary_title_description {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper {
+    margin: 0px 15px;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+    row-gap: 12px;
+    column-gap: 3px;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item {
+    display: block;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link {
+    display: block;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_imgblock {
+    width: auto;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_imgblock img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_title {
+    padding: 10px 0;
+    display: block;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_title .flower_dictionary_item_title_name font {
+    size: 20px;
+    font-weight: 400;
+    line-height: 18px;
+  }
 }
-.main_inner .nav .nav_btn {
-  position: fixed;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  width: 48px;
-  height: 48px;
-  background: #000 url("../img/icon/open.png") no-repeat center center/38px 38px;
-  border-radius: 50%;
-  z-index: 10;
+@media (max-width: 768px) {
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin: auto;
+    background: transparent;
+    z-index: 11;
+  }
+  header .header_inner {
+    font-family: "MYYeongnamnu";
+    height: 56px;
+    background: white;
+  }
+  header .header_inner h1 {
+    width: 120px;
+    text-align: center;
+    margin: auto;
+    line-height: 56px;
+    font-size: 2em;
+    font-weight: bold;
+  }
+  header .nav_contents {
+    position: sticky;
+    top: 56px;
+    left: 0px;
+    width: 100%;
+    min-height: 56px;
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+  }
+  header .nav_contents .nav_hashtag_subbtn {
+    position: absolute;
+    left: 100px;
+    font-weight: 400;
+  }
 }
-.main_inner .nav_open {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #000;
-  color: #fff;
-  z-index: 10;
+@media (max-width: 768px) and (max-width: 1240px) {
+  header .nav_contents .nav_hashtag_subbtn {
+    display: none;
+    position: absolute;
+    left: 100px;
+    font-weight: 400;
+  }
 }
-.main_inner .nav_open .nav_inner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 55%;
-}
-.main_inner .nav_open .nav_inner .nav_menuLeft img, .main_inner .nav_open .nav_inner .nav_menuRight img {
-  width: 100px;
-}
-.main_inner .nav_open .nav_inner .nav_menu > li {
-  margin: 50px 0;
-  text-align: center;
-}
-.main_inner .nav_open .nav_inner .nav_menu > li > a {
-  font-size: 1.1em;
-}
-.main_inner .nav_open .nav_inner .nav_menu > li .nav_subMenu > li {
-  margin: 20px 0 -10px;
-}
-.main_inner .nav_open .nav_inner .nav_menu > li .nav_subMenu > li > a {
-  color: #767676;
-  font-size: 0.9em;
-}
-.main_inner .nav_open .nav_close .nav_closeBtn {
-  position: fixed;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  width: 48px;
-  height: 48px;
-  background: #fff url("../img/icon/close.png") no-repeat center center/38px 38px;
-  border-radius: 50%;
-  z-index: 11;
-}
-
-section.flower_contents {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding-bottom: 100px;
-  padding-top: 112px;
-  margin: auto;
-}
-section.flower_contents .flower_dictionary {
-  max-width: 1714px;
-  width: 100%;
-  margin: 0 auto;
-}
-section.flower_contents .flower_dictionary .flower_dictionary_title {
-  padding: 30px 15px;
-  display: flex;
-  align-items: center;
-  column-gap: 22px;
-}
-section.flower_contents .flower_dictionary .flower_dictionary_title .flower_dictionary_title_1 {
-  font-size: 30px;
-  font-weight: 600;
-  line-height: 40px;
-  letter-spacing: 0.006em;
-}
-section.flower_contents .flower_dictionary .flower_dictionary_title .flower_dictionary_title_description {
-  display: block;
-  font-size: 14px;
-  font-weight: 500;
-}
-section.flower_contents .flower_dictionary div.flower_dictionary_wrapper {
-  margin: 0px 15px;
-}
-section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0px, 1fr));
-  row-gap: 24px;
-  column-gap: 24px;
-}
-section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item {
-  display: block;
-}
-section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link {
-  display: block;
-}
-section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_imgblock {
-  width: auto;
-}
-section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_imgblock img {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_title {
-  padding: 10px 0;
-  display: block;
-}
-section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_title .flower_dictionary_item_title_name font {
-  size: 20px;
-  font-weight: 400;
-  line-height: 18px;
-}
-
-/* footer */
-footer {
-  width: 100%;
-  padding: 30px;
-  background: #444;
-  margin-top: 1000px;
-}
-footer .footer_inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-footer .footer_inner .footer_left {
-  display: flex;
-  flex-direction: column;
-  row-gap: 15px;
-}
-footer .footer_inner .footer_left h1 {
-  font-family: "MYYeongnamnu";
-  font-size: 1.8em;
-  font-weight: bold;
-  color: #fff;
-}
-footer .footer_inner .footer_left p {
-  font-size: 0.9em;
-  color: #b7b7b7;
-}
-footer .footer_inner .footer_right {
-  display: flex;
-  justify-content: center;
-}
-footer .footer_inner .footer_right form {
-  border-bottom: 1px solid #fff;
-}
-footer .footer_inner .footer_right form .footer_emailInput {
-  width: 250px;
-  padding-bottom: 10px;
-  background: transparent;
-  outline: none;
-  caret-color: white;
-}
-footer .footer_inner .footer_right form .footer_emailInput::placeholder {
-  color: #b7b7b7;
-}
-footer .footer_inner .footer_right form .footer_btn {
-  background: transparent;
-  color: #fff;
-  font-size: 1.3em;
+@media (max-width: 768px) {
+  header .nav_contents .nav_hashtag_main .nav_hashtag_wrap {
+    display: flex;
+    column-gap: 30px;
+  }
+  header .nav_contents .nav_hashtag_main .nav_hashtag_wrap .nav_hashtag .nav_hashtag_namewrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 24px;
+    padding: 10px;
+  }
+  header .nav_contents .nav_hashtag_main .nav_hashtag_wrap .nav_hashtag .nav_hashtag_namewrap button {
+    background: none;
+    display: block;
+    cursor: pointer;
+    font-weight: 700;
+  }
+  section.flower_contents {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100px;
+    padding-top: 112px;
+    margin: auto;
+  }
+  section.flower_contents .flower_dictionary {
+    width: 100%;
+    margin: 0 auto;
+  }
+  section.flower_contents .flower_dictionary .flower_dictionary_title {
+    padding: 20px 5px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+  section.flower_contents .flower_dictionary .flower_dictionary_title .flower_dictionary_title_1 {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: 0.006em;
+    text-indent: -9999px;
+  }
+  section.flower_contents .flower_dictionary .flower_dictionary_title .flower_dictionary_title_description {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper {
+    margin: 0px 15px;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+    row-gap: 12px;
+    column-gap: 3px;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item {
+    display: block;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link {
+    display: block;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_imgblock {
+    width: auto;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_imgblock img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_title {
+    padding: 10px 0;
+    display: block;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_title .flower_dictionary_item_title_name font {
+    size: 20px;
+    font-weight: 400;
+    line-height: 18px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
