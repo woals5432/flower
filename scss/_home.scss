@@ -1,4 +1,7 @@
-body{
+html, body{
+  position: relative;
+  height: 100%;
+  margin: 0;
   font-family: 'S-CoreDream-3Light';
 }
 img {
@@ -25,7 +28,11 @@ header {
   margin: auto;
   background: transparent;
   z-index: 11;
+  transition: 0.3s ease-in;
 
+  &.down {
+    background: $white;
+  }
   .header_inner {
     font-family: 'MYYeongnamnu';
     height: 56px;
@@ -55,7 +62,7 @@ header {
       top: 50%;
       right: 20px;
       transform: translateY(-50%);
-      background: $black url('../img/icon/open.png') no-repeat center center / 38px 38px;
+      background: $white url('../img/icon/noun-nature-6193660.svg') no-repeat center center / 48px 48px;
       z-index: 10;
     }
   }
@@ -66,7 +73,6 @@ header {
     left: 0;
     transition: 0.3s;
     z-index: -10;
-    transition: opacity 1s cubic-bezier(0.2, 0.8, 0.4, 1);
     opacity: 0;
 
     &.open {
@@ -116,60 +122,118 @@ header {
         top: 50%;
         right: 20px;
         transform: translateY(-50%);
-        background: $white url('../img/icon/close.png') no-repeat center center / 38px 38px;
+        background: $white url('../img/icon/noun-ornament-707222.svg') no-repeat center center / 48px 48px;
         z-index: 100;
       }
     }
   }
   .main_visual {
-    @include set-box(100%, 98vh);
-    background: url('../img/main/main_5.jpg') fixed center / cover;
+    @include set-box(100%, 100vh);
+    background: url(../img/main/main_5.jpg) fixed center / cover;
   }
-  .season_flower {
+  .main_content {
     width: 100%;
-    background: url('../img/main/main_5.jpg') fixed center / cover;
 
-    .season {
-      display: flex;
-      height: 614px;
-      padding: 0 20px;
-      
-      .season_img {
-        @include set-box(50%);
-        background: {
-          position: center;
-          size: cover;
-        }
-        border-radius: 8px 0 0 0;
+    & > div {
+      width: 100%;
 
-        &.season_img1 {
-          background-image: url('../img/season/spring_lilac.jpg');
-        }
-        &.season_img2 {
-          background-image: url('../img/season/summer_sunflower.jpg');
-        }
-        &.season_img3 {
-          background-image: url('../img/season/fall_cosmos.jpg');
-        }
-        &.season_img4 {
-          background-image: url('../img/season/winnter_dendrobium.jpg');
+      h2 {
+        padding: 70px 70px 20px;
+        font: {
+          size: 1.8em;
+          weight: 700;
         }
       }
-      .season_color {
-        @include set-box(50%);
-        border-radius: 0 8px 0 0;
+      h3 {
+        padding: 0 70px 40px;
+        font: {
+          size: 1.2em;
+          weight: 500;
+        }
+        color: $gray2;
+      }
+      .main_contentDictionary {
+        .month_flower {
+          .swiper-slide {
+            img {
+              border-radius: 8px;
+            } 
+          }
+        }
+      }
+      .main_contentExhibit {
+        @extend %double;
+        column-gap: 30px;
+        padding: 0 70px;
+        
+        .flower_exhibition, .flower_exposition {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          row-gap: 20px;
 
-        &.season_color1 {
-          background: $main-color1;
+          span {
+            font-size: 1.1em;
+          }
         }
-        &.season_color2 {
-          background: $main-color2;
+      }
+      .main_contentFlowerClass {
+        .flower_class {
+          position: relative;
+          width: 100%;
+          line-height: 200px;
+          background: linear-gradient(rgba(255, 255, 255, 0) 10%, rgb(255, 255, 255)), url('../img/main/class_pc.png') center center / cover no-repeat;
+
+          &::before {
+            @include set-box(100%);
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.7);
+          }
+
+          span {
+            color: $white;
+            font-size: 2em;
+          }
         }
-        &.season_color3 {
-          background: $main-color3;
+        .flower_diyclass {
+          display: flex;
+          column-gap: 30px;
+          padding: 0 90px;
+          background: rgba(0, 0, 0, 0.7);
+
+          & > div {
+            width: 25%;
+
+            img {
+
+            }
+          }
         }
-        &.season_color4 {
-          background: $main-color4;
+      }
+      .main_contentBrand {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        column-gap: 20px;
+        padding: 50px 120px;
+
+        & > p {
+          font: {
+            family: 'MYYeongnamnu';
+            size: 3em;
+            weight: 700;
+          }
+        }
+        span {
+          line-height: 30px;
+          font: {
+            size: 0.9em;
+            weight: 600;
+          }
         }
       }
     }
@@ -237,21 +301,50 @@ footer {
       .nav_inner {
         .nav_menuLeft, .nav_menuRight {
           img {
-            width: 120px;
+
           }
         }
       }
     }
-    .season_flower {
-      .season {
-        flex-direction: column;
-        
-        .season_img {
-          @include set-box(100%, 50%);
-          border-radius: 8px 8px 0 0;
+    .main_content {
+      width: 100%;
+  
+      & > div {
+        h2 {
+          font: {
+            size: 1.5em;
+          }
         }
-        .season_color {
-          @include set-box(100%, 50%);
+        h3 {
+          font: {
+            size: 1.1em;
+          }
+        }
+        .main_contentDictionary {
+          .month_flower {
+            .swiper-slide {
+              img {
+                // @include set-box(100%, 20vh, 8px);
+                // object-fit: cover;
+              } 
+            }
+          }
+        }
+        .main_contentExhibit {
+          .flower_exhibition, .flower_exposition {
+            span {
+              font-size: 0.9em;
+            }
+          }
+        }
+        .main_contentFlowerClass {
+          .flower_class {
+            line-height: 150px;
+            background: linear-gradient(rgba(255, 255, 255, 0) 10%, rgb(255, 255, 255)), url('../img/main/class_mo.png') center center / cover no-repeat;
+          }
+        }
+        .main_contentBrand {
+
         }
       }
     }
@@ -266,6 +359,51 @@ footer {
 
         .nav_menuLeft, .nav_menuRight {
           display: none;
+        }
+      }
+    }
+    .main_content {  
+      & > div {
+        h2 {
+          padding: 50px 40px 20px;
+          font: {
+            size: 1.4em;
+          }
+        }
+        h3 {
+          padding: 0 40px 30px;
+          font: {
+            size: 0.9em;
+          }
+        }
+        .main_contentDictionary {
+          .month_flower {
+            .swiper-slide {
+              img {
+
+              } 
+            }
+          }
+        }
+        .main_contentExhibit {
+          column-gap: 20px;
+          padding: 0 40px;
+          
+        }
+        .main_contentFlowerClass {
+          .flower_class {
+            height: 100px;
+            span {
+              font-size: 1em;
+            }
+          }
+          .flower_diyclass {
+            column-gap: 10px;
+            padding: 0 50px;
+          }
+        }
+        .main_contentBrand {
+
         }
       }
     }

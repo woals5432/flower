@@ -1,15 +1,26 @@
+// 헤더
+const header = document.querySelector('header');
+window.addEventListener('scroll', () => {
+  if(window.scrollY > 300) {
+    header.classList.add('down');
+  };
+  if(window.scrollY <= 300) {
+    header.classList.remove('down');
+  };
+});
+
 // 메뉴 버튼
-const header = document.querySelector('.header_inner');
+const headerInner = document.querySelector('.header_inner');
 const nav = document.querySelector('.nav_open');
 const navBtn = document.querySelector('.nav_btn');
 const navClose = document.querySelector('.nav_closeBtn');
 navBtn.addEventListener('click', () => {
   nav.classList.add('open');
-  header.classList.add('open');
+  headerInner.classList.add('open');
 });
 navClose.addEventListener('click', () => {
   nav.classList.remove('open');
-  header.classList.remove('open');
+  headerInner.classList.remove('open');
 })
 
 // const menuBtn = document.querySelector('.menuBtn');
@@ -38,3 +49,14 @@ navClose.addEventListener('click', () => {
 //     menu.style.visibility = "hidden";
 //   }
 // })
+
+// 꽃사전 슬라이더
+var swiper = new Swiper(".month_flower", {
+  slidesPerView: 5,
+  spaceBetween: 20,
+  loop: true,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+});
