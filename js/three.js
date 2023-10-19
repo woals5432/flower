@@ -17,7 +17,7 @@ function one() {
   scene.add(light);
 
   let loader = new GLTFLoader();
-  loader.load('scene.gltf', function (gltf) {
+  loader.load('./flower/scene.gltf', function (gltf) {
     scene.add(gltf.scene);
 
     function animate() {
@@ -47,7 +47,7 @@ let light = new THREE.DirectionalLight(0xffffff, 10);
 scene.add(light);
 
 let loader = new GLTFLoader();
-loader.load('./flower/scene.gltf', function (gltf) {
+loader.load('bird/scene.gltf', function (gltf) {
   scene.add(gltf.scene);
 
   function animate() {

@@ -1,11 +1,11 @@
 Model Information:
-* title:	Bird Orange
-* source:	https://sketchfab.com/3d-models/bird-orange-0d31748606c2499fb652c0c1052b7cfa
-* author:	Wen Yeh (https://sketchfab.com/wenyeh1110)
+* title:	Flower
+* source:	https://sketchfab.com/3d-models/flower-a2eea4c5ba844243ad9484c5b5d2158e
+* author:	olilar (https://sketchfab.com/olilar)
 
 Model License:
-* license type:	CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
-* requirements:	Author must be credited. No commercial use. Modified versions must have the same license.
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "Bird Orange" (https://sketchfab.com/3d-models/bird-orange-0d31748606c2499fb652c0c1052b7cfa) by Wen Yeh (https://sketchfab.com/wenyeh1110) licensed under CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+This work is based on "Flower" (https://sketchfab.com/3d-models/flower-a2eea4c5ba844243ad9484c5b5d2158e) by olilar (https://sketchfab.com/olilar) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

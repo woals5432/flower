@@ -1,0 +1,30 @@
+main {
+  background: white;
+  height: 6000px;
+  font-family: 'MYYeongnamnu';
+  //font-family: 'S-CoreDream-3Light';
+
+  section {    
+    color: black;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    width:30%;
+    margin:auto;
+    margin-top: 1000px;
+    white-space: pre-line;
+    h1 {
+      font: {
+        weight:bold;
+        size:70px;
+      }
+    }
+    p {
+      font: {
+        weight:400;
+        size:40px;
+        family: 'S-CoreDream-3Light'
+      }
+    }
+  }
+}
