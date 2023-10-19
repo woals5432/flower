@@ -24,6 +24,11 @@
       </div>
     </header>
     <main>
+
+      
+
+
+
       <div class="main_inner">
         <div class="nav">
           <button class="nav_btn"></button>
@@ -61,43 +66,82 @@
           </div>
         </div>
         <div class="brand">
-
+          
           <section>
+            <canvas id="canvas" width="300" height="300" style="margin:auto">
+            </canvas>
             <img src="img/RAUM.png" alt="">
             <p>라움은 우리나라의 순우리말로 ‘아름다움’을 의미하며,<br>아름답다의 어원은 알음, 아는 것입니다.<br>
               서로를 알아가고 마음을 전하며 함께함을 배우자는 브랜드철학을 담고 있습니다</p>
           </section>
           <section>
-            <h1>[타겟]</h1>
-            <p>
-              꽃에 관심있는 사람
-              1 needs
-              -꽃이 언제피는 지
-              -꽃이 어떻게 생겼는 지
-              -꽃의 용도는 어떻게 되는지
-              -꽃의 의미(꽃말)는 무엇인지
-              2가치관
-              -꽃의 아름다움을 보며 힐링하는 사람
-              -꽃을 자식 처럼 생각하며 키우며 뿌듯해하는 사람</p>
+            
+            <div class="content">
+              <div class="contentText">
+                <h1>꽃을 선물 하는 사람</h1>
+                <p>1 needs
+                  꽃의 말(의미)는 무엇일까
+                  꽃이 어떻게 생겼나
+                  꽃을 주면 좋아할까
+                  무슨 꽃이 인기가 많나
+                  2 가치관
+                  -좋은 마음을 전해주고 싶은 사람
+                  -기념일을 축하하고 싶은 사람</p>
+              </div>
+              <div class="contentImg">
+                <img src="img/348127380187283456.webp" alt="">
+                <h4>후크시아</h4>
+                <span>선물이란 꽃말을 가진 꽃</span>
+              </div>
+            </div>
 
           </section>
           <section>
-            <h1>꽃을 선물 하는 사람</h1>
-            <p>1 needs
-              꽃의 말(의미)는 무엇일까
-              꽃이 어떻게 생겼나
-              꽃을 주면 좋아할까
-              무슨 꽃이 인기가 많나
-              2 가치관
-              -좋은 마음을 전해주고 싶은 사람
-              -기념일을 축하하고 싶은 사람</p>
+            <div class="content">
+              <div class="contentImg">
+                <img src="img/348127380187283456.webp" alt="">
+                <h4>후크시아</h4>
+                <span>선물이란 꽃말을 가진 꽃</span>
+              </div>
+              <div class="contentText">
+                <h1>꽃을 선물 하는 사람</h1>
+                <p>1 needs
+                  꽃의 말(의미)는 무엇일까
+                  꽃이 어떻게 생겼나
+                  꽃을 주면 좋아할까
+                  무슨 꽃이 인기가 많나
+                  2 가치관
+                  -좋은 마음을 전해주고 싶은 사람
+                  -기념일을 축하하고 싶은 사람</p>
+              </div>
+            </div>
 
           </section>
           <section>
-            <h1>[목적]</h1>
-            <p>꽃을 찾는 사람에게 유용한 정보를 제공하기위함</p>
+            <div class="content">
+
+              <div class="contentText">
+                <h1>꽃을 선물 하는 사람</h1>
+                <p>1 needs
+                  꽃의 말(의미)는 무엇일까
+                  꽃이 어떻게 생겼나
+                  꽃을 주면 좋아할까
+                  무슨 꽃이 인기가 많나
+                  2 가치관
+                  -좋은 마음을 전해주고 싶은 사람
+                  -기념일을 축하하고 싶은 사람</p>
+              </div>
+              <div class="contentImg">
+                <img src="img/348127380187283456.webp" alt="">
+                <h4>후크시아</h4>
+                <span>선물이란 꽃말을 가진 꽃</span>
+              </div>
+            </div>
           </section>
-          <section></section>
+          <section>
+            <h1>주요제작자</h1>
+            <p>김보형, 조은애, 김재민</p>
+          </section>
 
         </div>
       </div>
@@ -119,6 +163,52 @@
       </div>
     </footer>
   </div>
+
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.141.0/build/three.module.js",
+          "GLTFLoader" : "https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoader.js"
+      }
+    }
+  </script>
+  <script type="module" >
+  import { GLTFLoader } from 'GLTFLoader';
+import * as THREE from 'three';
+
+function one() {
+  let scene = new THREE.Scene();
+  let renderer = new THREE.WebGLRenderer({
+    canvas: document.querySelector('#canvas'),
+    antialias: true
+  });
+  renderer.outputEncoding = THREE.sRGBEncoding;
+
+  let camera = new THREE.PerspectiveCamera(30, 1);
+  camera.position.set(0, 0, 5);
+
+  scene.background = new THREE.Color('white');
+  let light = new THREE.DirectionalLight(0xffff00, 10);
+  scene.add(light);
+
+  let loader = new GLTFLoader();
+  loader.load('dog/scene.gltf', function (gltf) {
+    scene.add(gltf.scene);
+
+    function animate() {
+      requestAnimationFrame(animate)
+      // gltf.scene.rotation.x += 0.2;
+      gltf.scene.rotation.y += 0.2;
+      renderer.render(scene, camera);
+    }
+    animate()
+  });
+}
+one()
+</script>
+
+
 </body>
 
 </html>

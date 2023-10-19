@@ -9,21 +9,37 @@ main {
     text-align: center;
     opacity: 0;
     transition: all 2s;
-    width:30%;
+    width:50%;
     margin:auto;
     margin-top: 1000px;
     white-space: pre-line;
+    .content{
+      display:flex;
+      align-items: center;
+      justify-content: space-around;
+      column-gap: 20px;
+      .contentText{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+      }
+    }
+    img{
+      object-fit: none;
+    }
     h1 {
       font: {
         weight:bold;
-        size:70px;
+        size:40px;
       }
     }
     p {
+      width: 100%;
       font: {
-        weight:400;
-        size:40px;
-        family: 'S-CoreDream-3Light'
+        weight: 400;
+        size: 16px;        
+        family: "S-CoreDream-3Light";
       }
     }
   }
