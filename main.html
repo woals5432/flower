@@ -6,19 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>라움</title>
   <link rel="shortcut icon" href="" type="image/x-icon">
-  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="css/main.css">
   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script defer src="js/main.js"></script>
+  
 </head>
 
 <body>
   <div class="container">
     <header>
       <div class="header_inner">
-        <h1>RAUM</h1>
+        <a href="main.html"><h1>RAUM</h1></a>
       </div>
     </header>
     <main>
@@ -29,7 +29,10 @@
         <div class="nav_open">
           <div class="nav_inner">
             <div class="nav_menuLeft">
-              <img src="img/dictinary/dictinary1.jpg" alt="">
+
+              <canvas id="canvas" width="300" height="300">
+              </canvas>
+
             </div>
             <ul class="nav_menu">
               <li><a href="dictionary.html">꽃사전</a></li>
@@ -51,7 +54,10 @@
               <li><a href="brand.html">브랜드 소개</a></li>
             </ul>
             <div class="nav_menuRight">
-              <img src="img/dictinary/dictinary1.jpg" alt="">
+
+              <canvas id="canvas2" width="300" height="300">
+              </canvas>
+
             </div>
           </div>
           <div class="nav_close">
@@ -97,6 +103,16 @@
       </div>
     </footer>
   </div>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.141.0/build/three.module.js",
+          "GLTFLoader" : "https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoader.js"
+      }
+    }
+  </script>
+  <script type="module" src="js/three.js"></script>
 </body>
 
 </html>

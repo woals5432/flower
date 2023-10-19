@@ -15,7 +15,7 @@ const nav = document.querySelector('.nav_open');
 const navBtn = document.querySelector('.nav_btn');
 const navClose = document.querySelector('.nav_closeBtn');
 navBtn.addEventListener('click', () => {
-  headerInner.style.color = 'white';
+  headerInner.style.color = 'black';
   nav.style.display = 'block';
 
   window.addEventListener('scroll', () => {
