@@ -1,4 +1,4 @@
-.main_inner .main_content > div .main_contentExhibit, .main_inner .nav_open .nav_inner {
+footer .footer_inner, .main_inner .main_content > div.main_content2 .main_contentExhibit, .main_inner .nav_open .nav_inner {
   display: flex;
   justify-content: space-between;
 }
@@ -138,6 +138,7 @@ header .header_inner h1 {
   right: 20px;
   transform: translateY(-50%);
   background: #FFFFFF url("../img/icon/noun-nature-6193660.svg") no-repeat center center/48px 48px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 10;
 }
 .main_inner .nav_open {
@@ -207,43 +208,47 @@ header .header_inner h1 {
   width: 100%;
 }
 .main_inner .main_content > div h2 {
-  padding: 70px 70px 20px;
+  padding: 120px 70px 20px;
   font-size: 1.8em;
   font-weight: 700;
 }
 .main_inner .main_content > div h3 {
   padding: 0 70px 40px;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 500;
   color: #767676;
 }
-.main_inner .main_content > div .main_contentDictionary .month_flower .swiper-slide img {
+.main_inner .main_content > div.main_content1 h2 {
+  padding-top: 70px;
+}
+.main_inner .main_content > div.main_content1 .main_contentDictionary .month_flower .swiper-slide img {
   border-radius: 8px;
 }
-.main_inner .main_content > div .main_contentExhibit {
+.main_inner .main_content > div.main_content2 .main_contentExhibit {
   column-gap: 30px;
   padding: 0 70px;
 }
-.main_inner .main_content > div .main_contentExhibit .flower_exhibition, .main_inner .main_content > div .main_contentExhibit .flower_exposition {
+.main_inner .main_content > div.main_content2 .main_contentExhibit .flower_exhibition, .main_inner .main_content > div.main_content2 .main_contentExhibit .flower_exposition {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 20px;
 }
-.main_inner .main_content > div .main_contentExhibit .flower_exhibition img, .main_inner .main_content > div .main_contentExhibit .flower_exposition img {
+.main_inner .main_content > div.main_content2 .main_contentExhibit .flower_exhibition img, .main_inner .main_content > div.main_content2 .main_contentExhibit .flower_exposition img {
   height: 100%;
 }
-.main_inner .main_content > div .main_contentExhibit .flower_exhibition span, .main_inner .main_content > div .main_contentExhibit .flower_exposition span {
+.main_inner .main_content > div.main_content2 .main_contentExhibit .flower_exhibition span, .main_inner .main_content > div.main_content2 .main_contentExhibit .flower_exposition span {
   font-size: 1.1em;
 }
-.main_inner .main_content > div .main_contentFlowerClass .flower_class {
+.main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_class {
   position: relative;
   width: 100%;
   line-height: 200px;
   background: linear-gradient(rgba(255, 255, 255, 0) 10%, rgb(255, 255, 255)), url("../img/main/class_pc.png") center center/cover no-repeat;
+  text-indent: -9999px;
 }
-.main_inner .main_content > div .main_contentFlowerClass .flower_class::before {
+.main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_class::before {
   width: 100%;
   height: 100%;
   border-radius: 0;
@@ -253,91 +258,104 @@ header .header_inner h1 {
   left: 0;
   background: rgba(0, 0, 0, 0.7);
 }
-.main_inner .main_content > div .main_contentFlowerClass .flower_class span {
-  color: #FFFFFF;
-  font-size: 2em;
+.main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
 }
-.main_inner .main_content > div .main_contentFlowerClass .flower_diyclass {
+.main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass .class_bg {
+  display: none;
+}
+.main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass > ul {
   display: flex;
   column-gap: 30px;
+  position: relative;
+  top: -120px;
   padding: 0 90px;
-  background: rgba(0, 0, 0, 0.7);
 }
-.main_inner .main_content > div .main_contentFlowerClass .flower_diyclass > div {
+.main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass > ul li {
   width: 25%;
 }
-.main_inner .main_content > div .main_contentBrand {
+.main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass > ul li img {
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+.main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass > ul li div {
+  padding: 0 10px;
+  font-size: 0.9em;
+  line-height: 20px;
+  text-align: center;
+}
+.main_inner .main_content > div.main_content4 h2 {
+  padding-top: 0;
+}
+.main_inner .main_content > div.main_content4 h3 {
+  padding-bottom: 0;
+}
+.main_inner .main_content > div.main_content4 .main_contentBrand {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  column-gap: 20px;
-  padding: 50px 120px;
+  padding: 50px 70px;
 }
-.main_inner .main_content > div .main_contentBrand > p {
+.main_inner .main_content > div.main_content4 .main_contentBrand > p {
   font-family: "MYYeongnamnu";
   font-size: 3em;
   font-weight: 700;
 }
-.main_inner .main_content > div .main_contentBrand span {
+.main_inner .main_content > div.main_content4 .main_contentBrand span {
   line-height: 30px;
   font-size: 0.9em;
   font-weight: 600;
 }
 
-/* footer 
+/* footer */
 footer {
   width: 100%;
   padding: 50px 70px;
-  background: $black;
-
-  .footer_inner {
-    @extend %double;
-    align-items: center;
-
-    .footer_left {
-      display: flex;
-      flex-direction: column;
-      row-gap: 15px;
-
-      h1 {
-        font-family: 'MYYeongnamnu';
-        font-size: 1.8em;
-        font-weight: bold;
-        color: $white;
-      }
-      p {
-        font-size: 0.9em;
-        color: $gray3;
-      }
-    }
-    .footer_right {
-      display: flex;
-      justify-content: center;
-
-      form {
-        border-bottom: 1px solid $white;
-
-        .footer_emailInput {
-          width: 250px;
-          padding-bottom: 10px;
-          background: transparent;
-          outline: none;
-          caret-color: $white;
-
-          &::placeholder {
-            color: $gray3;
-          }
-        }
-        .footer_btn {
-          background: transparent;
-          color: $white;
-          font-size: 1.3em;
-        }
-      }
-    }
-  }
+  background: #000000;
 }
-*/
+footer .footer_inner {
+  align-items: center;
+}
+footer .footer_inner .footer_left {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+footer .footer_inner .footer_left h1 {
+  font-family: "MYYeongnamnu";
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+footer .footer_inner .footer_left p {
+  font-size: 0.9em;
+  color: #b7b7b7;
+}
+footer .footer_inner .footer_right {
+  display: flex;
+  justify-content: center;
+}
+footer .footer_inner .footer_right form {
+  border-bottom: 1px solid #FFFFFF;
+}
+footer .footer_inner .footer_right form .footer_emailInput {
+  width: 250px;
+  padding-bottom: 10px;
+  background: transparent;
+  outline: none;
+  caret-color: #FFFFFF;
+}
+footer .footer_inner .footer_right form .footer_emailInput::placeholder {
+  color: #b7b7b7;
+}
+footer .footer_inner .footer_right form .footer_btn {
+  background: transparent;
+  color: #FFFFFF;
+  font-size: 1.3em;
+}
+
 @media (max-width: 1023px) {
   .main_inner .main_content {
     width: 100%;
@@ -348,12 +366,48 @@ footer {
   .main_inner .main_content > div h3 {
     font-size: 1.1em;
   }
-  .main_inner .main_content > div .main_contentExhibit .flower_exhibition span, .main_inner .main_content > div .main_contentExhibit .flower_exposition span {
+  .main_inner .main_content > div.main_content2 .main_contentExhibit .flower_exhibition span, .main_inner .main_content > div.main_content2 .main_contentExhibit .flower_exposition span {
     font-size: 0.9em;
   }
-  .main_inner .main_content > div .main_contentFlowerClass .flower_class {
+  .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_class {
     line-height: 150px;
     background: linear-gradient(rgba(255, 255, 255, 0) 10%, rgb(255, 255, 255)), url("../img/main/class_mo.png") center center/cover no-repeat;
+  }
+  .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass .class_bg {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 105px;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass > ul {
+    display: flex;
+    column-gap: 15px;
+    position: relative;
+    top: -30px;
+    padding: 0 70px;
+  }
+  .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass > ul li {
+    width: 25%;
+  }
+  .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass > ul li img {
+    margin-bottom: 15px;
+  }
+  .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass > ul li div {
+    padding: 0 10px;
+    font-size: 0.8em;
+    line-height: 20px;
+    text-align: center;
+  }
+  .main_inner .main_content > div.main_content4 h2 {
+    padding-top: 70px;
+  }
+  .main_inner .main_content > div.main_content4 .main_contentBrand {
+    column-gap: 50px;
+  }
+  .main_inner .main_content > div.main_content4 .main_contentBrand > p {
+    font-size: 2.4em;
   }
 }
 @media (max-width: 767px) {
@@ -364,26 +418,64 @@ footer {
     display: none;
   }
   .main_inner .main_content > div h2 {
-    padding: 50px 40px 20px;
+    padding: 110px 40px 20px;
     font-size: 1.4em;
   }
   .main_inner .main_content > div h3 {
     padding: 0 40px 30px;
     font-size: 0.9em;
   }
-  .main_inner .main_content > div .main_contentExhibit {
+  .main_inner .main_content > div.main_content2 .main_contentExhibit {
     column-gap: 20px;
     padding: 0 40px;
   }
-  .main_inner .main_content > div .main_contentFlowerClass .flower_class {
-    height: 100px;
-  }
-  .main_inner .main_content > div .main_contentFlowerClass .flower_class span {
+  .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_class span {
     font-size: 1em;
   }
-  .main_inner .main_content > div .main_contentFlowerClass .flower_diyclass {
+  .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass {
     column-gap: 10px;
     padding: 0 50px;
+  }
+  .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass > ul {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+    position: relative;
+    top: -100px;
+    padding: 0;
+  }
+  .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass > ul li {
+    width: 50%;
+  }
+  .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass > ul li.class3, .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass > ul li.class4 {
+    display: none;
+  }
+  .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass > ul li div {
+    display: none;
+  }
+  .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass > ul li br {
+    display: none;
+  }
+  .main_inner .main_content > div.main_content4 h2 {
+    padding-top: 0;
+  }
+}
+@media (max-width: 500px) {
+  .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass .class_bg {
+    display: none;
+  }
+  .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass > ul li div {
+    font-size: 0.8em;
+  }
+  .main_inner .main_content > div.main_content4 .main_contentBrand {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .main_inner .main_content > div.main_content4 .main_contentBrand > p {
+    font-size: 2em;
+  }
+  .main_inner .main_content > div.main_content4 .main_contentBrand span {
+    font-size: 0.8em;
   }
 }
 
