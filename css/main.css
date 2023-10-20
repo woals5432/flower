@@ -231,6 +231,9 @@ header .header_inner h1 {
   align-items: center;
   row-gap: 20px;
 }
+.main_inner .main_content > div .main_contentExhibit .flower_exhibition img, .main_inner .main_content > div .main_contentExhibit .flower_exposition img {
+  height: 100%;
+}
 .main_inner .main_content > div .main_contentExhibit .flower_exhibition span, .main_inner .main_content > div .main_contentExhibit .flower_exposition span {
   font-size: 1.1em;
 }
