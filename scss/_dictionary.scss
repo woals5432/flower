@@ -1,9 +1,12 @@
-body{
+// scss\main.scss to css\main.css.
+body {
   font-family: 'S-CoreDream-3Light';
 }
+
 img {
   width: 100%;
 }
+
 button {
   cursor: pointer;
 }
@@ -14,304 +17,9 @@ button {
   margin: auto;
 }
 
-@media all and ( min-width:1024px){
-/* header */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  margin: auto;
-  background: transparent;
-  z-index: 11;
+@media all and (min-width:1024px) {
 
-  .header_inner {
-    font-family: 'MYYeongnamnu';
-    height: 56px;
-    background: white;
-
-    h1 {
-      width: 120px;
-      text-align: center;
-      margin: auto;
-      line-height: 56px;
-      font-size: 2em;
-      font-weight: bold;
-    }
-  }
-  .nav_contents {
-    position: sticky;
-    top: 56px;
-    left: 0px;
-    width: 100%;
-    min-height: 56px;
-    background: #eee;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 50px;
-
-    .nav_hashtag_subbtn {      
-      position: absolute;
-      left:100px;
-      font-weight:400;}
-  
-      @media (max-width: 1240px){
-        .nav_hashtag_subbtn{
-        display: none;
-        position: absolute;
-      left:100px;
-      font-weight:400;
-      }
-      } 
-    
-  
-     .nav_hashtag_main {
-
-      .nav_hashtag_wrap {
-          display: flex;
-          column-gap: 30px;
-        
-        .nav_hashtag {
-          .nav_hashtag_namewrap {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 40px;
-            border:2px solid black;
-            background-color: white;
-            border-radius: 24px;
-            padding: 10px;
-            button {
-              background: none;
-              display: block;
-              cursor: pointer;
-              font-weight: 700;
-            }       
-            span {
-
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-
-
-/* main */
-.main_inner {
-  width: 100%;
-
-  .nav {
-    .nav_btn {
-      position: fixed;
-      top: 50%;
-      right: 20px;
-      transform: translateY(-50%);
-      width: 48px;
-      height: 48px;
-      background: #000 url('../img/icon/open.png') no-repeat center center / 38px 38px;
-      border-radius: 50%;
-      z-index: 10;
-    }
-  }
-  .nav_open {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #000;
-    color: #fff;
-    z-index: 10;
-
-    .nav_inner {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 55%;
-
-      .nav_menuLeft, .nav_menuRight {
-        img {
-          width: 100px;
-        }
-      }
-      .nav_menu {
-        & > li {
-          margin: 50px 0;
-          text-align: center;
-
-          & > a {
-            font-size: 1.1em;
-          }
-
-          .nav_subMenu > li {
-            margin: 20px 0 -10px;
-
-            & > a {
-              color: #767676;
-              font-size: 0.9em;
-            }
-          }
-        }
-      }
-    }
-    .nav_close {
-      .nav_closeBtn {
-        position: fixed;
-        top: 50%;
-        right: 20px;
-        transform: translateY(-50%);
-        width: 48px;
-        height: 48px;
-        background: #fff url('../img/icon/close.png') no-repeat center center / 38px 38px;
-        border-radius: 50%;
-        z-index: 11;
-      }
-    }
-  }
-}
-// dictionary//
-  section.flower_contents{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding-bottom: 100px;
-    padding-top: 112px;
-    margin: auto;
- 
-    .flower_dictionary{
-      max-width:1714px;
-      width: 100%;
-      margin: 0 auto;
-
-      .flower_dictionary_title{
-        padding:30px 15px;
-        display:flex;
-        align-items: center;
-        column-gap: 22px;
-        
-        .flower_dictionary_title_1{
-          font-size: 30px;
-          font-weight: 600;
-          line-height: 40px;
-          letter-spacing: 0.006em;
-        }
-        .flower_dictionary_title_description{
-          display: block;
-          font-size: 14px;
-          font-weight: 500;
-        }
-      }
-
-      div.flower_dictionary_wrapper{
-        margin: 0px 15px;
-        .flower_dictionary_list{
-          display:grid;
-          grid-template-columns: repeat(4,minmax(0px,1fr));
-          row-gap: 24px;
-          column-gap: 24px;
-
-          .flower_dictionary_item{
-            display: block;
-            .flower_dictionary_item_link{
-              display: block;
-              .flower_dictionary_item_imgblock{
-                width: auto;
-                img{
-                  display: block;
-                  width: 100%;
-                  height: 100%;
-                }
-              }
-              .flower_dictionary_item_title{
-                padding: 10px 0;
-                display: block;
-                .flower_dictionary_item_title_name{
-                  font{
-                    size:20px;
-                    font-weight: 400;
-                    line-height: 18px;;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-
-    }
-  }
-
-
-
-
-
-/* footer */
-footer {
-  width: 100%;
-  padding: 30px;
-  background: #444;
-  margin-top: 1000px;
-
-  .footer_inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .footer_left {
-      display: flex;
-      flex-direction: column;
-      row-gap: 15px;
-
-      h1 {
-        font-family: 'MYYeongnamnu';
-        font-size: 1.8em;
-        font-weight: bold;
-        color: #fff;
-      }
-      p {
-        font-size: 0.9em;
-        color: #b7b7b7;
-      }
-    }
-    .footer_right {
-      display: flex;
-      justify-content: center;
-
-      form {
-        border-bottom: 1px solid #fff;
-
-        .footer_emailInput {
-          width: 250px;
-          padding-bottom: 10px;
-          background: transparent;
-          outline: none;
-          caret-color:white;
-
-          &::placeholder {
-            color: #b7b7b7;
-          }
-        }
-        .footer_btn {
-          background: transparent;
-          color: #fff;
-          font-size: 1.3em;
-        }
-      }
-    }
-  }
-}
-}
-
-//media queary 1024~768
-@media (min-width:768px)and ( max-width:1024px) {
+  /* header */
   header {
     position: fixed;
     top: 0;
@@ -319,12 +27,12 @@ footer {
     margin: auto;
     background: transparent;
     z-index: 11;
-  
+
     .header_inner {
       font-family: 'MYYeongnamnu';
       height: 56px;
       background: white;
-  
+
       h1 {
         width: 120px;
         text-align: center;
@@ -334,6 +42,7 @@ footer {
         font-weight: bold;
       }
     }
+
     .nav_contents {
       position: sticky;
       top: 56px;
@@ -345,46 +54,227 @@ footer {
       justify-content: center;
       align-items: center;
       column-gap: 50px;
-  
-      .nav_hashtag_subbtn {      
+
+      .nav_hashtag_subbtn {
         position: absolute;
-        left:100px;
-        font-weight:400;}
-    
-        @media (max-width: 1240px){
-          .nav_hashtag_subbtn{
+        left: 100px;
+        font-weight: 400;
+      }
+
+      @media (max-width: 1240px) {
+        .nav_hashtag_subbtn {
           display: none;
           position: absolute;
-        left:100px;
-        font-weight:400;
+          left: 100px;
+          font-weight: 400;
         }
-        } 
-      
-    
-       .nav_hashtag_main {
-  
+      }
+
+
+      .nav_hashtag_main {
+
         .nav_hashtag_wrap {
-            display: flex;
-            column-gap: 30px;
-          
+          display: flex;
+          column-gap: 6vh;
+
           .nav_hashtag {
             .nav_hashtag_namewrap {
               display: flex;
               justify-content: center;
               align-items: center;
               height: 40px;
-              border:2px solid black;
+              border: 2px solid black;
               background-color: white;
               border-radius: 24px;
               padding: 10px;
+
               button {
                 background: none;
                 display: block;
                 cursor: pointer;
                 font-weight: 700;
-              }       
-              span {
-  
+              }
+
+              span {}
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+  /* main */
+  .main_inner {
+    width: 100%;
+
+    .nav {
+      .nav_btn {
+        position: fixed;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        width: 48px;
+        height: 48px;
+        background: #000 url('../img/icon/open.png') no-repeat center center / 38px 38px;
+        border-radius: 50%;
+        z-index: 10;
+      }
+    }
+
+    .nav_open {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #000;
+      color: #fff;
+      z-index: 10;
+
+      .nav_inner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 55%;
+
+        .nav_menuLeft,
+        .nav_menuRight {
+          img {
+            width: 100px;
+          }
+        }
+
+        .nav_menu {
+          &>li {
+            margin: 50px 0;
+            text-align: center;
+
+            &>a {
+              font-size: 1.1em;
+            }
+
+            .nav_subMenu>li {
+              margin: 20px 0 -10px;
+
+              &>a {
+                color: #767676;
+                font-size: 0.9em;
+              }
+            }
+          }
+        }
+      }
+
+      .nav_close {
+        .nav_closeBtn {
+          position: fixed;
+          top: 50%;
+          right: 20px;
+          transform: translateY(-50%);
+          width: 48px;
+          height: 48px;
+          background: #fff url('../img/icon/close.png') no-repeat center center / 38px 38px;
+          border-radius: 50%;
+          z-index: 11;
+        }
+      }
+    }
+  }
+
+  // dictionary//
+  section.flower_contents {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100px;
+    padding-top: 112px;
+    margin: auto;
+
+    .flower_dictionary {
+      max-width: 1714px;
+      width: 100%;
+      margin: 0 auto;
+
+      .flower_dictionary_title {
+        padding: 30px 15px;
+        display: flex;
+        align-items: center;
+        column-gap: 22px;
+
+        .flower_dictionary_title_1 {
+          font-size: 30px;
+          font-weight: 600;
+          line-height: 40px;
+          letter-spacing: 0.006em;
+        }
+
+        .flower_dictionary_title_description {
+          display: block;
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .flower_dictionary {
+      div.flower_dictionary_wrapper {
+        margin: 0px 15px;
+        width: 100%;
+        height: 100%;
+
+        .flower_dictionary_list {
+          display: grid;
+          grid-template-columns: repeat(4, minmax(0px, 1fr));
+          row-gap: 24px;
+          column-gap: 24px;
+
+          .flower_dictionary_item {
+            display: block;
+
+
+            .item_card {
+              position: relative;
+              width: 100%;
+              height: 100%;
+              transition: all 0.5s ease-in;
+              transform-style: preserve-3d;
+              cursor: pointer;
+
+              &.active {
+                //active class
+                transform: rotateY(180deg);
+              }
+
+              .item_front {
+                backface-visibility: hidden;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: rotateY(180deg);
+
+                .flower_dictionary_item_link {
+                  display: block;
+
+                  .flower_dictionary_item_imgblock {
+                    display: block;
+
+                    img {
+                      display: block;
+                      width: 100%;
+                      height: 100%;
+                    }
+                  }
+
+
+                }
+
               }
             }
           }
@@ -392,74 +282,311 @@ footer {
       }
     }
   }
-  section.flower_contents{
+
+  .item_back {
+    
+    display:block;
+    width: 100%;
+    height: inherit;
+    background: #EEEFF1;
+
+    .flower_backcardwrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items:center;
+      
+      row-gap: 20px;
+      
+      .flower_name {
+        display: block;
+        margin: 20px 0px;
+        font-size: 3em;
+        color: #565F6E;
+        font-weight: 800;
+      }
+
+      .flower_mean {
+        display: inline-block;
+        font-size: 1.8em;
+        font-weight: 400;
+        padding-right: 5px;
+        padding-bottom: 10px;
+        color: #85683E
+      }
+
+      .flower_mean0 {
+        color:#D4B37E;
+      }
+    }
+    .flower_introduce_wrap{
+      display: block;
+      width: 95%;
+      height: inherit;
+      padding: 10px;
+      border-radius: 10px;
+      border: 5px solid  #EEEFF1;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+      
+      .flower_introduce {
+        font-size:1.2em;
+        font-weight: bold;
+        margin: 0px;
+      }
+
+      .flower_we {
+        font-size:0.5em;
+        padding-left: 3px;
+        color:#bab4ac;
+      }
+
+      .flower_info {
+        margin-top: 5px;
+      }
+    }
+  }
+
+
+  /* footer */
+  footer {
+    width: 100%;
+    padding: 30px;
+    background: #444;
+    margin-top: 1000px;
+
+    .footer_inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .footer_left {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+
+        h1 {
+          font-family: 'MYYeongnamnu';
+          font-size: 1.8em;
+          font-weight: bold;
+          color: #fff;
+        }
+
+        p {
+          font-size: 0.9em;
+          color: #b7b7b7;
+        }
+      }
+
+      .footer_right {
+        display: flex;
+        justify-content: center;
+
+        form {
+          border-bottom: 1px solid #fff;
+
+          .footer_emailInput {
+            width: 250px;
+            padding-bottom: 10px;
+            background: transparent;
+            outline: none;
+            caret-color: white;
+
+            &::placeholder {
+              color: #b7b7b7;
+            }
+          }
+
+          .footer_btn {
+            background: transparent;
+            color: #fff;
+            font-size: 1.3em;
+          }
+        }
+      }
+    }
+  }
+}
+
+//media queary 1024~768
+@media (min-width:768px)and (max-width:1024px) {
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin: auto;
+    background: transparent;
+    z-index: 11;
+
+    .header_inner {
+      font-family: 'MYYeongnamnu';
+      height: 56px;
+      background: white;
+
+      h1 {
+        width: 120px;
+        text-align: center;
+        margin: auto;
+        line-height: 56px;
+        font-size: 2em;
+        font-weight: bold;
+      }
+    }
+
+    .nav_contents {
+      position: sticky;
+      top: 56px;
+      left: 0px;
+      width: 100%;
+      min-height: 56px;
+      background: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 50px;
+
+      .nav_hashtag_subbtn {
+        position: absolute;
+        left: 100px;
+        font-weight: 400;
+      }
+
+      @media (max-width: 1240px) {
+        .nav_hashtag_subbtn {
+          display: none;
+          position: absolute;
+          left: 100px;
+          font-weight: 400;
+        }
+      }
+
+
+      .nav_hashtag_main {
+
+        .nav_hashtag_wrap {
+          display: flex;
+          column-gap: 6vh;
+
+          .nav_hashtag {
+            .nav_hashtag_namewrap {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 40px;
+              border: 2px solid black;
+              background-color: white;
+              border-radius: 24px;
+              padding: 10px;
+
+              button {
+                background: none;
+                display: block;
+                cursor: pointer;
+                font-weight: 700;
+              }
+
+              span {}
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //heeader
+
+  section.flower_contents {
     position: relative;
     width: 100%;
     height: 100%;
     padding-bottom: 100px;
     padding-top: 112px;
     margin: auto;
- 
-    .flower_dictionary{
+
+    .flower_dictionary {
       width: 100%;
       margin: 0 auto;
 
-      .flower_dictionary_title{
-        padding:20px 5px;
-        display:flex;
+      .flower_dictionary_title {
+        padding: 20px 5px;
+        display: flex;
         align-items: center;
         column-gap: 10px;
-        
-        .flower_dictionary_title_1{
+
+        .flower_dictionary_title_1 {
           font-size: 30px;
           font-weight: 600;
           line-height: 40px;
           letter-spacing: 0.006em;
           text-indent: -9999px;
         }
-        .flower_dictionary_title_description{
+
+        .flower_dictionary_title_description {
           display: block;
           font-size: 18px;
           font-weight: 500;
         }
       }
+    }
 
-      div.flower_dictionary_wrapper{
+
+    .flower_dictionary {
+      div.flower_dictionary_wrapper {
         margin: 0px 15px;
-        .flower_dictionary_list{
-          display:grid;
-          grid-template-columns: repeat(2,minmax(0px,1fr));
-          row-gap: 12px;
+
+        .flower_dictionary_list {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0px, 1fr));
+          row-gap: 60px;
           column-gap: 3px;
 
-          .flower_dictionary_item{
+          .flower_dictionary_item {
             display: block;
-            .flower_dictionary_item_link{
+
+            .item_card {
+              position: relative;
               display: block;
-              .flower_dictionary_item_imgblock{
-                width: auto;
-                img{
+              width: 100%;
+              height: 100%;
+
+              .item_front {
+                position: absolute;
+
+                .flower_dictionary_item_link {
                   display: block;
-                  width: 100%;
-                  height: 100%;
-                }
-              }
-              .flower_dictionary_item_title{
-                padding: 10px 0;
-                display: block;
-                .flower_dictionary_item_title_name{
-                  font{
-                    size:20px;
-                    font-weight: 400;
-                    line-height: 18px;;
+
+                  .flower_dictionary_item_imgblock {
+                    width: auto;
+
+                    img {
+                      display: block;
+                      width: 100%;
+                      height: 100%;
+                    }
+                  }
+
+                  .flower_dictionary_item_title {
+                    padding: 10px 0;
+                    display: block;
+
+                    .flower_dictionary_item_title_name {
+                      font {
+                        size: 20px;
+                        font-weight: 400;
+                        line-height: 18px;
+                        ;
+                      }
+                    }
+
                   }
                 }
+
+                .item_back {}
               }
             }
           }
         }
-      }
 
+      }
     }
   }
 }
@@ -473,12 +600,12 @@ footer {
     margin: auto;
     background: transparent;
     z-index: 11;
-  
+
     .header_inner {
       font-family: 'MYYeongnamnu';
       height: 56px;
       background: white;
-  
+
       h1 {
         width: 120px;
         text-align: center;
@@ -488,6 +615,7 @@ footer {
         font-weight: bold;
       }
     }
+
     .nav_contents {
       position: sticky;
       top: 56px;
@@ -499,113 +627,123 @@ footer {
       justify-content: center;
       align-items: center;
       column-gap: 50px;
-  
-      .nav_hashtag_subbtn {      
+
+      .nav_hashtag_subbtn {
         position: absolute;
-        left:100px;
-        font-weight:400;}
-    
-        @media (max-width: 1240px){
-          .nav_hashtag_subbtn{
+        left: 100px;
+        font-weight: 400;
+      }
+
+      @media (max-width: 1240px) {
+        .nav_hashtag_subbtn {
           display: none;
           position: absolute;
-        left:100px;
-        font-weight:400;
+          left: 100px;
+          font-weight: 400;
         }
-        } 
-      
-    
-       .nav_hashtag_main {
-  
+      }
+
+
+      .nav_hashtag_main {
+
         .nav_hashtag_wrap {
-            display: flex;
-            column-gap: 30px;
-          
+          display: flex;
+          column-gap: 30px;
+
           .nav_hashtag {
             .nav_hashtag_namewrap {
               display: flex;
               justify-content: center;
               align-items: center;
               height: 40px;
-              border:2px solid black;
+              border: 2px solid black;
               background-color: white;
               border-radius: 24px;
               padding: 10px;
+
               button {
                 background: none;
                 display: block;
                 cursor: pointer;
                 font-weight: 700;
-              }       
-              span {
-  
               }
+
+              span {}
             }
           }
         }
       }
     }
   }
-  section.flower_contents{
+
+  section.flower_contents {
     position: relative;
     width: 100%;
     height: 100%;
     padding-bottom: 100px;
     padding-top: 112px;
     margin: auto;
- 
-    .flower_dictionary{
+
+    .flower_dictionary {
       width: 100%;
       margin: 0 auto;
 
-      .flower_dictionary_title{
-        padding:20px 5px;
-        display:flex;
+      .flower_dictionary_title {
+        padding: 20px 5px;
+        display: flex;
         align-items: center;
         column-gap: 10px;
-        
-        .flower_dictionary_title_1{
+
+        .flower_dictionary_title_1 {
           font-size: 30px;
           font-weight: 600;
           line-height: 40px;
           letter-spacing: 0.006em;
           text-indent: -9999px;
         }
-        .flower_dictionary_title_description{
+
+        .flower_dictionary_title_description {
           display: block;
           font-size: 18px;
           font-weight: 500;
         }
       }
 
-      div.flower_dictionary_wrapper{
+      div.flower_dictionary_wrapper {
         margin: 0px 15px;
-        .flower_dictionary_list{
-          display:grid;
-          grid-template-columns: repeat(2,minmax(0px,1fr));
+
+        .flower_dictionary_list {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0px, 1fr));
           row-gap: 12px;
           column-gap: 3px;
 
-          .flower_dictionary_item{
+          .flower_dictionary_item {
             display: block;
-            .flower_dictionary_item_link{
+
+            .flower_dictionary_item_link {
               display: block;
-              .flower_dictionary_item_imgblock{
+
+              .flower_dictionary_item_imgblock {
                 width: auto;
-                img{
+
+                img {
                   display: block;
                   width: 100%;
                   height: 100%;
                 }
               }
-              .flower_dictionary_item_title{
+
+              .flower_dictionary_item_title {
                 padding: 10px 0;
                 display: block;
-                .flower_dictionary_item_title_name{
-                  font{
-                    size:20px;
+
+                .flower_dictionary_item_title_name {
+                  font {
+                    size: 20px;
                     font-weight: 400;
-                    line-height: 18px;;
+                    line-height: 18px;
+                    ;
                   }
                 }
               }

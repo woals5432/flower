@@ -10,3 +10,4 @@ navClose.addEventListener('click', () => {
   headerInner.style.color = '';
   nav.style.display = '';
 })
+

@@ -307,7 +307,7 @@ button {
 @media all and (min-width: 1024px) {
   header .nav_contents .nav_hashtag_main .nav_hashtag_wrap {
     display: flex;
-    column-gap: 30px;
+    column-gap: 6vh;
   }
   header .nav_contents .nav_hashtag_main .nav_hashtag_wrap .nav_hashtag .nav_hashtag_namewrap {
     display: flex;
@@ -360,7 +360,8 @@ button {
     align-items: center;
     width: 55%;
   }
-  .main_inner .nav_open .nav_inner .nav_menuLeft img, .main_inner .nav_open .nav_inner .nav_menuRight img {
+  .main_inner .nav_open .nav_inner .nav_menuLeft img,
+  .main_inner .nav_open .nav_inner .nav_menuRight img {
     width: 100px;
   }
   .main_inner .nav_open .nav_inner .nav_menu > li {
@@ -420,6 +421,8 @@ button {
   }
   section.flower_contents .flower_dictionary div.flower_dictionary_wrapper {
     margin: 0px 15px;
+    width: 100%;
+    height: 100%;
   }
   section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list {
     display: grid;
@@ -430,25 +433,87 @@ button {
   section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item {
     display: block;
   }
-  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link {
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .item_card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-in;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .item_card.active {
+    transform: rotateY(180deg);
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .item_card .item_front {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .item_card .item_front .flower_dictionary_item_link {
     display: block;
   }
-  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_imgblock {
-    width: auto;
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .item_card .item_front .flower_dictionary_item_link .flower_dictionary_item_imgblock {
+    display: block;
   }
-  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_imgblock img {
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .item_card .item_front .flower_dictionary_item_link .flower_dictionary_item_imgblock img {
     display: block;
     width: 100%;
     height: 100%;
   }
-  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_title {
-    padding: 10px 0;
+  .item_back {
     display: block;
+    width: 100%;
+    height: inherit;
+    background: #EEEFF1;
   }
-  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_title .flower_dictionary_item_title_name font {
-    size: 20px;
+  .item_back .flower_backcardwrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+  }
+  .item_back .flower_backcardwrap .flower_name {
+    display: block;
+    margin: 20px 0px;
+    font-size: 3em;
+    color: #565F6E;
+    font-weight: 800;
+  }
+  .item_back .flower_backcardwrap .flower_mean {
+    display: inline-block;
+    font-size: 1.8em;
     font-weight: 400;
-    line-height: 18px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    color: #85683E;
+  }
+  .item_back .flower_backcardwrap .flower_mean0 {
+    color: #D4B37E;
+  }
+  .item_back .flower_introduce_wrap {
+    display: block;
+    width: 95%;
+    height: inherit;
+    padding: 10px;
+    border-radius: 10px;
+    border: 5px solid #EEEFF1;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  }
+  .item_back .flower_introduce_wrap .flower_introduce {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0px;
+  }
+  .item_back .flower_introduce_wrap .flower_we {
+    font-size: 0.5em;
+    padding-left: 3px;
+    color: #bab4ac;
+  }
+  .item_back .flower_introduce_wrap .flower_info {
+    margin-top: 5px;
   }
   footer {
     width: 100%;
@@ -550,7 +615,7 @@ button {
 @media (min-width: 768px) and (max-width: 1024px) {
   header .nav_contents .nav_hashtag_main .nav_hashtag_wrap {
     display: flex;
-    column-gap: 30px;
+    column-gap: 6vh;
   }
   header .nav_contents .nav_hashtag_main .nav_hashtag_wrap .nav_hashtag .nav_hashtag_namewrap {
     display: flex;
@@ -604,28 +669,37 @@ button {
   section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list {
     display: grid;
     grid-template-columns: repeat(2, minmax(0px, 1fr));
-    row-gap: 12px;
+    row-gap: 60px;
     column-gap: 3px;
   }
   section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item {
     display: block;
   }
-  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link {
-    display: block;
-  }
-  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_imgblock {
-    width: auto;
-  }
-  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_imgblock img {
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .item_card {
+    position: relative;
     display: block;
     width: 100%;
     height: 100%;
   }
-  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_title {
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .item_card .item_front {
+    position: absolute;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .item_card .item_front .flower_dictionary_item_link {
+    display: block;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .item_card .item_front .flower_dictionary_item_link .flower_dictionary_item_imgblock {
+    width: auto;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .item_card .item_front .flower_dictionary_item_link .flower_dictionary_item_imgblock img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .item_card .item_front .flower_dictionary_item_link .flower_dictionary_item_title {
     padding: 10px 0;
     display: block;
   }
-  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link .flower_dictionary_item_title .flower_dictionary_item_title_name font {
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .item_card .item_front .flower_dictionary_item_link .flower_dictionary_item_title .flower_dictionary_item_title_name font {
     size: 20px;
     font-weight: 400;
     line-height: 18px;
