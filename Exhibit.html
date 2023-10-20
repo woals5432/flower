@@ -31,7 +31,8 @@
         <div class="nav_open">
           <div class="nav_inner">
             <div class="nav_menuLeft">
-              <img src="img/dictinary/dictinary1.jpg" alt="">
+              <canvas id="canvas" width="300" height="300">
+              </canvas>
             </div>
             <ul class="nav_menu">
               <li><a href="dictionary.html">꽃사전</a></li>
@@ -340,6 +341,18 @@
     </div>
 
   </div>
+
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.141.0/build/three.module.js",
+          "GLTFLoader" : "https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoader.js"
+      }
+    }
+  </script>
+  <script type="module" src="js/three.js">
+  </script>
 </body>
 
 </html>
