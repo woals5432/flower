@@ -1,0 +1,350 @@
+.header_in{
+  height: 56px;
+  width:100%;
+  background: transparent;
+}
+
+/* 메인 */
+main {
+  display: flex;
+  background: white;
+  position: relative;
+  min-width: 390px;
+  flex-direction: column;
+}
+
+/* 메인컨텐츠 */
+.mainContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContent li {
+  width: 100%;
+  height: 46vh;
+}
+
+.mainContent a {
+  display: flex;
+  width: 100%;
+  height: 46vh;
+}
+
+.mainContent-text {
+  flex-grow: 1;
+  padding: 24px;
+  background: #ffdcfc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 31%;
+}
+
+.mainContent-text h3 {
+  font-size: 30px;
+
+}
+
+.mainContent-text-ps {
+  margin-top: 24px;
+}
+
+.mainContent-img {
+  flex-grow: 3;
+  height: 100%;
+}
+
+.mainContent-img>img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+/* home */
+.home {
+  margin-top: 48px;
+  padding: 0 24px;
+}
+
+.homeDiv {
+  display: flex;
+}
+
+.homeDivText {
+  font-size: 19px;
+}
+
+.homeDivText span {
+  display: block;
+}
+
+/* 편지 */
+.page-section {
+  margin-top: 96px;
+  padding: 0 24px;
+}
+
+.pageInner {
+  border: 3px solid black;
+  padding: 24px;
+  font-size: 19px;
+}
+
+.pageInner p {
+  padding: 15px;
+}
+
+.pageInner>div {
+  border-bottom: 3px solid black;
+}
+
+/* 매거진 */
+.page-sectionContent {
+  margin-top: 48px;
+}
+
+.magazine-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: 32vh;
+}
+
+.Magazine-img {
+  width: 48%;
+}
+
+.Magazine-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.Magazine-text {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 이벤트 */
+
+
+.eventsInner {
+  display: flex;
+  width: 100%;
+  height: 30vh;
+}
+
+.eventsInner-left {
+  width: 33%;
+  font-size: 30px;
+}
+
+.eventsInner-right {
+  width: 69%;
+  margin-left: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rightInner {
+  display: flex;
+}
+
+.rightText {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.rightText1 {
+  font-size: 20px;
+}
+
+.rightText2 {
+  font-weight: 300;
+}
+
+.rightText2 p:first-child {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.rightImg {
+  margin-left: 24px;
+}
+
+.rightImg img {
+  width: 100%;
+  height: 100%;
+}
+
+.eventsView {
+  margin-top: 20px;
+}
+
+/* 배너 */
+.banner {
+  display: flex;
+  background: #FF8F1C;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 24px;
+  height: 24vh;
+}
+
+.bannerText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+.bannerText h3 {
+  font-size: 32px;
+}
+
+.bannerText span {
+  font-size: 21px;
+}
+
+.bannerImg img {
+  width: 100%;
+  height: 100%;
+}
+.bannerImg2{
+  width:100%;
+  height: 100%;
+}
+/* 스토어 */
+.store{
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  height: 35vh;
+}
+.store h3 {
+  font-size: 30px;
+}
+.storeContent{
+  display:flex;
+  justify-content: space-around;
+  height: 24vh;
+}
+.storeInner{
+  width:45%;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.storeInner p {
+  font-size:20px;
+}
+.storeContent img{
+  width:100%;
+}
+
+
+
+
+/* 반응형 */
+@media (max-width:590px) {
+
+  /* br {
+    display: inline-block;
+    content: " ";
+    padding: 0 2px;
+  } */
+  .mainContent-text h3 {
+    font-size: 20px;
+  }
+
+  .magazine-content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: 55vh;
+  }
+
+  .mainContent a {
+    height: 25vh;
+    width: 100%
+  }
+
+  .Magazine-img {
+    width: 100%;
+    height: 59%;
+  }
+
+  .Magazine-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .Magazine-text {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .mainContent-text {
+    width: 80%;
+  }
+
+  .eventsInner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 39vh;
+  }
+
+  .rightText {
+    width: 50%;
+    justify-content: space-evenly;
+  }
+
+  .rightImg {
+    width: 50%
+  }
+
+  .eventsInner-right {
+    margin-top: 65px;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .banner {
+    flex-direction: column;
+    height: 41vh;
+  }
+  
+  .bannerText h3 {
+    font-size: 28px;
+  }  
+  .bannerText span {
+    font-size: 21px;
+    margin-top:15px
+  }
+  .bannerImg{
+    width:100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+  }
+  .bannerImg2{
+    display:flex;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .bannerImg img{
+    width:auto;
+  }
+}
