@@ -250,6 +250,20 @@ footer .footer_inner .footer_right form .footer_btn {
   font-size: 1.3em;
 }
 
+.description {
+  display: none;
+}
+
+/* 이미지 클릭 시 설명창 표시 및 이미지 숨김 */
+.image.active {
+  display: none;
+}
+
+/* 이미지 클릭 시 설명창 표시 */
+.image.active + .description {
+  display: block;
+}
+
 .main {
   background: white;
   height: 6000px;

@@ -53,15 +53,37 @@ importData();
 // 화면에 항목을 추가하는 함수
 function createItem(product) {
   const li = document.createElement('li');
+  li.classList.add("image")
   const img = document.createElement('img');
+  const div = document.createElement('div');
+  div.classList.add("description")
+  
   li.id = product.id;
   img.setAttribute('src', product.img);
+  div.innerText = product.info;
   li.appendChild(img);
+  li.appendChild(div);
   ul.appendChild(li);
+  for(let i = 1; i < li.id; i++){
+    div.id = "description" + i
+    
+  }
 }
 
+console.log(document.querySelectorAll('.image'));
+const images = document.querySelectorAll('.image');
+console.log(images);
+images.forEach(image => {
+  image.addEventListener('click', () => {
+    const description = document.getElementById(`description${image.id}`);
 
+    // 이미지 숨기기
+    image.classList.add('active');
 
+    // 설명창 표시
+    description.style.display = 'block';
+  });
+});
 
 
 

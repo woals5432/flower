@@ -198,3 +198,20 @@ footer {
     }
   }
 }
+
+
+
+
+.description {
+  display: none;
+}
+
+/* 이미지 클릭 시 설명창 표시 및 이미지 숨김 */
+.image.active {
+  display: none;
+}
+
+/* 이미지 클릭 시 설명창 표시 */
+.image.active + .description {
+  display: block;
+}
