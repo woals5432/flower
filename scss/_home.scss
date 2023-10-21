@@ -307,7 +307,7 @@ footer {
         border-bottom: 1px solid $main-color;
 
         .footer_emailInput {
-          width: 250px;
+          width: 230px;
           padding-bottom: 10px;
           background: transparent;
           outline: none;
@@ -493,9 +493,10 @@ footer {
       }
     }
   }
+
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .main_inner {
     .main_content {
       & > div {
@@ -528,6 +529,14 @@ footer {
             }
           }
         }
+      }
+    }
+  }
+  footer {
+    padding: 40px;
+    .footer_inner {
+      .footer_right {
+        display: none;
       }
     }
   }

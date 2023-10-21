@@ -341,7 +341,7 @@ footer .footer_inner .footer_right form {
   border-bottom: 1px solid #FFFFFF;
 }
 footer .footer_inner .footer_right form .footer_emailInput {
-  width: 250px;
+  width: 230px;
   padding-bottom: 10px;
   background: transparent;
   outline: none;
@@ -460,7 +460,7 @@ footer .footer_inner .footer_right form .footer_btn {
     padding-top: 0;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass .class_bg {
     display: none;
   }
@@ -476,6 +476,12 @@ footer .footer_inner .footer_right form .footer_btn {
   }
   .main_inner .main_content > div.main_content4 .main_contentBrand span {
     font-size: 0.8em;
+  }
+  footer {
+    padding: 40px;
+  }
+  footer .footer_inner .footer_right {
+    display: none;
   }
 }
 
