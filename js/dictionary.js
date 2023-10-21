@@ -35,7 +35,7 @@ selectButtons.forEach(button => {
 
 // JSON 데이터 가져오기
 const importData = () => {
-  fetch('your_data.json')
+  fetch('flowers.json')
     .then(response => response.json())
     .then(data => {
       myProduct = data.data; // JSON 데이터를 myProduct 변수에 저장
