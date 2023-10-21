@@ -1,4 +1,4 @@
-import products from "../your_data.json" assert{type: 'json'};
+import products from "../flowers.json" assert{type: 'json'};
 //assert{type:'json'} - 외부파일이 json이라고 확실히 명시
 
 // const elcard = document.querySelectorAll('.flower_dictionary_item > .item_card ')
@@ -6,8 +6,8 @@ import products from "../your_data.json" assert{type: 'json'};
 
 // elcard.forEach(function (item) {
 //   item.onclick = function () {
-//     this.classList.toggle('active')
-//   }
+//     this.classList.toggle('active') 
+//   } 
 // })
 
 
