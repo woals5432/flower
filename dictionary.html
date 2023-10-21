@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/main.css">
   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script defer src="js/main.js"></script>
-  <script type="module" src="js/dictionary.js" defer></script>
+
 
 </head>
 
@@ -19,7 +19,9 @@
   <div class="container">
     <header>
       <div class="header_inner">
-        <h1>RAUM</h1>
+        <a href="main.html">
+          <h1>RAUM</h1>
+        </a>
       </div>
       <section class="nav_contents">
 
@@ -33,7 +35,7 @@
           <ul class="nav_hashtag_wrap">
             <li class="nav_hashtag">
               <div class="nav_hashtag_namewrap">
-                <button value="">
+                <button value="인기">
                   <span>#인기</span>
                 </button>
               </div>
@@ -80,12 +82,13 @@
         <div class="nav_open">
           <div class="nav_inner">
             <div class="nav_menuLeft">
-              <img src="img/dictinary/dictinary1.jpg" alt="">
+              <canvas id="canvas" width="300" height="300">
+              </canvas>
             </div>
             <ul class="nav_menu">
-              <li><a href="#">꽃사전</a></li>
+              <li><a href="dictionary.html">꽃사전</a></li>
               <li>
-                <a href="#">꽃전시</a>
+                <a href="Exhibit.html">꽃전시</a>
                 <ul class="nav_subMenu">
                   <li><a href="#">꽃 전시회</a></li>
                   <li><a href="#">꽃 박람회</a></li>
@@ -99,7 +102,7 @@
                   <li><a href="#">DIY 플라워 클래스</a></li>
                 </ul>
               </li>
-              <li><a href="#">브랜드 소개</a></li>
+              <li><a href="brand.html">브랜드 소개</a></li>
             </ul>
             <div class="nav_menuRight">
               <img src="img/dictinary/dictinary1.jpg" alt="">
@@ -145,6 +148,17 @@
     </footer>
   </div>
 
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.141.0/build/three.module.js",
+          "GLTFLoader" : "https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoader.js"
+      }
+    }
+  </script>
+  <script type="module" src="js/three.js">
+  </script>
   <script type="module" src="js/dictionary.js"></script>
 </body>
 
