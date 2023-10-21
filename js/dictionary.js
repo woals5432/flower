@@ -57,33 +57,40 @@ function createItem(product) {
   const img = document.createElement('img');
   const div = document.createElement('div');
   div.classList.add("description")
-  
+
   li.id = product.id;
   img.setAttribute('src', product.img);
   div.innerText = product.info;
   li.appendChild(img);
   li.appendChild(div);
   ul.appendChild(li);
-  for(let i = 1; i < li.id; i++){
+  for (let i = 1; i < li.id; i++) {
     div.id = "description" + i
-    
+
   }
+
+  const images = document.querySelectorAll('.image');
+  images.forEach(image => {
+    image.addEventListener('click', () => {
+      const description = document.getElementById(`description${image.id}`);
+
+      // 이미지 숨기기
+      image.classList.add('active');
+
+      // 설명창 표시
+      description.style.display = 'block';
+    });
+  });
 }
 
-console.log(document.querySelectorAll('.image'));
-const images = document.querySelectorAll('.image');
-console.log(images);
-images.forEach(image => {
-  image.addEventListener('click', () => {
-    const description = document.getElementById(`description${image.id}`);
 
-    // 이미지 숨기기
-    image.classList.add('active');
 
-    // 설명창 표시
-    description.style.display = 'block';
-  });
-});
+
+
+
+
+
+
 
 
 
