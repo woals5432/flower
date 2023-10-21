@@ -1,48 +1,46 @@
 import products from "../your_data.json" assert{type: 'json'};
 //assert{type:'json'} - 외부파일이 json이라고 확실히 명시
 
-const elcard = document.querySelectorAll('.flower_dictionary_item > .item_card ')
-console.log(elcard)
+// const elcard = document.querySelectorAll('.flower_dictionary_item > .item_card ')
+// console.log(elcard)
 
-elcard.forEach(function (item) {
-  item.onclick = function () {
-    this.classList.toggle('active')
-  }
-})
+// elcard.forEach(function (item) {
+//   item.onclick = function () {
+//     this.classList.toggle('active')
+//   }
+// })
 
 
 
 //json 불러오기
 
-//const btn = document.querySelector('button');
-//const select = document.querySelector('select');
+// HTML 요소 가져오기
+const selectButtons = document.querySelectorAll('.nav_hashtag_namewrap button');
+const ul = document.querySelector('.flower_dictionary_list');
+
+// JSON 데이터를 저장할 변수
 let myProduct;
 
-const createItem = (product) => {
-  const ul = document.querySelector('.flower_dictionary_list'); //원래있는거 선택
+// 버튼 클릭 이벤트 핸들러
+selectButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const selectedCategory = button.value;
 
-  const li = document.createElement('li'); //새로운 엘리먼트 생성
-  const img = document.createElement('img');
+    // 선택한 카테고리에 해당하는 항목 필터링
+    ul.innerHTML = ''; // 기존 목록 삭제
+    const filteredData = myProduct.filter(item => item.category.includes(selectedCategory));
+    filteredData.forEach(item => createItem(item));
+  });
+});
 
-
-  //li.setAttribute('id',product.id);
-  li.id = product.id; //id는 안 만들어도 됨(기본 속성으로 있음)
-  img.setAttribute('src', product.img); //img에 src속성 만들고 value내용삽입  
-
-  li.append(img);
-
-  ul.append(li);
-
-};
-
+// JSON 데이터 가져오기
 const importData = () => {
-  // 여기서 JSON 파일을 가져오는 비동기 작업을 수행
-  fetch('your_data.json') // JSON 파일 경로를 지정
-    .then(response => response.json()) // JSON 데이터로 변환
+  fetch('your_data.json')
+    .then(response => response.json())
     .then(data => {
       myProduct = data.data; // JSON 데이터를 myProduct 변수에 저장
-      myProduct.forEach((product) => {
-        if (!document.getElementById(product.id)) { // 클릭할 때마다 추가되는 것 방지(기존 아이디값이 없을 때만 작동)
+      myProduct.forEach(product => {
+        if (!document.getElementById(product.id)) {
           createItem(product);
         }
       });
@@ -50,33 +48,89 @@ const importData = () => {
     .catch(error => console.error('JSON 파일 로딩 중 오류 발생: ', error));
 };
 
-const removeItems = () => {
-  const items = document.querySelectorAll('li');
-  items.forEach((aa) => {
-    aa.remove()
-  })
+importData();
+
+// 화면에 항목을 추가하는 함수
+function createItem(product) {
+  const li = document.createElement('li');
+  const img = document.createElement('img');
+  li.id = product.id;
+  img.setAttribute('src', product.img);
+  li.appendChild(img);
+  ul.appendChild(li);
 }
 
-const selectCategory = (aa) => {
-  if (!myProduct) { return }
-
-  const { selectedIndex: n } = aa.target.options; //구조분해(destructuring), 이름 n으로 바꿈
-  const { value } = aa.target.options[n]
-  //console.log(value)
 
 
-  const filterd = myProduct.filter((product) => {
-    return product.category === value;
-  })
-
-  removeItems()
-  filterd.forEach((aa) => {
-    createItem(aa);
-  })
-}
-importData()
 
 
-//btn.addEventListener('click', importData)
-//select.addEventListener('change', selectCategory)
 
+
+
+
+
+
+// const select = document.querySelector('.nav_hashtag_namewrap');
+// const ul = document.querySelector('.flower_dictionary_list');
+// const button = document.querySelector('button');
+
+// let myProduct;
+
+// const createItem = (product) => {
+//   const li = document.createElement('li');
+//   const img = document.createElement('img');
+//   li.id = product.id;
+//   img.setAttribute('src', product.img);
+//   li.appendChild(img);
+//   ul.appendChild(li);
+// };
+
+// const importData = () => {
+//   fetch('your_data.json')
+//     .then(response => response.json())
+//     .then(data => {
+//       myProduct = data.data;
+//       myProduct.forEach(product => {
+//         if (!document.getElementById(product.id)) {
+//           createItem(product);
+//         }
+//       });
+//     })
+//     .catch(error => console.error('JSON 파일 로딩 중 오류 발생: ', error));
+// };
+
+// importData();
+
+// const removeItems = () => {
+//   const items = document.querySelectorAll('li');
+//   items.forEach(aa => {
+//     aa.remove();
+//   });
+// };
+
+// const selectCategory = (aa) => {
+//   if (!myProduct) {
+//     return;
+//   }
+
+//   const { selectedIndex: n } = aa.target.options;
+//   const { value } = aa.target.options[n];
+
+//   const filtered = myProduct.filter((product) => {
+//     return product.category.includes(value);
+//   });
+
+//   removeItems();
+//   filtered.forEach(aa => {
+//     createItem(aa);
+//   });
+// };
+
+// select.addEventListener('change', selectCategory);
+
+// button.addEventListener('click', () => {
+//   const selectedCategory = select.value;
+//   ul.innerHTML = ''; // 기존 목록 삭제
+//   const filteredData = myProduct.filter(item => item.category.includes(selectedCategory));
+//   filteredData.forEach(item => createItem(item));
+// });
