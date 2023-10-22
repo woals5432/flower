@@ -68,8 +68,6 @@ function createItem(product) {
 
 
 
-
-
 // const select = document.querySelector('.nav_hashtag_namewrap');
 // const ul = document.querySelector('.flower_dictionary_list');
 // const button = document.querySelector('button');

@@ -13,33 +13,27 @@
 </head>
 <body>
   <div class="container">
-
-    <header>
+    <header class="main_header">
       <div class="header_inner">
         <a href="main.html"><h1 title="라움">RAUM</h1></a>
       </div>
     </header>
-    
     <main>
       <div class="main_inner">
         <div class="nav">
           <button title="menu" class="nav_btn"></button>
         </div>
         <div class="nav_open">
+          <div class="nav_header">
+            <a href="main.html"><h1 title="라움">RAUM</h1></a>
+          </div>
           <div class="nav_inner">
             <div class="nav_menuLeft">
-              <canvas id="canvas" width="300" height="300">
-              </canvas>
+              <canvas id="canvas" width="300" height="300"></canvas>
             </div>
             <ul class="nav_menu">
               <li><a href="dictionary.html">꽃사전</a></li>
-              <li>
-                <a href="Exhibit.html">꽃전시</a>
-                <ul class="nav_subMenu">
-                  <li><a href="#">꽃 전시회</a></li>
-                  <li><a href="#">꽃 박람회</a></li>
-                </ul>
-              </li>
+              <li><a href="exhibit.html">꽃전시</a></li>
               <li>
                 <a href="#">플라워 클래스</a>
                 <ul class="nav_subMenu">
@@ -50,9 +44,6 @@
               </li>
               <li><a href="brand.html">브랜드 소개</a></li>
             </ul>
-            <div class="nav_menuRight">
-              <img src="img/dictinary/dictinary1.jpg" alt="">
-            </div>
           </div>
           <div class="nav_close">
             <button class="nav_closeBtn"></button>
@@ -67,34 +58,54 @@
               <div class="swiper month_flower">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <img src="./img/dictinary/dictinary1.jpg" alt="">
+                    <a href="dictionary.html">
+                      <img src="./img/dictionary/dictionary3.jpg" alt="3">
+                    </a>
                   </div>
                   <div class="swiper-slide">
-                    <img src="./img/dictinary/dictinary2.jpg" alt="">
+                    <a href="dictionary.html">
+                      <img src="./img/dictionary/dictionary8.jpg" alt="8">
+                    </a>
                   </div>
                   <div class="swiper-slide">
-                    <img src="./img/dictinary/dictinary3.jpg" alt="">
+                    <a href="dictionary.html">
+                      <img src="./img/dictionary/dictionary12.jpg" alt="12">
+                    </a>
                   </div>
                   <div class="swiper-slide">
-                    <img src="./img/dictinary/dictinary4.jpg" alt="">
+                    <a href="dictionary.html">
+                      <img src="./img/dictionary/dictionary13.jpg" alt="13">
+                    </a>
                   </div>
                   <div class="swiper-slide">
-                    <img src="./img/dictinary/dictinary5.jpg" alt="">
+                    <a href="dictionary.html">
+                      <img src="./img/dictionary/dictionary14.jpg" alt="14">
+                    </a>
                   </div>
                   <div class="swiper-slide">
-                    <img src="./img/dictinary/dictinary6.jpg" alt="">
+                    <a href="dictionary.html">
+                      <img src="./img/dictionary/dictionary15.jpg" alt="15">
+                    </a>
                   </div>
                   <div class="swiper-slide">
-                    <img src="./img/dictinary/dictinary7.jpg" alt="">
+                    <a href="dictionary.html">
+                      <img src="./img/dictionary/dictionary19.jpg" alt="19">
+                    </a>
                   </div>
                   <div class="swiper-slide">
-                    <img src="./img/dictinary/dictinary8.jpg" alt="">
+                    <a href="dictionary.html">
+                      <img src="./img/dictionary/dictionary22.jpg" alt="22">
+                    </a>
                   </div>
                   <div class="swiper-slide">
-                    <img src="./img/dictinary/dictinary9.jpg" alt="">
+                    <a href="dictionary.html">
+                      <img src="./img/dictionary/dictionary26.jpg" alt="26">
+                    </a>
                   </div>
                   <div class="swiper-slide">
-                    <img src="./img/dictinary/dictinary10.jpg" alt="">
+                    <a href="dictionary.html">
+                      <img src="./img/dictionary/dictionary32.jpg" alt="32">
+                    </a>
                   </div>
                 </div>
               </div>
@@ -105,12 +116,16 @@
             <h3>10월의 꽃 전시</h3>
             <div class="main_contentExhibit">
               <div class="flower_exhibition">
-                <img src="./img/main/kukka-piknic-exhibition-coexistence-with-flowers-11-11ad90e3-6f4b-4853-aaf2-bb798a4c0f11.gif" alt="">
-                <span>꾸까 : 꽃과의 공존</span>
+                <a href="exhibit.html">
+                  <img src="./img/main/flowerexhibition.jpeg" alt="고양가을꽃축제 비밀의 화원">
+                </a>
+                <span>고양가을꽃축제 비밀의 화원</span>
               </div>
               <div class="flower_exposition">
-                <img src="./img/main/flowerexposition.jpg" alt="">
-                <span>고양국제꽃박람회</span>
+                <a href="exhibit.html">
+                  <img src="./img/main/flowerexposition.jpg" alt="대구꽃박람회">
+                </a>
+                <span>대구꽃박람회</span>
               </div>
             </div>
           </div>
@@ -118,38 +133,56 @@
             <h2>Flower Class</h2>
             <div class="main_contentFlowerClass">
               <h3>실내에서 간편하게 즐기기 좋은 DIY 키트 클래스</h3>
-              <div class="flower_class">
-                <span>DIY 플라워 클래스</span>
-              </div>
+              <div class="flower_class">DIY 플라워 클래스</div>
               <div class="flower_diyclass">
-                <div class="class1">
-                  <img src="./img/main/class1.jpg" alt="">
-                </div>
-                <div class="class2">
-                  <img src="./img/main/class2.jpg" alt="">
-                </div>
-                <div class="class3">
-                  <img src="./img/main/class3.jpg" alt="">
-                </div>
-                <div class="class4">
-                  <img src="./img/main/class4.jpg" alt="">
-                </div></div>
+                <div class="class_bg"></div>
+                <ul>
+                  <li class="class1">
+                    <img src="./img/main/flowerclass1.jpg" alt="온라인 플라워 클래스">
+                    <div>재료비로만 배워보는,<br> 온라인 플라워 클래스</div>
+                  </li>
+                  <li class="class2">
+                    <img src="./img/main/flowerclass2.jpg" alt="화병꽂이 집중 과정">
+                    <div>[온라인 클래스 #1]<br> 화병꽂이 집중 과정</div>
+                  </li>
+                  <li class="class3">
+                    <img src="./img/main/flowerclass3.jpg" alt="라운드 센터피스 집중 과정">
+                    <div>[온라인 클래스 #2]<br> 라운드 센터피스 집중 과정</div>
+                  </li>
+                  <li class="class4">
+                    <img src="./img/main/flowerclass4.jpg" alt="햇박스 집중 과정">
+                    <div>[온라인 클래스 #3]<br> 햇박스 집중 과정</div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="main_content4">
             <h2>Brand</h2>
+            <h3>꽃을 만나는 새로운 공간, 라움</h3>
             <div class="main_contentBrand">
-              <p>RAUM</p>
-              <span>
-                <p>라움은 우리나라의 순우리말로 ‘아름다움’을 의미하며, 아름답다의 어원은 알음, 아는 것입니다.</p>
-                <p>서로를 알아가고 마음을 전하며 함께함을 배우자는 브랜드철학을 담고 있습니다.</p>
-              </span>
+              <ul class="mian_contentBrand_raum">
+                <li>
+                  <a href="brand.html">
+                    <img src="img/main/brand1.jpg" alt="brand1">
+                    <strong>꽃에 관심있는 사람</strong>
+                    <p>라움은 꽃을 좋아하는 사람들이 꽃에 대해 더 많이 알 수 있도록 돕고자 노력합니다.</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="brand.html">
+                    <img src="img/main/brand2.jpg" alt="brand2">
+                    <strong>꽃을 선물하는 사람</strong>
+                    <p>라움은 꽃을 선물하려는 사람들이 니즈에 맞게 꽃을 선택할 수 있도록 돕고자 노력합니다.</p>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </main>
-    <!-- <footer>
+    <footer>
       <div class="footer_inner">
         <div class="footer_left">
           <h1>라움</h1>
@@ -157,17 +190,15 @@
         </div>
         <div class="footer_right">
           <form action="">
-            <input type="email" class="footer_emailInput" placeholder="꽃 관련 사진,정보를 받으세요">
+            <input type="email" class="footer_emailInput" placeholder="꽃 관련 사진, 정보를 받으세요">
             <button type="submit" class="footer_btn">
               <i class="fa-solid fa-envelope"></i>
             </button>
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
   </div>
-
-  
   <script type="importmap">
     {
       "imports": {

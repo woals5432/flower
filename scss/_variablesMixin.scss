@@ -1,15 +1,13 @@
-$main-color1: #E6A9C9;
-$main-color2: #F1D152;
-$main-color3: #8D9D66;
-$main-color4: #ACC3E4;
+$main-color: #FFFFFF;
+$sub-color: #000000;
 
-$white: #FFFFFF;
-$black: #000000;
 $gray1: #444;
 $gray2: #767676;
 $gray3: #b7b7b7;
 
-$opacity: rgba(255, 255, 255, 0.5);
+$opacity1: rgba(255, 255, 255, 0.5);
+$opacity2: rgba(0, 0, 0, 0.5);
+$opacity3: rgba(0, 0, 0, 0.7);
 
 @mixin set-box($width: 100%, $height: 100%, $border-radius: 0) {
   width: $width;
@@ -20,4 +18,10 @@ $opacity: rgba(255, 255, 255, 0.5);
 %double {
   display: flex;
   justify-content: space-between;
+}
+
+%img_cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

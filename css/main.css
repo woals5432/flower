@@ -1,7 +1,13 @@
 @charset "UTF-8";
-.main_inner .main_content > div .main_contentExhibit, .main_inner .nav_open .nav_inner {
+footer .footer_inner, .main_inner .main_content > div.main_content2 .main_contentExhibit {
   display: flex;
   justify-content: space-between;
+}
+
+.mainContent > li > a .mainContent-img img, .main section img, .main_inner .main_content > div.main_content4 .main_contentBrand .mian_contentBrand_raum > li img, .main_inner .main_content > div.main_content2 .main_contentExhibit .flower_exhibition > a img, .main_inner .main_content > div.main_content2 .main_contentExhibit .flower_exposition > a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @font-face {
@@ -72,6 +78,468 @@ a {
   color: inherit;
 }
 
+html, body {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  font-family: "S-CoreDream-3Light";
+}
+
+img {
+  width: 100%;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  min-width: 390px;
+  margin: auto;
+}
+
+/* header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: auto;
+  z-index: 11;
+  transition: 0.3s ease-in;
+}
+header.main_header {
+  background: transparent;
+}
+header.down {
+  background: #FFFFFF;
+}
+header .header_inner {
+  font-family: "MYYeongnamnu";
+  height: 56px;
+}
+header .header_inner h1 {
+  width: 120px;
+  text-align: center;
+  margin: auto;
+  line-height: 56px;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+/* main */
+.main_inner {
+  width: 100%;
+}
+.main_inner .nav .nav_btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background: #FFFFFF url("../img/icon/noun-nature-6193660.svg") no-repeat center center/48px 48px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+.main_inner .nav_open {
+  width: 100%;
+  height: 100vh;
+  border-radius: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+  z-index: -10;
+  opacity: 0;
+}
+.main_inner .nav_open.open {
+  background: #000000;
+  color: #FFFFFF;
+  z-index: 12;
+  transition: opacity 1s cubic-bezier(0.2, 0.8, 0.4, 1);
+  opacity: 1;
+}
+.main_inner .nav_open .nav_header {
+  font-family: "MYYeongnamnu";
+  height: 56px;
+  background: #000000;
+  color: #FFFFFF;
+  z-index: 13;
+}
+.main_inner .nav_open .nav_header h1 {
+  width: 120px;
+  text-align: center;
+  margin: auto;
+  line-height: 56px;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+.main_inner .nav_open .nav_inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  height: 90%;
+  margin: auto;
+}
+.main_inner .nav_open .nav_inner .nav_menu > li {
+  margin: 60px 0;
+  text-align: center;
+}
+.main_inner .nav_open .nav_inner .nav_menu > li > a {
+  font-size: 1.3em;
+}
+.main_inner .nav_open .nav_inner .nav_menu > li .nav_subMenu > li {
+  margin: 25px 0 -10px;
+}
+.main_inner .nav_open .nav_inner .nav_menu > li .nav_subMenu > li > a {
+  color: #767676;
+}
+.main_inner .nav_open .nav_close .nav_closeBtn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background: #FFFFFF url("../img/icon/noun-ornament-707222.svg") no-repeat center center/48px 48px;
+  z-index: 100;
+}
+.main_inner .main_visual {
+  width: 100%;
+  height: 100vh;
+  border-radius: 0;
+  background: url(../img/main/main_visual.jpg) fixed center/cover;
+}
+.main_inner .main_content {
+  width: 100%;
+}
+.main_inner .main_content > div {
+  width: 100%;
+}
+.main_inner .main_content > div h2 {
+  padding: 120px 70px 20px;
+  font-size: 1.8em;
+  font-weight: 700;
+}
+.main_inner .main_content > div h3 {
+  padding: 0 70px 40px;
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #767676;
+}
+.main_inner .main_content > div.main_content1 h2 {
+  padding-top: 70px;
+}
+.main_inner .main_content > div.main_content1 .main_contentDictionary .month_flower .swiper-slide img {
+  border-radius: 8px;
+}
+.main_inner .main_content > div.main_content2 .main_contentExhibit {
+  column-gap: 30px;
+  padding: 0 70px;
+}
+.main_inner .main_content > div.main_content2 .main_contentExhibit .flower_exhibition, .main_inner .main_content > div.main_content2 .main_contentExhibit .flower_exposition {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+.main_inner .main_content > div.main_content2 .main_contentExhibit .flower_exhibition > a, .main_inner .main_content > div.main_content2 .main_contentExhibit .flower_exposition > a {
+  height: 100%;
+}
+.main_inner .main_content > div.main_content2 .main_contentExhibit .flower_exhibition span, .main_inner .main_content > div.main_content2 .main_contentExhibit .flower_exposition span {
+  font-size: 1.1em;
+}
+.main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_class {
+  position: relative;
+  width: 100%;
+  line-height: 200px;
+  background: linear-gradient(rgba(255, 255, 255, 0) 10%, rgb(255, 255, 255)), url("../img/main/class_pc.png") center center/cover no-repeat;
+  text-indent: -9999px;
+}
+.main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_class::before {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+.main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+.main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass .class_bg {
+  display: none;
+}
+.main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass > ul {
+  display: flex;
+  column-gap: 30px;
+  position: relative;
+  top: -120px;
+  padding: 0 90px;
+}
+.main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass > ul li {
+  width: 25%;
+}
+.main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass > ul li img {
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+.main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass > ul li div {
+  padding: 0 10px;
+  font-size: 0.9em;
+  line-height: 20px;
+  text-align: center;
+}
+.main_inner .main_content > div.main_content4 h2 {
+  padding-top: 0;
+}
+.main_inner .main_content > div.main_content4 .main_contentBrand {
+  padding: 0 70px 70px;
+}
+.main_inner .main_content > div.main_content4 .main_contentBrand .mian_contentBrand_raum {
+  display: flex;
+  column-gap: 30px;
+}
+.main_inner .main_content > div.main_content4 .main_contentBrand .mian_contentBrand_raum > li {
+  position: relative;
+}
+.main_inner .main_content > div.main_content4 .main_contentBrand .mian_contentBrand_raum > li strong {
+  display: none;
+}
+.main_inner .main_content > div.main_content4 .main_contentBrand .mian_contentBrand_raum > li p {
+  display: none;
+}
+.main_inner .main_content > div.main_content4 .main_contentBrand .mian_contentBrand_raum > li:hover p {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 50px;
+  line-height: 25px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #FFFFFF;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  padding: 50px 70px;
+  background: #000000;
+}
+footer .footer_inner {
+  align-items: center;
+}
+footer .footer_inner .footer_left {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+footer .footer_inner .footer_left h1 {
+  font-family: "MYYeongnamnu";
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+footer .footer_inner .footer_left p {
+  font-size: 0.9em;
+  color: #b7b7b7;
+}
+footer .footer_inner .footer_right {
+  display: flex;
+  justify-content: center;
+}
+footer .footer_inner .footer_right form {
+  border-bottom: 1px solid #FFFFFF;
+}
+footer .footer_inner .footer_right form .footer_emailInput {
+  width: 230px;
+  padding-bottom: 10px;
+  background: transparent;
+  outline: none;
+  caret-color: #FFFFFF;
+}
+footer .footer_inner .footer_right form .footer_emailInput::placeholder {
+  color: #b7b7b7;
+}
+footer .footer_inner .footer_right form .footer_btn {
+  background: transparent;
+  color: #FFFFFF;
+  font-size: 1.3em;
+}
+
+@media (max-width: 1023px) {
+  .main_inner .nav_open .nav_inner {
+    width: 65%;
+  }
+  .main_inner .nav_open .nav_inner .nav_menu > li > a {
+    font-size: 1.1em;
+  }
+  .main_inner .nav_open .nav_inner .nav_menu > li .nav_subMenu > li > a {
+    font-size: 0.9em;
+  }
+  .main_inner .main_content {
+    width: 100%;
+  }
+  .main_inner .main_content > div h2 {
+    font-size: 1.5em;
+  }
+  .main_inner .main_content > div h3 {
+    font-size: 1.1em;
+  }
+  .main_inner .main_content > div.main_content2 .main_contentExhibit .flower_exhibition span, .main_inner .main_content > div.main_content2 .main_contentExhibit .flower_exposition span {
+    font-size: 0.9em;
+  }
+  .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_class {
+    line-height: 150px;
+    background: linear-gradient(rgba(255, 255, 255, 0) 10%, rgb(255, 255, 255)), url("../img/main/class_mo.png") center center/cover no-repeat;
+  }
+  .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass .class_bg {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 105px;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass > ul {
+    display: flex;
+    column-gap: 15px;
+    position: relative;
+    top: -30px;
+    padding: 0 70px;
+  }
+  .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass > ul li {
+    width: 25%;
+  }
+  .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass > ul li img {
+    margin-bottom: 15px;
+  }
+  .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass > ul li div {
+    padding: 0 10px;
+    font-size: 0.8em;
+    line-height: 20px;
+    text-align: center;
+  }
+  .main_inner .main_content > div.main_content4 h2 {
+    padding-top: 70px;
+  }
+  .main_inner .main_content > div.main_content4 .main_contentBrand {
+    column-gap: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .main_inner .nav_open .nav_inner {
+    justify-content: center;
+  }
+  .main_inner .nav_open .nav_inner .nav_menuLeft {
+    display: none;
+  }
+  .main_inner .main_content > div h2 {
+    padding: 110px 40px 20px;
+    font-size: 1.4em;
+  }
+  .main_inner .main_content > div h3 {
+    padding: 0 40px 30px;
+    font-size: 0.9em;
+  }
+  .main_inner .main_content > div.main_content2 .main_contentExhibit {
+    column-gap: 20px;
+    padding: 0 40px;
+  }
+  .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_class span {
+    font-size: 1em;
+  }
+  .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass {
+    column-gap: 10px;
+    padding: 0 40px;
+  }
+  .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass > ul {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+    position: relative;
+    top: -100px;
+    padding: 0;
+  }
+  .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass > ul li {
+    width: 50%;
+  }
+  .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass > ul li.class3, .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass > ul li.class4 {
+    display: none;
+  }
+  .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass > ul li div {
+    display: none;
+  }
+  .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass > ul li br {
+    display: none;
+  }
+  .main_inner .main_content > div.main_content4 h2 {
+    padding-top: 0;
+  }
+  .main_inner .main_content > div.main_content4 .main_contentBrand {
+    padding: 0 40px 70px;
+  }
+  .main_inner .main_content > div.main_content4 .main_contentBrand .mian_contentBrand_raum > li:hover p {
+    font-size: 0.8em;
+  }
+  footer {
+    padding: 50px 40px;
+  }
+}
+@media (max-width: 600px) {
+  .main_inner .main_content > div.main_content2 .main_contentExhibit .flower_exhibition span, .main_inner .main_content > div.main_content2 .main_contentExhibit .flower_exposition span {
+    display: none;
+  }
+  .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass .class_bg {
+    display: none;
+  }
+  .main_inner .main_content > div.main_content3 .main_contentFlowerClass .flower_diyclass > ul li div {
+    font-size: 0.8em;
+  }
+  .main_inner .main_content > div.main_content4 .main_contentBrand {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .main_inner .main_content > div.main_content4 .main_contentBrand .mian_contentBrand_raum > li:hover p {
+    display: none;
+  }
+  .main_inner .main_content > div.main_content4 .main_contentBrand .mian_contentBrand_raum > li:hover strong {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #FFFFFF;
+    font-size: 0.8em;
+  }
+  footer {
+    padding: 40px;
+  }
+  footer .footer_inner .footer_right {
+    display: none;
+  }
+}
 body {
   font-family: "S-CoreDream-3Light";
 }
@@ -86,62 +554,51 @@ button {
 
 .container {
   width: 100%;
-  min-width: 360px;
+  min-width: 390px;
   margin: auto;
 }
 
 /* header */
+header {
+  background: #FFFFFF;
+}
+
 .nav_contents {
   position: sticky;
   top: 56px;
   left: 0px;
   width: 100%;
-  min-height: 56px;
   background: #eee;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 50px;
-}
-.nav_contents .nav_hashtag_subbtn {
-  position: absolute;
-  left: 100px;
-  font-weight: 400;
-}
-@media (max-width: 1240px) {
-  .nav_contents .nav_hashtag_subbtn {
-    display: none;
-    position: absolute;
-    left: 100px;
-    font-weight: 400;
-  }
 }
 .nav_contents .nav_hashtag_main .nav_hashtag_wrap {
-  display: flex;
-  column-gap: 30px;
-}
-.nav_contents .nav_hashtag_main .nav_hashtag_wrap .nav_hashtag .nav_hashtag_namewrap {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
-  border: 2px solid black;
+  column-gap: 40px;
+  padding: 10px;
+}
+.nav_contents .nav_hashtag_main .nav_hashtag_wrap .nav_hashtag .nav_hashtag_namewrap {
+  border: 1px solid #b7b7b7;
   background-color: white;
   border-radius: 24px;
-  padding: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
 }
 .nav_contents .nav_hashtag_main .nav_hashtag_wrap .nav_hashtag .nav_hashtag_namewrap button {
   background: none;
   display: block;
-  cursor: pointer;
-  font-weight: 700;
+  font-weight: 500;
+  font-size: 15px;
+  color: #444;
+  white-space: nowrap;
 }
+
 /* main */
 section.flower_contents {
   position: relative;
   width: 100%;
   height: 100%;
-  padding-bottom: 100px;
   padding-top: 112px;
   margin: auto;
 }
@@ -151,7 +608,7 @@ section.flower_contents .flower_dictionary {
   margin: 0 auto;
 }
 section.flower_contents .flower_dictionary .flower_dictionary_title {
-  padding: 30px 15px;
+  padding: 30px 24px;
   display: flex;
   align-items: center;
   column-gap: 22px;
@@ -166,9 +623,10 @@ section.flower_contents .flower_dictionary .flower_dictionary_title .flower_dict
   display: block;
   font-size: 14px;
   font-weight: 500;
+  color: #767676;
 }
 section.flower_contents .flower_dictionary div.flower_dictionary_wrapper {
-  margin: 0px 15px;
+  margin: 0px 24px;
 }
 section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list {
   display: grid;
@@ -199,419 +657,147 @@ section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower
   font-weight: 400;
   line-height: 18px;
 }
-
-/* footer */
-footer {
-  width: 100%;
-  padding: 30px;
-  background: #444;
-  margin-top: 1000px;
-}
-footer .footer_inner {
+section.flower_contents .flower_dictionary .mainContent_more {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
+  height: 60px;
+  padding: 10px 24px;
 }
-footer .footer_inner .footer_left {
-  display: flex;
-  flex-direction: column;
-  row-gap: 15px;
-}
-footer .footer_inner .footer_left h1 {
-  font-family: "MYYeongnamnu";
-  font-size: 1.8em;
-  font-weight: bold;
-  color: #fff;
-}
-footer .footer_inner .footer_left p {
+section.flower_contents .flower_dictionary .mainContent_more button {
+  background: transparent;
+  color: #444;
   font-size: 0.9em;
-  color: #b7b7b7;
 }
-footer .footer_inner .footer_right {
-  display: flex;
-  justify-content: center;
-}
-footer .footer_inner .footer_right form {
-  border-bottom: 1px solid #fff;
-}
-footer .footer_inner .footer_right form .footer_emailInput {
-  width: 250px;
-  padding-bottom: 10px;
-  background: transparent;
-  outline: none;
-  caret-color: white;
-}
-footer .footer_inner .footer_right form .footer_emailInput::placeholder {
-  color: #b7b7b7;
-}
-footer .footer_inner .footer_right form .footer_btn {
-  background: transparent;
-  color: #fff;
-  font-size: 1.3em;
+section.flower_contents .flower_dictionary .mainContent_more button i {
+  line-height: 20px;
 }
 
+@media (max-width: 767px) {
+  .nav_contents .nav_hashtag_main .nav_hashtag_wrap {
+    column-gap: 30px;
+  }
+  .nav_contents .nav_hashtag_main .nav_hashtag_wrap .nav_hashtag .nav_hashtag_namewrap {
+    padding: 10px;
+  }
+  .nav_contents .nav_hashtag_main .nav_hashtag_wrap .nav_hashtag .nav_hashtag_namewrap button {
+    font-size: 14px;
+  }
+  section.flower_contents .flower_dictionary .flower_dictionary_title .flower_dictionary_title_1 {
+    font-size: 24px;
+  }
+  section.flower_contents .flower_dictionary .flower_dictionary_title .flower_dictionary_title_description {
+    font-size: 13px;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list {
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+  }
+}
+@media (max-width: 500px) {
+  .nav_contents .nav_hashtag_main .nav_hashtag_wrap {
+    column-gap: 15px;
+  }
+  .nav_contents .nav_hashtag_main .nav_hashtag_wrap .nav_hashtag .nav_hashtag_namewrap {
+    padding: 8px;
+  }
+  .nav_contents .nav_hashtag_main .nav_hashtag_wrap .nav_hashtag .nav_hashtag_namewrap button {
+    font-size: 13px;
+  }
+}
 .main {
-  background: white;
-  height: 6000px;
-  font-family: "MYYeongnamnu";
+  background: #FFFFFF;
 }
 .main section {
-  color: black;
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  font-family: "MYYeongnamnu";
+  color: #000000;
   text-align: center;
   opacity: 0;
   transition: all 2s;
-  width: 50%;
-  margin: auto;
-  margin-top: 1000px;
-  white-space: pre-line;
+  width: 80%;
+  margin: 800px auto 0;
+  padding: 0 100px;
+}
+.main section > span {
+  font-size: clamp(80px, 20vw, 200px);
+  font-weight: 700;
+}
+.main section > p {
+  padding: 0 20px;
+}
+.main section.brand_producer {
+  margin-bottom: 200px;
+}
+.main section.brand_producer h1 {
+  margin-bottom: -20px;
 }
 .main section .content {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-  column-gap: 20px;
+  justify-content: space-between;
+  column-gap: 30px;
+}
+.main section .content .contentImg, .main section .content .contentText {
+  flex: 1;
 }
 .main section .content .contentText {
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 30px;
-}
-.main section img {
-  object-fit: none;
+  text-align: left;
 }
 .main section h1 {
+  width: 100%;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 30px;
 }
 .main section p {
   width: 100%;
   font-weight: 400;
   font-size: 16px;
   font-family: "S-CoreDream-3Light";
-}
-
-html, body {
-  position: relative;
-  height: 100%;
-  margin: 0;
-  font-family: "S-CoreDream-3Light";
-}
-
-img {
-  width: 100%;
-}
-
-button {
-  cursor: pointer;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
-
-.container {
-  width: 100%;
-  min-width: 390px;
-  margin: auto;
-}
-
-/* header */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  margin: auto;
-  background: transparent;
-  z-index: 11;
-  transition: 0.3s ease-in;
-}
-header.down {
-  background: #FFFFFF;
-}
-header .header_inner {
-  font-family: "MYYeongnamnu";
-  height: 56px;
-}
-header .header_inner.open {
-  color: #FFFFFF;
-}
-header .header_inner h1 {
-  width: 120px;
-  text-align: center;
-  margin: auto;
-  line-height: 56px;
-  font-size: 2em;
-  font-weight: bold;
-}
-
-/* main */
-.main_inner {
-  width: 100%;
-}
-.main_inner .nav .nav_btn {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  position: fixed;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  background: #FFFFFF url("../img/icon/noun-nature-6193660.svg") no-repeat center center/48px 48px;
-  z-index: 10;
-}
-.main_inner .nav_open {
-  width: 100vw;
-  height: 100vh;
-  border-radius: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transition: 0.3s;
-  z-index: -10;
-  opacity: 0;
-}
-.main_inner .nav_open.open {
-  background: #000000;
-  color: #FFFFFF;
-  z-index: 10;
-  transition: opacity 1s cubic-bezier(0.2, 0.8, 0.4, 1);
-  opacity: 1;
-}
-.main_inner .nav_open .nav_inner {
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60%;
-}
-.main_inner .nav_open .nav_inner .nav_menuLeft img, .main_inner .nav_open .nav_inner .nav_menuRight img {
-  width: 150px;
-}
-.main_inner .nav_open .nav_inner .nav_menu > li {
-  margin: 50px 0;
-  text-align: center;
-}
-.main_inner .nav_open .nav_inner .nav_menu > li > a {
-  font-size: 1.1em;
-}
-.main_inner .nav_open .nav_inner .nav_menu > li .nav_subMenu > li {
-  margin: 20px 0 -10px;
-}
-.main_inner .nav_open .nav_inner .nav_menu > li .nav_subMenu > li > a {
-  color: #767676;
-  font-size: 0.9em;
-}
-.main_inner .nav_open .nav_close .nav_closeBtn {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  position: fixed;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  background: #FFFFFF url("../img/icon/noun-ornament-707222.svg") no-repeat center center/48px 48px;
-  z-index: 100;
-}
-.main_inner .main_visual {
-  width: 100%;
-  height: 100vh;
-  border-radius: 0;
-  background: url(../img/main/main_5.jpg) fixed center/cover;
-}
-.main_inner .main_content {
-  width: 100%;
-}
-.main_inner .main_content > div {
-  width: 100%;
-}
-.main_inner .main_content > div h2 {
-  padding: 70px 70px 20px;
-  font-size: 1.8em;
-  font-weight: 700;
-}
-.main_inner .main_content > div h3 {
-  padding: 0 70px 40px;
-  font-size: 1.2em;
-  font-weight: 500;
-  color: #767676;
-}
-.main_inner .main_content > div .main_contentDictionary .month_flower .swiper-slide img {
-  border-radius: 8px;
-}
-.main_inner .main_content > div .main_contentExhibit {
-  column-gap: 30px;
-  padding: 0 70px;
-}
-.main_inner .main_content > div .main_contentExhibit .flower_exhibition, .main_inner .main_content > div .main_contentExhibit .flower_exposition {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 20px;
-}
-.main_inner .main_content > div .main_contentExhibit .flower_exhibition img, .main_inner .main_content > div .main_contentExhibit .flower_exposition img {
-  height: 100%;
-}
-.main_inner .main_content > div .main_contentExhibit .flower_exhibition span, .main_inner .main_content > div .main_contentExhibit .flower_exposition span {
-  font-size: 1.1em;
-}
-.main_inner .main_content > div .main_contentFlowerClass .flower_class {
-  position: relative;
-  width: 100%;
-  line-height: 200px;
-  background: linear-gradient(rgba(255, 255, 255, 0) 10%, rgb(255, 255, 255)), url("../img/main/class_pc.png") center center/cover no-repeat;
-}
-.main_inner .main_content > div .main_contentFlowerClass .flower_class::before {
-  width: 100%;
-  height: 100%;
-  border-radius: 0;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.7);
-}
-.main_inner .main_content > div .main_contentFlowerClass .flower_class span {
-  color: #FFFFFF;
-  font-size: 2em;
-}
-.main_inner .main_content > div .main_contentFlowerClass .flower_diyclass {
-  display: flex;
-  column-gap: 30px;
-  padding: 0 90px;
-  background: rgba(0, 0, 0, 0.7);
-}
-.main_inner .main_content > div .main_contentFlowerClass .flower_diyclass > div {
-  width: 25%;
-}
-.main_inner .main_content > div .main_contentBrand {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  column-gap: 20px;
-  padding: 50px 120px;
-}
-.main_inner .main_content > div .main_contentBrand > p {
-  font-family: "MYYeongnamnu";
-  font-size: 3em;
-  font-weight: 700;
-}
-.main_inner .main_content > div .main_contentBrand span {
   line-height: 30px;
-  font-size: 0.9em;
-  font-weight: 600;
 }
 
-/* footer 
-footer {
-  width: 100%;
-  padding: 50px 70px;
-  background: $black;
-
-  .footer_inner {
-    @extend %double;
-    align-items: center;
-
-    .footer_left {
-      display: flex;
-      flex-direction: column;
-      row-gap: 15px;
-
-      h1 {
-        font-family: 'MYYeongnamnu';
-        font-size: 1.8em;
-        font-weight: bold;
-        color: $white;
-      }
-      p {
-        font-size: 0.9em;
-        color: $gray3;
-      }
-    }
-    .footer_right {
-      display: flex;
-      justify-content: center;
-
-      form {
-        border-bottom: 1px solid $white;
-
-        .footer_emailInput {
-          width: 250px;
-          padding-bottom: 10px;
-          background: transparent;
-          outline: none;
-          caret-color: $white;
-
-          &::placeholder {
-            color: $gray3;
-          }
-        }
-        .footer_btn {
-          background: transparent;
-          color: $white;
-          font-size: 1.3em;
-        }
-      }
-    }
-  }
-}
-*/
 @media (max-width: 1023px) {
-  .main_inner .main_content {
+  .main section {
     width: 100%;
+    padding: 0 50px;
   }
-  .main_inner .main_content > div h2 {
-    font-size: 1.5em;
+  .main section .content {
+    flex-direction: column;
+    row-gap: 30px;
   }
-  .main_inner .main_content > div h3 {
-    font-size: 1.1em;
+  .main section .content.content2 {
+    flex-direction: column-reverse;
   }
-  .main_inner .main_content > div .main_contentExhibit .flower_exhibition span, .main_inner .main_content > div .main_contentExhibit .flower_exposition span {
-    font-size: 0.9em;
-  }
-  .main_inner .main_content > div .main_contentFlowerClass .flower_class {
-    line-height: 150px;
-    background: linear-gradient(rgba(255, 255, 255, 0) 10%, rgb(255, 255, 255)), url("../img/main/class_mo.png") center center/cover no-repeat;
+  .main section .content .contentText {
+    text-align: center;
   }
 }
 @media (max-width: 767px) {
-  .main_inner .nav_open .nav_inner {
-    justify-content: center;
+  .main section h1 {
+    font-size: 30px;
   }
-  .main_inner .nav_open .nav_inner .nav_menuLeft, .main_inner .nav_open .nav_inner .nav_menuRight {
-    display: none;
-  }
-  .main_inner .main_content > div h2 {
-    padding: 50px 40px 20px;
-    font-size: 1.4em;
-  }
-  .main_inner .main_content > div h3 {
-    padding: 0 40px 30px;
-    font-size: 0.9em;
-  }
-  .main_inner .main_content > div .main_contentExhibit {
-    column-gap: 20px;
-    padding: 0 40px;
-  }
-  .main_inner .main_content > div .main_contentFlowerClass .flower_class {
-    height: 100px;
-  }
-  .main_inner .main_content > div .main_contentFlowerClass .flower_class span {
-    font-size: 1em;
-  }
-  .main_inner .main_content > div .main_contentFlowerClass .flower_diyclass {
-    column-gap: 10px;
-    padding: 0 50px;
+  .main section p {
+    font-size: 14px;
   }
 }
-.header_in {
-  height: 56px;
-  width: 100%;
-  background: transparent;
+@media (max-width: 600px) {
+  .main section {
+    padding: 0;
+  }
+  .main section h1 {
+    font-size: 25px;
+  }
+  .main section .content .contentText {
+    padding: 0 20px;
+  }
 }
-
 /* 메인 */
 main {
   display: flex;
@@ -621,326 +807,149 @@ main {
   flex-direction: column;
 }
 
+section.flower_contents_ex {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 56px 0 0;
+  margin: auto;
+}
+section.flower_contents_ex .flower_exhibit {
+  width: 100%;
+  margin: 0 auto;
+}
+section.flower_contents_ex .flower_exhibit .flower_exhibit_title {
+  padding: 30px 24px;
+  display: flex;
+  align-items: center;
+  column-gap: 22px;
+}
+section.flower_contents_ex .flower_exhibit .flower_exhibit_title .flower_exhibit_title_1 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: 0.006em;
+}
+section.flower_contents_ex .flower_exhibit .flower_exhibit_title .flower_exhibit_title_description {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #767676;
+}
+
 /* 메인컨텐츠 */
 .mainContent {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-
-.mainContent li {
+.mainContent > li {
   width: 100%;
   height: 46vh;
 }
-
-.mainContent a {
+.mainContent > li > a {
   display: flex;
   width: 100%;
   height: 46vh;
 }
-
-.mainContent-text {
+.mainContent > li > a .mainContent-text {
   flex-grow: 1;
   padding: 24px;
-  background: #ffdcfc;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 31%;
 }
-
-.mainContent-text h3 {
-  font-size: 30px;
+.mainContent > li > a .mainContent-text.text_bg1 {
+  background: #eca6ff;
 }
-
-.mainContent-text-ps {
+.mainContent > li > a .mainContent-text.text_bg2 {
+  background: #fac300;
+}
+.mainContent > li > a .mainContent-text.text_bg3 {
+  background: #0db54a;
+}
+.mainContent > li > a .mainContent-text.text_bg4 {
+  background: #ff8f1c;
+}
+.mainContent > li > a .mainContent-text.text_bg5 {
+  background: #5296ff;
+}
+.mainContent > li > a .mainContent-text.text_bg6 {
+  background: #ffa096;
+}
+.mainContent > li > a .mainContent-text h3 {
+  font-size: 26px;
+  line-height: 25px;
+}
+.mainContent > li > a .mainContent-text h3 br {
+  display: none;
+}
+.mainContent > li > a .mainContent-text .mainContent-text-ps {
   margin-top: 24px;
+  line-height: 25px;
 }
-
-.mainContent-img {
+.mainContent > li > a .mainContent-img {
   flex-grow: 3;
   height: 100%;
 }
-
-.mainContent-img > img {
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-}
-
-/* home */
-.home {
-  margin-top: 48px;
-  padding: 0 24px;
-}
-
-.homeDiv {
+.mainContent .mainContent_more {
   display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 60px;
+  padding: 10px 24px;
 }
-
-.homeDivText {
-  font-size: 19px;
+.mainContent .mainContent_more button {
+  background: transparent;
+  color: #444;
+  font-size: 0.9em;
 }
-
-.homeDivText span {
-  display: block;
-}
-
-/* 편지 */
-.page-section {
-  margin-top: 96px;
-  padding: 0 24px;
-}
-
-.pageInner {
-  border: 3px solid black;
-  padding: 24px;
-  font-size: 19px;
-}
-
-.pageInner p {
-  padding: 15px;
-}
-
-.pageInner > div {
-  border-bottom: 3px solid black;
-}
-
-/* 매거진 */
-.page-sectionContent {
-  margin-top: 48px;
-}
-
-.magazine-content {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  height: 32vh;
-}
-
-.Magazine-img {
-  width: 48%;
-}
-
-.Magazine-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
-}
-
-.Magazine-text {
-  width: 48%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* 이벤트 */
-.eventsInner {
-  display: flex;
-  width: 100%;
-  height: 30vh;
-}
-
-.eventsInner-left {
-  width: 33%;
-  font-size: 30px;
-}
-
-.eventsInner-right {
-  width: 69%;
-  margin-left: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.rightInner {
-  display: flex;
-}
-
-.rightText {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.rightText1 {
-  font-size: 20px;
-}
-
-.rightText2 {
-  font-weight: 300;
-}
-
-.rightText2 p:first-child {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.rightImg {
-  margin-left: 24px;
-}
-
-.rightImg img {
-  width: 100%;
-  height: 100%;
-}
-
-.eventsView {
-  margin-top: 20px;
-}
-
-/* 배너 */
-.banner {
-  display: flex;
-  background: #FF8F1C;
-  justify-content: space-between;
-  border-radius: 10px;
-  padding: 24px;
-  height: 24vh;
-}
-
-.bannerText {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.bannerText h3 {
-  font-size: 32px;
-}
-
-.bannerText span {
-  font-size: 21px;
-}
-
-.bannerImg img {
-  width: 100%;
-  height: 100%;
-}
-
-.bannerImg2 {
-  width: 100%;
-  height: 100%;
-}
-
-/* 스토어 */
-.store {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 35vh;
-}
-
-.store h3 {
-  font-size: 30px;
-}
-
-.storeContent {
-  display: flex;
-  justify-content: space-around;
-  height: 24vh;
-}
-
-.storeInner {
-  width: 45%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.storeInner p {
-  font-size: 20px;
-}
-
-.storeContent img {
-  width: 100%;
+.mainContent .mainContent_more button i {
+  line-height: 20px;
 }
 
 /* 반응형 */
-@media (max-width: 590px) {
-  /* br {
-    display: inline-block;
-    content: " ";
-    padding: 0 2px;
-  } */
-  .mainContent-text h3 {
-    font-size: 20px;
-  }
-  .magazine-content {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    height: 55vh;
-  }
-  .mainContent a {
-    height: 25vh;
-    width: 100%;
-  }
-  .Magazine-img {
-    width: 100%;
-    height: 59%;
-  }
-  .Magazine-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .Magazine-text {
-    width: 100%;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .mainContent-text {
+@media (max-width: 1023px) {
+  .mainContent > li > a .mainContent-text {
     width: 80%;
   }
-  .eventsInner {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 39vh;
+  .mainContent > li > a .mainContent-text h3 {
+    font-size: 24px;
   }
-  .rightText {
-    width: 50%;
-    justify-content: space-evenly;
+  .mainContent > li > a .mainContent-text .mainContent-text-ps {
+    font-size: 15px;
   }
-  .rightImg {
-    width: 50%;
+}
+@media (max-width: 767px) {
+  section.flower_contents_ex .flower_exhibit .flower_exhibit_title .flower_exhibit_title_1 {
+    font-size: 24px;
   }
-  .eventsInner-right {
-    margin-top: 65px;
-    margin-left: 0;
-    width: 100%;
+  section.flower_contents_ex .flower_exhibit .flower_exhibit_title .flower_exhibit_title_description {
+    font-size: 13px;
   }
-  .banner {
-    flex-direction: column;
-    height: 41vh;
+  .mainContent > li {
+    height: 25vh;
   }
-  .bannerText h3 {
-    font-size: 28px;
+  .mainContent > li > a {
+    height: 25vh;
   }
-  .bannerText span {
-    font-size: 21px;
-    margin-top: 15px;
+  .mainContent > li > a .mainContent-text h3 {
+    font-size: 20px;
   }
-  .bannerImg {
-    width: 100%;
-    height: 60%;
-    display: flex;
-    justify-content: center;
+  .mainContent > li > a .mainContent-text .mainContent-text-ps {
+    font-size: 13px;
   }
-  .bannerImg2 {
-    display: flex;
-    align-items: center;
-    display: flex;
-    justify-content: center;
+}
+@media (max-width: 600px) {
+  .mainContent > li > a .mainContent-text h3 {
+    font-size: 18px;
   }
-  .bannerImg img {
-    width: auto;
+  .mainContent > li > a .mainContent-text h3 br {
+    display: block;
+  }
+  .mainContent > li > a .mainContent-text .mainContent-text-ps {
+    display: none;
   }
 }
 

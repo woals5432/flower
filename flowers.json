@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "핀트화이트 옥시페탈룸",
-      "img": "img/dictinary/dictinary1.jpg",
+      "img": "img/dictionary/dictionary1.jpg",
       "mean": "서로를믿는마음",
       "info": "올망졸망 5개의 작은 꽃잎이 모여 있는 형태의 옥시페탈륨은 밤하늘의 반짝이는 별을 닮아 '화이트스타'라고 불리기도 합니다. 꽃송이와 줄기의 질감이 벨벳처럼 보드랍고 폭신한 사랑스러운 꽃으로 밤하늘의 빛나는 별처럼 어두운 공간이나 마음을 환하게 만들어 줄 거예요.",
       "category": [
@@ -14,7 +14,7 @@
     {
       "id": 2,
       "name": "미니 거베라",
-      "img": "img/dictinary/dictinary2.jpg",
+      "img": "img/dictionary/dictionary2.jpg",
       "mean": "신비 수수께끼",
       "info": "다양한 색상과 화려한 모양을 가지고 있어 다방면으로 활용되는 대중적인 꽃입니다. 축하 화환에서 주로 쓰이는 거베라보다 작은 사이즈로, 활짝 잎을 열고 있는 풍성한 얼굴로 매력을 뽐냅니다.",
       "category": [
@@ -26,7 +26,7 @@
     {
       "id": 3,
       "name": "에이디램 튤립",
-      "img": "img/dictinary/dictinary3.jpg",
+      "img": "img/dictionary/dictionary3.jpg",
       "mean": "순수 천진난만",
       "info": "다홍빛 에이디램 튤립입니다. 화병에 꽂아 놓으면 한 순간에 생기 있는 공간을 연출할 수 있습니다. 통풍이 잘되는 서늘한 곳에 차가운 물을 올려주면 오래도록 함께 하실 수 있습니다.",
       "category": [
@@ -37,7 +37,7 @@
     {
       "id": 4,
       "name": "코와니",
-      "img": "img/dictinary/dictinary4.jpg",
+      "img": "img/dictionary/dictionary4.jpg",
       "mean": "순수 천진난만",
       "info": "하늘하늘한 꽃차례와 부드러운 줄기의 곡선이 아름다운 꽃입니다. 안쪽의 몽오리의 꽃들이 차례로 피면서 꽤 오래기간 볼 수 있는 꽃입니다. 코와니/호와니 는 뿌리가 양파처럼 둥그런 구근 식물에 속한답니다. 그래서인지 알싸한 양파향을 지니고 있는 유니크하고도 매력적인 꽃입니다.",
       "category": [
@@ -48,7 +48,7 @@
     {
       "id": 5,
       "name": "왁스플라워",
-      "img": "img/dictinary/dictinary5.jpg",
+      "img": "img/dictionary/dictionary5.jpg",
       "mean": "변덕,섬세함,귀여움",
       "info": "마치 밀랍 공예 같은 광택과 질감이 있어 붙여진 이름입니다. 5개의 꽃잎으로 이뤄져 있지만 존재감이 있어 풍성하게 연출하기 좋습니다.",
       "category": [
@@ -59,7 +59,7 @@
     {
       "id": 6,
       "name": "로얄버진 튤립",
-      "img": "img/dictinary/dictinary6.jpg",
+      "img": "img/dictionary/dictionary6.jpg",
       "mean": "추억 어린시절.",
       "info": "새하얀 자태의 로얄버진 튤립입니다. 초록 줄기 위에 두툼하고 새하얀 튤립 꽃잎이 매력적인 꽃입니다. 추억이란 꽃말이 있어 아름다운 자태에 자연스럽게 옛날을 회상하게 합니다",
       "category": [
@@ -69,7 +69,7 @@
     {
       "id": 7,
       "name": "화이트 프리지아",
-      "img": "img/dictinary/dictinary7.jpg",
+      "img": "img/dictionary/dictionary7.jpg",
       "mean": "익살스러움",
       "info": "산뜻한 향이 특징인 프리지아는 완만하게 뻗은 줄기 끝에 꽃이 달린 모양입니다. 특히 백색 프리지아는 특유의 청순한 분위기가 특징입니다. 꽃말로는 신뢰, 순수, 인내를 상징해 신혼부부를 생각나게 합니다.",
       "category": [
@@ -79,7 +79,7 @@
     {
       "id": 8,
       "name": "아쿠아장미",
-      "img": "img/dictinary/dictinary8.jpg",
+      "img": "img/dictionary/dictionary8.jpg",
       "mean": "행복",
       "info": "중간 핑크톤의 장미로 다른 장미보다 비교적 가시가 적고 손질하기 쉬워 선물하기 좋습니다. 곁에서 소리소문 없이 행복을 채워주는 소중한 사람을 닮은 꽃입니다.",
       "category": [
@@ -91,7 +91,7 @@
     {
       "id": 9,
       "name": "베네르 라넌큘러스",
-      "img": "img/dictinary/dictinary9.jpg",
+      "img": "img/dictionary/dictionary9.jpg",
       "mean": "화사한 매력 명성",
       "info": "코랄핑크의 수많은 꽃잎이 하나씩 펼치며 공간을 꽉 채우는 꽃입니다. 하늘하늘한 꽃잎에도 튼튼하게 자라 농원에서 특히 사랑받는 답니다. 있는 그대로 본연의 색을 잘 간직하면서 한겹 한겹 피워내는 단단한 매력이 있답니다. 꾸밈없는 아름다움을 간직한 사람에게 전해보세요.",
       "category": [
@@ -102,7 +102,7 @@
     {
       "id": 10,
       "name": "파스티니 거베라",
-      "img": "img/dictinary/dictinary10.jpg",
+      "img": "img/dictionary/dictionary10.jpg",
       "mean": "숭고한 아름다움,신비,희망",
       "info": "흔한 이미지였던 거베라는 다양한 품종이 개발되며 유니크한 모습으로 다시 사랑받고 있어요.꼬불꼬불한 파스타 면을 닮은 파스티니 거베라도 한 송이만으로 꽃다발을 특별하게 만들어주죠.파스티니처럼 상호작용을 통해 내 삶에 특별한 사람이 된 고마운 사람에게 진심을 표현해보세요",
       "category": [
@@ -114,7 +114,7 @@
     {
       "id": 11,
       "name": "유채",
-      "img": "img/dictinary/dictinary11.jpg",
+      "img": "img/dictionary/dictionary11.jpg",
       "mean": "명량 쾌활",
       "info": "제주에서 3월말에서 5월초에 피어 봄이 왔음을 알리는 꽃입니다.작은 꽃망울에서 노란 꽃가루가 흩날리는 특징이 있습니다.",
       "category": [
@@ -124,7 +124,7 @@
     {
       "id": 12,
       "name": "핑크파티 장미",
-      "img": "img/dictinary/dictinary12.jpg",
+      "img": "img/dictionary/dictionary12.jpg",
       "mean": "맹세 행복한 사랑",
       "info": "전 세계적으로 사랑받는 장미는 3만 여종이 넘는데요.가장 친숙한 품종이 딥핑크 핑크파티입니다. 추운 겨울철 연인에게 마음을 녹여줄 수 있는 핑크파티를 선물해보세요.",
       "category": [
@@ -135,29 +135,8 @@
     },
     {
       "id": 13,
-      "name": "캔디프린스 튤립",
-      "img": "img/dictinary/dictinary13.jpg",
-      "mean": "영원한 사랑",
-      "info": "캔디 프린스의 연보라 색감은 고급스럽지만 청순한 분위기를 자아냅니다. 온도에 민감해서 서늘하면 오므라들었다.따뜻하면 활짝 피어납니다. 서늘한 서재에 두고 오랫동안 바라보는 것도 좋습니다.",
-      "category": [
-        "봄"
-      ]
-    },
-    {
-      "id": 14,
-      "name": "다이너스티 튤립",
-      "img": "img/dictinary/dictinary14.jpg",
-      "mean": "사랑의 시작 애정 배려",
-      "info": "연한 핑크색의 다이너스티 튤립은 '사랑의 시작'을 의미합니다. 사랑이 시작되는 설레는 순간, 다이너스티 튤립을 전해보세요.튤립은 생장 속도가 빨라 이틀 뒤면 활짝 피는 특징이 있어요.",
-      "category": [
-        "봄",
-        "인기"
-      ]
-    },
-    {
-      "id": 15,
       "name": "스트롱골드 튤립",
-      "img": "img/dictinary/dictinary15.jpg",
+      "img": "img/dictionary/dictionary13.jpg",
       "mean": "바라볼 수 없는 사랑 희망",
       "info": "따스한 온기를 품은 튤립 중 화사하고 봄의 햇살같은 스트롱골드 튤립을 소개합니다.샛노랑 튤립인 스트롱골드는 바라볼 수 없는 사랑, 희망 등 닿을 수 없는 대상에 대한 애틋함을 표현한 꽃입니다.",
       "category": [
@@ -166,9 +145,9 @@
       ]
     },
     {
-      "id": 16,
+      "id": 14,
       "name": "아네모네",
-      "img": "img/dictinary/dictinary16.jpg",
+      "img": "img/dictionary/dictionary14.jpg",
       "mean": "기대 덧없는 사랑",
       "info": "고채도 아네모네는 눈길을 사로잡습니다. 그런데 얇은 꽃잎처럼 보이는 건 꽃받침이고, 중앙의 흑자색 부분이 꽃압나다. 비바람이 많이 부는 곳에 잘 자라지만 빛과 온도에 민감하게 반영해 벌어지고 오므라들 정도로 예민합니다.",
       "category": [
@@ -178,9 +157,9 @@
       ]
     },
     {
-      "id": 17,
+      "id": 15,
       "name": "보라 리시안셔스 - ",
-      "img": "img/dictinary/dictinary17.jpg",
+      "img": "img/dictionary/dictionary15.jpg",
       "mean": "우아함 싱그런 아름다움",
       "info": "리시안서스는 품종개량으로 다양한 색으로 만나볼 수 있지만 이번에 보라복겹은 잎 끝이 보라색으로 물들어 신비로운 느낌을 자아냅니다.장미만큼 익숙하지만 특별한 분위기 전환을 원한다면 꽃을 추천합니다.",
       "category": [
@@ -189,9 +168,9 @@
       ]
     },
     {
-      "id": 18,
+      "id": 16,
       "name": "디디스커스",
-      "img": "img/dictinary/dictinary18.jpg",
+      "img": "img/dictionary/dictionary16.jpg",
       "mean": "말 없는 사랑",
       "info": "디디스커스는 미나리과꽃으로 푸른색은 '블루레이스', 핑크색은 '핑크레이스'라고 부릅니다. 첫눈을 기다리는 아이 같은 설렘처럼 작고 앙증맞은 꽃입니다.",
       "category": [
@@ -200,9 +179,9 @@
       ]
     },
     {
-      "id": 19,
+      "id": 17,
       "name": "하노이 라넌큘러스",
-      "img": "img/dictinary/dictinary19.jpg",
+      "img": "img/dictionary/dictionary17.jpg",
       "mean": " 매혹 명성 망은",
       "info": "겹겹이 얇은 꽃입이 이룬 우아함이 매력입니다. 꽃잎이 피어날 수록 매력적이라 보면 볼수록 매력적인 이에게 잘 어울리는 꽃입니다. 최근에는 봄을 장식하는 주연급으로 인기가 많습니다. 꽃을 선택할 때는 작고 단단한 봉오리는 개화하지 않은 채 지는 경우가 많아 봉오리가 살짝 벌어지기 시작한 것을 고르는 것이 좋다.",
       "category": [
@@ -210,9 +189,9 @@
       ]
     },
     {
-      "id": 20,
+      "id": 18,
       "name": "아리아트네 라넌큘러스",
-      "img": "img/dictinary/dictinary20.jpg",
+      "img": "img/dictionary/dictionary18.jpg",
       "mean": "화사한 매력 명성 매혹",
       "info": "라넌큘러스 중 아리아트네는 여리여리한 꽃잎이 모두 느껴집니다. 흔치 않은 연한 색감과 꽃망울과 연결되는 부드러운 줄기 모양이 사랑스럽고 화사한 매력이란 꽃말이 잘 어울리는 화형입니다.",
       "category": [
@@ -220,9 +199,9 @@
       ]
     },
     {
-      "id": 21,
+      "id": 19,
       "name": "스타티스",
-      "img": "img/dictinary/dictinary21.jpg",
+      "img": "img/dictionary/dictionary19.jpg",
       "mean": "변함없는사랑 영구불변",
       "info": "변지 않는 것을 좋아해 꽃 선물을 망설이시는 분을 위한 꽃입니다. 스타티스 생화는 매력적이지만 말려도 특유의 색과 모양을 유지합니다. 그래서 드라이 플라워와 압화로 많이 활용됩니다. 앞으로 함깨 만들어갈 시간이 기대되는 사람에게 영원한 사랑을 뜻하는 스타티스를 건내보세요.",
       "category": [
@@ -231,9 +210,9 @@
       ]
     },
     {
-      "id": 22,
+      "id": 20,
       "name": "델피니움",
-      "img": "img/dictinary/dictinary22.jpg",
+      "img": "img/dictionary/dictionary20.jpg",
       "mean": "청명 고귀 오만 변덕",
       "info": "비칠 듯이 투명한 델피니움 꽃잎은 속마음을 다 드러내고 알아 달라는 아이와 비슷합니다. 내 옆에서만 아이처럼 연약한 모습을 보여주는 소중한 사람에게 건내주세요. 여린 마음을 그대로 지켜주고 싶은 당신의 진심이 전달될 거예요.",
       "category": [
@@ -241,9 +220,9 @@
       ]
     },
     {
-      "id": 23,
+      "id": 21,
       "name": "열매 남천",
-      "img": "img/dictinary/dictinary23.jpg",
+      "img": "img/dictionary/dictionary21.jpg",
       "mean": "내 사랑은 더해만 가요",
       "info": "여러움이 오히려 좋은 일로 바뀐다'는 전화위복을 뜻하는 열매 남천은 겨울에 잘 어울립니다. 새하얀 눈과 대비되어 연말 분위기가 물씬 풍기기 때문이죠. 올해를 잘 마무리하고, 좋은 기운을 받아들이는 마음으로 열매 남천을 마련해보시는 건 어떨까요",
       "category": [
@@ -252,9 +231,9 @@
       ]
     },
     {
-      "id": 24,
+      "id": 22,
       "name": "쏠레이 프리지아 ",
-      "img": "img/dictinary/dictinary24.jpg",
+      "img": "img/dictionary/dictionary22.jpg",
       "mean": "익살스러움, 천진난만",
       "info": "자기애 강한 나르시스를 흠모한 숲의 요정 후리지아에서 유래되었습니다. 멀리서 바라만 봤을 후리지아처럼 수줍은 진심을 표현하기 좋은 꽃이예요. 프리지아 봉오리가 하나씩 피면 은은하고 산뜻한 향을 따라 순수한 마음이 전달될 거예요.",
       "category": [
@@ -263,19 +242,9 @@
       ]
     },
     {
-      "id": 25,
-      "name": "스톡크",
-      "img": "img/dictinary/dictinary25.jpg",
-      "mean": "영원한 사랑",
-      "info": "스토크는 비단꽃향무라는 이름을 가졌을 정도로 향이 좋은 꽃입니다. 한줄기에 여러 꽃송이가 달려서 풍성하게 즐길 수 있는 꽃이에요'영원한 사랑' 이라는 꽃말이 인상적인 꽃이랍니다. 영원을 함께하고 싶은 사람에게 선물해보세요.",
-      "category": [
-        "여름"
-      ]
-    },
-    {
-      "id": 26,
+      "id": 23,
       "name": "은엽 아카시아",
-      "img": "img/dictinary/dictinary26.jpg",
+      "img": "img/dictionary/dictionary23.jpg",
       "mean": "숨긴 사랑",
       "info": "은엽 아카시아의 꽃말은 숨긴 사랑이라고 해요. 소중하게 혼자 간직한 마음이 있다면 은엽 아카시아를 건네보세요. 한번의 용기 있는 행동이 당신을 행복하게 만들어 줄 거에요.",
       "category": [
@@ -283,9 +252,9 @@
       ]
     },
     {
-      "id": 27,
+      "id": 24,
       "name": "아프리콧 스톡크",
-      "img": "img/dictinary/dictinary27.jpg",
+      "img": "img/dictionary/dictionary24.jpg",
       "mean": "영원한 사랑",
       "info": "스토크는 비단꽃향무라는 이름을 가졌을 정도로 향이 좋은 꽃입니다. 한줄기에 여러 꽃송이가 달려서 풍성하게 즐길 수 있는 꽃이에요. '영원한 사랑' 이라는 꽃말이 인상적인 꽃이랍니다. 영원을 함께하고 싶은 사람에게 선물해보세요.",
       "category": [
@@ -293,9 +262,9 @@
       ]
     },
     {
-      "id": 28,
+      "id": 25,
       "name": "라넌큘러스",
-      "img": "img/dictinary/dictinary28.jpg",
+      "img": "img/dictionary/dictionary25.jpg",
       "mean": "매혹, 비난",
       "info": "아직 피어나지 않았을 때는 귀엽고 달콤한 알사탕처럼 작고 동그랗지만, 한 번 개화가 시작되면 놀라울 정도로 활짝 피어납니다. 겉모습과 달리 내면이 단단한 친구에게 잘 어울리는 꽃이에요.",
       "category": [
@@ -303,32 +272,21 @@
       ]
     },
     {
-      "id": 29,
+      "id": 26,
       "name": "피치팡팡",
-      "img": "img/dictinary/dictinary29.jpg",
+      "img": "img/dictionary/dictionary26.jpg",
       "mean": "당신을 사랑해요",
       "info": "보기드문 버건디빛 폼폰형 국화인 피치팡팡 국화는 우아한 기품을 가진 당신에게 가장 잘 어울리는 꽃이에요. 중심부에서 퍼져나가는 강렬한 색감이 매력적이에요.",
       "category": [
         "가을",
-        "겨울"
-      ]
-    },
-    {
-      "id": 30,
-      "name": "리바이벌 장미",
-      "img": "img/dictinary/dictinary30.jpg",
-      "mean": "행복한사랑",
-      "info": "장미는 사랑의 여신 아프로디테가 거품 속에서 태어날 때 함께 피어난 꽃이라고 해요. 함께 사랑에 풍덩 빠지고 싶은 사람이 있다면 리바이벌 장미로 마음을 전하세요.",
-      "category": [
-        "봄",
-        "여름",
+        "겨울",
         "인기"
       ]
     },
     {
-      "id": 31,
+      "id": 27,
       "name": "금어초",
-      "img": "img/dictinary/dictinary31.jpg",
+      "img": "img/dictionary/dictionary27.jpg",
       "mean": "욕망 수다쟁이",
       "info": "사랑스러운 꽃물결-금어초는 화관은 기부가 두툼한 입술모양에 꽃모양이 지느러미를 조금씩 움직이면서 물속을 헤엄치는 금붕어를 닮았다고해서 금어초라고 불린다고 해요",
       "category": [
@@ -337,9 +295,9 @@
       ]
     },
     {
-      "id": 32,
+      "id": 28,
       "name": "앤틱그린 수국",
-      "img": "img/dictinary/dictinary32.jpg",
+      "img": "img/dictionary/dictionary28.jpg",
       "mean": "한결 같은 사랑",
       "info": "신비롭고 오묘한 색감을 가진 엔틱 수국은 빈티지한 무드가 돋보이는 아이에요.'진심'이라는 꽃말을 담고 있는 수국을 감사한 마음을 담아 소중한 사람에게 선물해보세요.",
       "category": [
@@ -347,9 +305,9 @@
       ]
     },
     {
-      "id": 33,
+      "id": 29,
       "name": "자피라 안스리움",
-      "img": "img/dictinary/dictinary33.jpg",
+      "img": "img/dictionary/dictionary29.jpg",
       "mean": "사랑의 고뇌",
       "info": "상쾌한 하루를 시작하고 싶다면, 자피라 안시리움. 화가의 팔레트라고 불리는 안시리움은 붉게 물든 꽃대가 돋보이는 사랑스러운 아이에요.",
       "category": [
@@ -360,9 +318,9 @@
       ]
     },
     {
-      "id": 34,
+      "id": 30,
       "name": "잎 남천",
-      "img": "img/dictinary/dictinary34.jpg",
+      "img": "img/dictionary/dictionary30.jpg",
       "mean": "전화위복",
       "info": "사계절 풍경이 담긴 나무 남천은 하얗고 조그마한 꽃이 무리지어 피어난 후 쌀쌀한 가을에는 단풍이 곱게 들어요.그 후 빨간 열매가 조롱조롱 열린답니다. 겨울에도 춥지 않다면 낙엽이 지지 않아 사계절을 함께 보낼 수 있는 아이입니다.",
       "category": [
@@ -373,9 +331,9 @@
       ]
     },
     {
-      "id": 35,
+      "id": 31,
       "name": "버터플라이 라넌큘러스",
-      "img": "img/dictinary/dictinary35.jpg",
+      "img": "img/dictionary/dictionary31.jpg",
       "mean": " 매혹,매력",
       "info": "화형이 크고 화려하게 피어난 버터플라이 라년큘러스는 섬세한 꽃잎의 아름다움에 어느 순간 넋이 나갑니다 '매혹과 매력'의 꽃말이 있을 만큼 시간이 지날수록 봉오리가 한겹 한겹 펼쳐지면서 화형을 뽐낼 거에요.",
       "category": [
@@ -383,9 +341,9 @@
       ]
     },
     {
-      "id": 36,
+      "id": 32,
       "name": "시레네",
-      "img": "img/dictinary/dictinary36.jpg",
+      "img": "img/dictionary/dictionary32.jpg",
       "mean": "청춘의 사랑",
       "info": "시레네의 줄기는 가늘고 연약해 쉽게 끊어질 수 있어 조심히 다루어야 한답니다. 완벽하지 않은 청춘의 사랑과 닮아있네요",
       "category": [

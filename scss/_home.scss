@@ -6,14 +6,14 @@ html, body{
 }
 img {
   width: 100%;
+  cursor: pointer;
 }
 button {
   cursor: pointer;
 }
-
-::-webkit-scrollbar {
-  display: none;
-}
+// ::-webkit-scrollbar {
+//   display: none;
+// }
 
 .container {
   width: 100%;
@@ -27,26 +27,25 @@ header {
   top: 0;
   width: 100%;
   margin: auto;
-  background: transparent;
   z-index: 11;
   transition: 0.3s ease-in;
 
+  &.main_header {
+    background: transparent;
+  }
   &.down {
-    background: $white;
+    background: $main-color;
   }
   .header_inner {
     font-family: 'MYYeongnamnu';
     height: 56px;
 
-    &.open {
-      color: $white;
-    }
     h1 {
       width: 120px;
       text-align: center;
       margin: auto;
       line-height: 56px;
-      font-size: 2em;
+      font-size: 2.5em;
       font-weight: bold;
     }
   }
@@ -63,12 +62,13 @@ header {
       top: 50%;
       right: 20px;
       transform: translateY(-50%);
-      background: $white url('../img/icon/noun-nature-6193660.svg') no-repeat center center / 48px 48px;
-      z-index: 10; 
-    } 
+      background: $main-color url('../img/icon/noun-nature-6193660.svg') no-repeat center center / 48px 48px;
+      box-shadow: 0 0 10px $opacity2;
+      z-index: 10;
+    }
   }
   .nav_open{
-    @include set-box(100vw, 100vh);
+    @include set-box(100%, 100vh);
     position: fixed;
     top: 0;
     left: 0;
@@ -77,40 +77,49 @@ header {
     opacity: 0;
 
     &.open {
-      background: $black;
-      color: $white;
-      z-index: 10;
+      background: $sub-color;
+      color: $main-color;
+      z-index: 12;
       transition: opacity 1s cubic-bezier(0.2, 0.8, 0.4, 1);
       opacity: 1;
     }
-    .nav_inner {
-      @extend %double;
-      align-items: center;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 60%;
-
-      .nav_menuLeft, .nav_menuRight {
-        img {
-          width: 150px;
-        }
+    .nav_header {
+      font-family: 'MYYeongnamnu';
+      height: 56px;
+      background: $sub-color;
+      color: $main-color;
+      z-index: 13;
+    
+      h1 {
+        width: 120px;
+        text-align: center;
+        margin: auto;
+        line-height: 56px;
+        font-size: 2.5em;
+        font-weight: bold;
       }
+    }
+    .nav_inner {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 50%;
+      height: 90%;
+      margin: auto;
+      
       .nav_menu {
         & > li {
-          margin: 50px 0;
+          margin: 60px 0;
           text-align: center;
 
           & > a {
-            font-size: 1.1em;
+            font-size: 1.3em;
           }
           .nav_subMenu > li {
-            margin: 20px 0 -10px;
+            margin: 25px 0 -10px;
 
             & > a {
               color: $gray2;
-              font-size: 0.9em;
             }
           }
         }
@@ -123,14 +132,14 @@ header {
         top: 50%;
         right: 20px;
         transform: translateY(-50%);
-        background: $white url('../img/icon/noun-ornament-707222.svg') no-repeat center center / 48px 48px;
+        background: $main-color url('../img/icon/noun-ornament-707222.svg') no-repeat center center / 48px 48px;
         z-index: 100;
       }
     }
   }
   .main_visual {
     @include set-box(100%, 100vh);
-    background: url(../img/main/main_5.jpg) fixed center / cover;
+    background: url(../img/main/main_visual.jpg) fixed center / cover;
   }
   .main_content {
     width: 100%;
@@ -139,7 +148,7 @@ header {
       width: 100%;
 
       h2 {
-        padding: 70px 70px 20px;
+        padding: 120px 70px 20px;
         font: {
           size: 1.8em;
           weight: 700;
@@ -148,95 +157,139 @@ header {
       h3 {
         padding: 0 70px 40px;
         font: {
-          size: 1.2em;
+          size: 1.1em;
           weight: 500;
         }
         color: $gray2;
       }
-      .main_contentDictionary {
-        .month_flower {
-          .swiper-slide {
-            img {
-              border-radius: 8px;
-            } 
-          }
+      
+      &.main_content1 {
+        h2 {
+          padding-top: 70px;
         }
-      }
-      .main_contentExhibit {
-        @extend %double;
-        column-gap: 30px;
-        padding: 0 70px;
-        
-        .flower_exhibition, .flower_exposition {
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          row-gap: 20px;
-
-          img {
-            height: 100%;
-          }
-          span {
-            font-size: 1.1em;
-          }
-        }
-      }
-      .main_contentFlowerClass {
-        .flower_class {
-          position: relative;
-          width: 100%;
-          line-height: 200px;
-          background: linear-gradient(rgba(255, 255, 255, 0) 10%, rgb(255, 255, 255)), url('../img/main/class_pc.png') center center / cover no-repeat;
-
-          &::before {
-            @include set-box(100%);
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: rgba(0, 0, 0, 0.7);
-          }
-
-          span {
-            color: $white;
-            font-size: 2em;
-          }
-        }
-        .flower_diyclass {
-          display: flex;
-          column-gap: 30px;
-          padding: 0 90px;
-          background: rgba(0, 0, 0, 0.7);
-
-          & > div {
-            width: 25%;
-
-            img {
-
+        .main_contentDictionary {
+          .month_flower {
+            .swiper-slide {
+              img {
+                border-radius: 8px;
+              } 
             }
           }
         }
       }
-      .main_contentBrand {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        column-gap: 20px;
-        padding: 50px 120px;
+      &.main_content2 {
+        .main_contentExhibit {
+          @extend %double;
+          column-gap: 30px;
+          padding: 0 70px;
+          
+          .flower_exhibition, .flower_exposition {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 20px;
 
-        & > p {
-          font: {
-            family: 'MYYeongnamnu';
-            size: 3em;
-            weight: 700;
+            & > a {
+              height: 100%;
+
+              img {
+                @extend %img_cover;
+              }
+            }
+            span {
+              font-size: 1.1em;
+            }
           }
         }
-        span {
-          line-height: 30px;
-          font: {
-            size: 0.9em;
-            weight: 600;
+      }
+      &.main_content3 {
+        .main_contentFlowerClass {
+          .flower_class {
+            position: relative;
+            width: 100%;
+            line-height: 200px;
+            background: linear-gradient(rgba(255, 255, 255, 0) 10%, rgb(255, 255, 255)), url('../img/main/class_pc.png') center center / cover no-repeat;
+            text-indent: -9999px;
+
+            &::before {
+              @include set-box(100%);
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              background: $opacity3;
+            }
+          }
+          .flower_diyclass {
+            @include set-box(100%);
+
+            .class_bg {
+              display: none;
+            }
+
+            & > ul {
+              display: flex;
+              column-gap: 30px;
+              position: relative;
+              top: -120px;
+              padding: 0 90px;
+
+              li {
+                width: 25%;
+    
+                img {
+                  margin-bottom: 15px;
+                  border-radius: 8px;
+                }
+                div {
+                  padding: 0 10px;
+                  font-size: 0.9em;
+                  line-height: 20px;
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+      }
+      &.main_content4 {
+        h2 {
+          padding-top: 0;
+        }
+        .main_contentBrand {
+          padding: 0 70px 70px;
+
+          .mian_contentBrand_raum {
+            display: flex;
+            column-gap: 30px;
+
+            & > li {
+              position: relative;
+
+              img {
+                @extend %img_cover;
+              }
+              strong {
+                display: none;
+              }
+              p {
+                display: none;
+              }
+              &:hover p {
+                @include set-box(100%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 0 50px;
+                line-height: 25px;
+                background: $opacity3;
+                color: $main-color;
+              }
+            }
           }
         }
       }
@@ -244,11 +297,11 @@ header {
   }
 }
 
-/* footer 
+/* footer */
 footer {
   width: 100%;
   padding: 50px 70px;
-  background: $black;
+  background: $sub-color;
 
   .footer_inner {
     @extend %double;
@@ -263,7 +316,7 @@ footer {
         font-family: 'MYYeongnamnu';
         font-size: 1.8em;
         font-weight: bold;
-        color: $white;
+        color: $main-color;
       }
       p {
         font-size: 0.9em;
@@ -275,14 +328,14 @@ footer {
       justify-content: center;
 
       form {
-        border-bottom: 1px solid $white;
+        border-bottom: 1px solid $main-color;
 
         .footer_emailInput {
-          width: 250px;
+          width: 230px;
           padding-bottom: 10px;
           background: transparent;
           outline: none;
-          caret-color: $white;
+          caret-color: $main-color;
 
           &::placeholder {
             color: $gray3;
@@ -290,22 +343,30 @@ footer {
         }
         .footer_btn {
           background: transparent;
-          color: $white;
+          color: $main-color;
           font-size: 1.3em;
         }
       }
     }
   }
 }
-*/
 
 @media (max-width: 1023px) {
   .main_inner {
     .nav_open {
       .nav_inner {
-        .nav_menuLeft, .nav_menuRight {
-          img {
+        width: 65%;
 
+        .nav_menu {
+          & > li {
+            & > a {
+              font-size: 1.1em;
+            }
+            .nav_subMenu > li {
+              & > a {
+                font-size: 0.9em;
+              }
+            }
           }
         }
       }
@@ -324,31 +385,61 @@ footer {
             size: 1.1em;
           }
         }
-        .main_contentDictionary {
-          .month_flower {
-            .swiper-slide {
-              img {
-                // @include set-box(100%, 20vh, 8px);
-                // object-fit: cover;
-              } 
+        &.main_content2 {
+          .main_contentExhibit {
+            .flower_exhibition, .flower_exposition {
+              span {
+                font-size: 0.9em;
+              }
             }
           }
         }
-        .main_contentExhibit {
-          .flower_exhibition, .flower_exposition {
-            span {
-              font-size: 0.9em;
+        &.main_content3 {
+          .main_contentFlowerClass {
+            .flower_class {
+              line-height: 150px;
+              background: linear-gradient(rgba(255, 255, 255, 0) 10%, rgb(255, 255, 255)), url('../img/main/class_mo.png') center center / cover no-repeat;
+            }
+            .flower_diyclass {
+              .class_bg {
+                display: block;
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 105px;
+                background: rgba(0, 0, 0, 0.7);
+              }
+              & > ul {
+                display: flex;
+                column-gap: 15px;
+                position: relative;
+                top: -30px;
+                padding: 0 70px;
+    
+                li {
+                  width: 25%;
+      
+                  img {
+                    margin-bottom: 15px;
+                  }
+                  div {
+                    padding: 0 10px;
+                    font-size: 0.8em;
+                    line-height: 20px;
+                    text-align: center;
+                  }
+                }
+              }
             }
           }
         }
-        .main_contentFlowerClass {
-          .flower_class {
-            line-height: 150px;
-            background: linear-gradient(rgba(255, 255, 255, 0) 10%, rgb(255, 255, 255)), url('../img/main/class_mo.png') center center / cover no-repeat;
+        &.main_content4 {
+          h2 {
+            padding-top: 70px;
           }
-        }
-        .main_contentBrand {
-
+          .main_contentBrand {
+            column-gap: 50px;
+          }
         }
       }
     }
@@ -361,7 +452,7 @@ footer {
       .nav_inner {
         justify-content: center;
 
-        .nav_menuLeft, .nav_menuRight {
+        .nav_menuLeft {
           display: none;
         }
       }
@@ -369,7 +460,7 @@ footer {
     .main_content {  
       & > div {
         h2 {
-          padding: 50px 40px 20px;
+          padding: 110px 40px 20px;
           font: {
             size: 1.4em;
           }
@@ -380,35 +471,137 @@ footer {
             size: 0.9em;
           }
         }
-        .main_contentDictionary {
-          .month_flower {
-            .swiper-slide {
-              img {
-
-              } 
+        &.main_content2 {
+          .main_contentExhibit {
+            column-gap: 20px;
+            padding: 0 40px;
+          }
+        }
+        &.main_content3 {
+          .main_contentFlowerClass {
+            .flower_class {
+              span {
+                font-size: 1em;
+              }
+            }
+            .flower_diyclass {
+              column-gap: 10px;
+              padding: 0 40px;
+              
+              & > ul {
+                display: flex;
+                justify-content: space-between;
+                column-gap: 20px;
+                position: relative;
+                top: -100px;
+                padding: 0;
+    
+                li {
+                  width: 50%;
+                  
+                  &.class3, &.class4 {
+                    display: none;
+                  }
+                  div {
+                    display: none;
+                  }
+                  br {
+                    display: none;
+                  }
+                }
+              }
             }
           }
         }
-        .main_contentExhibit {
-          column-gap: 20px;
-          padding: 0 40px;
-          
-        }
-        .main_contentFlowerClass {
-          .flower_class {
-            height: 100px;
-            span {
-              font-size: 1em;
+        &.main_content4 {
+          h2 {
+            padding-top: 0;
+          }
+          .main_contentBrand {
+            padding: 0 40px 70px;
+
+            .mian_contentBrand_raum {
+              & > li {
+                &:hover p {
+                  font-size: 0.8em;
+                }
+              }
             }
           }
-          .flower_diyclass {
-            column-gap: 10px;
-            padding: 0 50px;
+        }
+      }
+    }
+  }
+  footer {
+    padding: 50px 40px;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .main_inner {
+    .main_content {
+      & > div {
+        &.main_content2 {
+          .main_contentExhibit {
+            .flower_exhibition, .flower_exposition {
+              span {
+                display: none;
+              }
+            }
           }
         }
-        .main_contentBrand {
-
+        &.main_content3 {
+          .main_contentFlowerClass {
+            .flower_diyclass {
+              .class_bg {
+                display: none;
+              }
+              & > ul {
+                li {
+                  div {
+                    font-size: 0.8em;
+                  }
+                }
+              }
+            }
+          }
         }
+        &.main_content4 {
+          .main_contentBrand {
+            flex-direction: column;
+            row-gap: 20px;
+
+            .mian_contentBrand_raum {
+              & > li {
+                &:hover p {
+                  display: none;
+                }
+                &:hover strong {
+                  @include set-box(100%);
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  padding: 10px;
+                  background: $opacity3;
+                  color: $main-color;
+                  font-size: 0.8em;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    padding: 40px;
+    .footer_inner {
+      .footer_right {
+        display: none;
       }
     }
   }

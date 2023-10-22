@@ -1,5 +1,5 @@
 // 헤더
-const header = document.querySelector("header");
+const header = document.querySelector(".main_header");
 window.addEventListener("scroll", () => {
   if (window.scrollY > 300) {
     header.classList.add("down");
@@ -16,14 +16,11 @@ const navBtn = document.querySelector(".nav_btn");
 const navClose = document.querySelector(".nav_closeBtn");
 
 navBtn.addEventListener("click", () => {
-  nav.classList.toggle("open");
-  headerInner.classList.toggle("open"); 
-  // navBtn.style.background = "white url('img/icon/noun-ornament-707222.svg') no-repeat center center / 48px 48px"
+  nav.classList.add("open");
 });
 
 navClose.addEventListener("click", () => {
   nav.classList.remove("open");
-  headerInner.classList.remove("open");
 });
 
 // const menuBtn = document.querySelector('.menuBtn');
@@ -59,7 +56,7 @@ var swiper = new Swiper(".month_flower", {
   spaceBetween: 20,
   loop: true,
   autoplay: {
-    delay: 2000,
+    delay: 1000,
     disableOnInteraction: false,
   },
 });
