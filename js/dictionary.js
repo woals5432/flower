@@ -79,7 +79,6 @@ function createItem(product) {
     li.addEventListener('click', () => {
       const imgElement = li.querySelector('img');
       const description = li.querySelector('.info');
-      console.log();
 
       // 이미지를 뒤집기 위해 CSS 클래스를 추가/제거
       imgElement.classList.toggle('flipped');
