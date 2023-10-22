@@ -732,12 +732,21 @@ section.flower_contents .flower_dictionary .mainContent_more button {
   display: block;
 }
 
-.main section p {
-  width: 100%;
-  font-weight: 400;
-  font-size: 16px;
-  font-family: "S-CoreDream-3Light";
-  line-height: 30px;
+.main {
+  background: #FFFFFF;
+}
+.main section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  font-family: "MYYeongnamnu";
+  color: #000000;
+  text-align: center;
+  opacity: 0;
+  transition: all 2s;
+  width: 80%;
+  margin: 800px auto 0;
+  padding: 0 100px;
 }
 .main section > span {
   font-size: clamp(80px, 20vw, 200px);
@@ -780,6 +789,62 @@ section.flower_contents .flower_dictionary .mainContent_more button {
   font-size: 16px;
   font-family: "S-CoreDream-3Light";
   line-height: 30px;
+}
+
+@media (max-width: 1023px) {
+  .main section {
+    width: 100%;
+    padding: 0 50px;
+  }
+  .main section .content {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .main section .content.content2 {
+    flex-direction: column-reverse;
+  }
+  .main section .content .contentText {
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .main section h1 {
+    font-size: 30px;
+  }
+  .main section p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 600px) {
+  .main section {
+    padding: 0;
+  }
+  .main section h1 {
+    font-size: 25px;
+  }
+  .main section .content .contentText {
+    padding: 0 20px;
+  }
+}
+/* 메인 */
+main {
+  display: flex;
+  background: white;
+  position: relative;
+  min-width: 390px;
+  flex-direction: column;
+}
+
+section.flower_contents_ex {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 56px 0 0;
+  margin: auto;
+}
+section.flower_contents_ex .flower_exhibit {
+  width: 100%;
+  margin: 0 auto;
 }
 section.flower_contents_ex .flower_exhibit .flower_exhibit_title {
   padding: 30px 24px;
@@ -890,15 +955,6 @@ section.flower_contents_ex .flower_exhibit .flower_exhibit_title .flower_exhibit
   }
   section.flower_contents_ex .flower_exhibit .flower_exhibit_title .flower_exhibit_title_description {
     font-size: 13px;
-  }
-  .mainContent > li {
-    height: 25vh;
-  }
-  .mainContent > li > a {
-    height: 25vh;
-  }
-  .mainContent > li > a .mainContent-text h3 {
-    font-size: 20px;
   }
   .mainContent > li {
     height: 25vh;
