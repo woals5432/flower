@@ -33,6 +33,8 @@ selectButtons.forEach(button => {
   });
 });
 
+
+
 // JSON 데이터 가져오기
 const importData = () => {
   fetch('flowers.json')
@@ -70,8 +72,22 @@ function createItem(product) {
   li.appendChild(div);
   div.appendChild(h4);
   div.appendChild(span);
-  
-  
+
+
+  const liElements = document.querySelectorAll('.flowers');
+  liElements.forEach(li => {
+    li.addEventListener('click', () => {
+      const imgElement = li.querySelector('img');
+      const description = li.querySelector('.info');
+      console.log();
+
+      // 이미지를 뒤집기 위해 CSS 클래스를 추가/제거
+      imgElement.classList.toggle('flipped');
+
+      // 설명창 표시/숨김을 위해 CSS 클래스를 추가/제거
+      description.classList.toggle('show-description');
+    });
+  });
 
 }
 

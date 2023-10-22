@@ -136,6 +136,7 @@ button {
   cursor: pointer;
   font-weight: 700;
 }
+
 /* main */
 section.flower_contents {
   position: relative;
@@ -258,6 +259,23 @@ footer .footer_inner .footer_right form .footer_btn {
   font-size: 20px;
   margin-bottom: 10px;
 }
+
+.flipped {
+  transform: scaleX(-1);
+  backface-visibility: hidden;
+  transition: transform 0.3s ease;
+}
+
+/* 설명창 숨김 */
+.info {
+  display: none;
+}
+
+/* 설명창 표시 */
+.show-description {
+  display: block;
+}
+
 .main {
   background: white;
   height: 6000px;
