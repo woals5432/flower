@@ -634,9 +634,11 @@ section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower
   row-gap: 24px;
   column-gap: 24px;
 }
+
 section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item {
   display: block;
 }
+
 section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link {
   display: block;
 }
@@ -657,6 +659,16 @@ section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower
   font-weight: 400;
   line-height: 18px;
 }
+
+section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list li {
+  position: relative;
+}
+
+section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .info {
+  position:absolute;
+  top:30%;
+}
+
 section.flower_contents .flower_dictionary .mainContent_more {
   display: flex;
   justify-content: end;
@@ -708,7 +720,7 @@ section.flower_contents .flower_dictionary .mainContent_more button {
 }
 
 .info {
-  padding: 10px;
+  padding: 20px;
 }
 .info h4 {
   font-weight: bold;
@@ -718,8 +730,9 @@ section.flower_contents .flower_dictionary .mainContent_more button {
 
 .flipped {
   transform: rotateY(180deg);
-  backface-visibility: hidden;
+  /* backface-visibility: hidden; */
   transition: transform 0.3s ease;
+  opacity: 0.5;
 }
 
 /* 설명창 숨김 */
