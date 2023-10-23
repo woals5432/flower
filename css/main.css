@@ -634,11 +634,10 @@ section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower
   row-gap: 24px;
   column-gap: 24px;
 }
-
 section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item {
   display: block;
+  position: relative;
 }
-
 section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .flower_dictionary_item .flower_dictionary_item_link {
   display: block;
 }
@@ -659,16 +658,6 @@ section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower
   font-weight: 400;
   line-height: 18px;
 }
-
-section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list li {
-  position: relative;
-}
-
-section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list .info {
-  position:absolute;
-  top:30%;
-}
-
 section.flower_contents .flower_dictionary .mainContent_more {
   display: flex;
   justify-content: end;
@@ -681,46 +670,43 @@ section.flower_contents .flower_dictionary .mainContent_more button {
   color: #444;
   font-size: 0.9em;
 }
-
-.main section > span {
-  font-size: clamp(80px, 20vw, 200px);
-  font-weight: 700;
-}
-.main section > p {
-  padding: 0 20px;
-}
-.main section.brand_producer {
-  margin-bottom: 200px;
-}
-.main section.brand_producer h1 {
-  margin-bottom: -20px;
-}
-.main section .content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  column-gap: 30px;
-}
-.main section .content .contentImg, .main section .content .contentText {
-  flex: 1;
-}
-.main section .content .contentText {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 30px;
-  text-align: left;
-}
-.main section h1 {
-  width: 100%;
-  font-weight: bold;
-  font-size: 20px;
-  margin-bottom: 10px;
+section.flower_contents .flower_dictionary .mainContent_more button i {
+  line-height: 20px;
 }
 
+@media (max-width: 767px) {
+  .nav_contents .nav_hashtag_main .nav_hashtag_wrap {
+    column-gap: 30px;
+  }
+  .nav_contents .nav_hashtag_main .nav_hashtag_wrap .nav_hashtag .nav_hashtag_namewrap {
+    padding: 10px;
+  }
+  .nav_contents .nav_hashtag_main .nav_hashtag_wrap .nav_hashtag .nav_hashtag_namewrap button {
+    font-size: 14px;
+  }
+  section.flower_contents .flower_dictionary .flower_dictionary_title .flower_dictionary_title_1 {
+    font-size: 24px;
+  }
+  section.flower_contents .flower_dictionary .flower_dictionary_title .flower_dictionary_title_description {
+    font-size: 13px;
+  }
+  section.flower_contents .flower_dictionary div.flower_dictionary_wrapper .flower_dictionary_list {
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+  }
+}
+@media (max-width: 500px) {
+  .nav_contents .nav_hashtag_main .nav_hashtag_wrap {
+    column-gap: 15px;
+  }
+  .nav_contents .nav_hashtag_main .nav_hashtag_wrap .nav_hashtag .nav_hashtag_namewrap {
+    padding: 8px;
+  }
+  .nav_contents .nav_hashtag_main .nav_hashtag_wrap .nav_hashtag .nav_hashtag_namewrap button {
+    font-size: 13px;
+  }
+}
 .info {
-  padding: 20px;
+  padding: 10px;
 }
 .info h4 {
   font-weight: bold;
@@ -730,7 +716,6 @@ section.flower_contents .flower_dictionary .mainContent_more button {
 
 .flipped {
   transform: rotateY(180deg);
-  /* backface-visibility: hidden; */
   transition: transform 0.3s ease;
   opacity: 0.5;
 }
@@ -741,8 +726,20 @@ section.flower_contents .flower_dictionary .mainContent_more button {
 }
 
 /* 설명창 표시 */
-.show-description {
+.info.show-description {
   display: block;
+}
+
+.flowers {
+  position: relative;
+}
+
+.info {
+  position: absolute;
+  top: 15%;
+}
+.info span {
+  line-height: 30px;
 }
 
 .main {

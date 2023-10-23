@@ -191,7 +191,7 @@ section.flower_contents {
         column-gap: 15px;
 
         .nav_hashtag {
-          .nav_hashtag_namewrap {
+          .nav_hashtag_namewrap {  
             padding: 8px;
 
             button {
@@ -203,6 +203,7 @@ section.flower_contents {
     }
   }
 }
+
 .info {
   padding: 10px;
   
@@ -218,9 +219,10 @@ section.flower_contents {
 
 .flipped {
   transform: rotateY( 180deg );
-  // backface-visibility: hidden; 
+  //backface-visibility: hidden; 
   transition: transform 0.3s ease;
   opacity: 0.5;
+  
 }
 
 /* 설명창 숨김 */
@@ -231,4 +233,15 @@ section.flower_contents {
 /* 설명창 표시 */
 .info.show-description {
   display: block;
+}
+
+.flowers {
+  position: relative;
+}
+.info{
+  position: absolute;
+  top:15%;
+  span{
+    line-height: 30px;
+  }
 }
