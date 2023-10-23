@@ -15,9 +15,11 @@
     padding: 0 100px;
     
     & > span {
+      
       font: {
         size: clamp(80px, 20vw, 200px);
         weight: 700;
+        
       }
     }
     & > p {

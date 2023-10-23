@@ -2,8 +2,10 @@ let observer = new IntersectionObserver((e) => {
   e.forEach((박스,idx) => {
     if (박스.isIntersecting) {
       박스.target.style.opacity = 1;
+      박스.target.style.height = "307px";
     } else {
       박스.target.style.opacity = 0;
+      박스.target.style.height = "0px";
     }
   })
 })
