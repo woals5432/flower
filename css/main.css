@@ -155,6 +155,9 @@ header .header_inner h1 {
   z-index: -10;
   opacity: 0;
 }
+.main_inner .nav_open .scroll::-webkit-scrollbar {
+  display: none;
+}
 .main_inner .nav_open.open {
   background: #000000;
   color: #FFFFFF;
@@ -707,13 +710,12 @@ section.flower_contents .flower_dictionary .mainContent_more button i {
 }
 .info {
   padding: 10px;
+  margin-bottom: 10px;
 }
 .info h4 {
   font-weight: bold;
   font-size: 20px;
-  margin-bottom: 10px;
 }
-
 .flipped {
   transform: rotateY(180deg);
   transition: transform 0.3s ease;
@@ -742,6 +744,11 @@ section.flower_contents .flower_dictionary .mainContent_more button i {
   line-height: 30px;
 }
 
+@media (max-width: 1100px) {
+  .info span {
+    font-size: 12px;
+  }
+}
 .main {
   background: #FFFFFF;
 }

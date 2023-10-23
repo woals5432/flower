@@ -75,6 +75,9 @@ header {
     transition: 0.3s;
     z-index: -10;
     opacity: 0;
+    .scroll::-webkit-scrollbar {
+      display: none;
+    }
 
     &.open {
       background: $sub-color;
@@ -354,6 +357,7 @@ footer {
 @media (max-width: 1023px) {
   .main_inner {
     .nav_open {
+      
       .nav_inner {
         width: 65%;
 

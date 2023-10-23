@@ -148,6 +148,7 @@ section.flower_contents {
 }
 
 @media (max-width: 767px) {
+  
   .nav_contents {
     .nav_hashtag_main {
       .nav_hashtag_wrap {
@@ -206,13 +207,15 @@ section.flower_contents {
 
 .info {
   padding: 10px;
-  
+  margin-bottom: 10px;
   h4 {
     font: {
       weight: bold;
       size: 20px;
     }
-    margin-bottom: 10px;
+    span{
+
+    }
   }
 }
 
@@ -243,5 +246,13 @@ section.flower_contents {
   top:15%;
   span{
     line-height: 30px;
+  }
+}
+
+@media (max-width:1100px) {
+  .info{
+    span{      
+      font-size: 12px
+    }
   }
 }
